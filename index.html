@@ -1,0 +1,2868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bub &amp; Burt">
+<meta name="theme-color" content="#dfe7ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121827" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAIdElEQVR42u2dW2wUZRSAt1AFIm0BuQQsAcUHEIESLgkPRAsoxQJSaky80GAwSEARUSEBpS2oEbmDIGAaSYv6YgVEFKLIg/EBL+EiUowgRWoJICjUKCiwPv+nyX9yMjuzs/X73k5mZ/+Zn5OTr4ezM1nndk5OJgBaCK3YAiChAUhogPDJTiRRaKBCA5DQACQ0gMWhkzg0UKEBSGgAEhrA5ND0oYEKDUBCA5DQADaHTiZwaKBCA5DQACQ0gMWhUWigQgOQ0AAkNIDNoZmHBio0AAkNQEID2ByaeWigQgOQ0AAkNIDNoelDAxUagIQGIKEBbA5NHxqo0AAkNAAJDWB0aH5UCFRoABIagIQGMDk0sxxAhQYgoQFIaACbQzPLAVRoABIagIQGsDk0fWigQgOQ0AAkNIDNoRmHBio0AAkNQEID2Bw60/rQYxedD/X79yzu8r++/0zfHyo0oBwAJDRAFA4dt3noseW/eY+v2lJt+r5vDh4zOuprfoes7JzW+2+6etmJ8/N7OXFDw6mQHT6R1v2hQgPKAUBCA8SArF/eHZ1WiS4qv+DEj85Z4MTDCvoGcuLD3//gxAMH9Dcdl+s/N7XMiXdX3prS+8/r0jFSJ5YEdfKcNrkp3R8qNKAcACQ0QCwdeuuoSB26qOKiyZmramoj3RDp0JqTH9m7w3XGik6m+5d95ZZGM6dW9ocKDUBCAwkNkBEOXVMYqkMXVf7uxHIWQ3PkaVNKnVj2oaXTWp1YOnu/PvlOXHeiwbu+5L3V/lkQqzPLvrAkaJ866lmQZk5d3pEKDUBCAwkNkHEOfar63pQ69LjFfzix7DPPnXqf9/xLly55j1dt+9rr0NKZy0rHeJ1YMrKgZ6D7H1pQGMiZjx39LtD6fe8aEuj8qNeXTv3pog5UaAASGkhogLgTu98U5uXleY9LB1+5xT0u+8oS2UfWnD7VBHVU6/drTpvq69G+T3XsgPlIhQaUA4CEBojCocN+tp3mtJJ2t3Rw4m5d3dmK+pNHFKf+zOTg1vUPHfzKiUffM8mJZd85bGfONDTHH7fE/fwnL+VSoQHlACChAWLn0EG/4IFXXGeUsxuy76vNSkhnlchZD9m3lo6szYZY19f65ECFBiChAUhoaPkOneo+tLXvrDF02Eivw2pObf28tr7k24P73M+LeWgrvXr3c+JT9XWm88fcP9n0edkHtvbNg16vnIfetTDHia35SYUGlAOAhAaIwqGDzp/uWtDeiYvF85P3V7zgxNfrDztx60nFTixnNTTa/+Q+B+PCaZvDJUo+Mq1/ffuulP4DaA6qHQ/6G0KrUwe9XhXmoQFIaCChATLAocOeh24cNtyJc9vf7MTWyQjZR75mdeaASOdvRsVy7+EbO1wHP7nG/3nNQa2/IdTQ+tDa9cj7kffb6sFiRaFxaAASGkhogPg7dNC+3/jX/3LiTTVVXme+/Oc/rkMbJbrZ7IXoI+9fMcJ7ft8nd3ud3DrvfPrX8/71hNPu27vTibt379GyKqRw5DNnGp24UOyHnOWgDw1AQgMJDZABZP389giTtIxf+rcTy98Qau88WTL3MSfueVuXjN5AOf/8yBOPez+/eeMGr1NL4u7Y0pElhaMnOPH0GTO9n3//na1O/PH8dlRoQDkASGiAuJGdTPgVesLSK068+8svnLi69nPv+fKdJ9KZtT5u2I6t9aHl9ZUUP+zEzy980bRexeIlXseUTq05atiOra2vObO8327dunrPHzx4kPs322x3f3fOb0uFBpQDgIQGSLtDW//v3OrMGpoja44tkbMjEjlL0vy435nfWLvMdD1nz57zOqTm1BpaHzso1uuxOrO2P3K/J0innteGCg0oBwAJDRC5Q8vfcE1c5jrmqi3VTlxVU2ty6OazHbb3Alr70Pqz7oJtmHQ+iXRAzSElb23a5F2vYtHLgRw3KNKRGxvPpHS/rMj8pUIDygFAQgNEQNbxjcMdCZm43HVoOe8skc+Dlu9Ukce1d6wEdeSgyPlmOashnS/Vjqh9X7qRzixnL7S+cqr/Rpkn+tJUaEA5AEhogAhQn22nObKkrHSME9edaEjpBUf9nsCgfdK4O7GVHj26e+9P60tr+2v9G4UKDSgHAAkNkA6HTqT4+dDSmfv1yW/RGxh2n1lzSuu8cdj3L+MDBw45sexba9dr3V8qNKAcACQ0QBQOrfWhpQNrTiwdunNOVkZvUNSzCdbztT6w7BsH7fNaz5frU6EBSGggoQFagkMnlGfbWfvKA2/PjfQGwp6Pjts8s+bImrOme7ZE+5sk6OwMFRpQDgASGiAShxZ96O1z3L7xpKllTiyfD100cpQTy/cUDhkQzGn152zkxWpDV7zqPotNvnNFmyfWCLuvqzm6te+tzUfL/bI+O5AKDSgHAAkNkAayflxXYBqILlnjxtue9R9v7tR3xGoDNEeXz+nQkPf71JRpXqe2OrJ1liLs2Q7rbwjlewi1/NGQ51OhAeUAIKEBInHotYOSYS5QsjbL65hdO+V4z0/3u8C1d7ycu9jkdeZts5Pe/dCcWsPqxEGPW/vOzZx5dqjpRoUGlAOAhAaIxKGPrRmYjHLByetaBXLqdKM584fP3DDdf9PVyym9vukzZnodVyKdd/PGDSm9npw2uab9oUIDkNBAQgNkANmJZHovoPfxOYHOr79ztcnBpQNb1++tfSDN+ykdWDq19vnQCXl/qNCAcgCQ0AARkFW3ekCoVlP6Zmsn3lMebp95bGWT93jU69c+fd20P9a+tOzzppqg16PdPxUagIQGEhogIx161d2Rdk5L12d7j6+fcsV7fFZNW+/x2lnXYr1+0P1J9XqZdj1UaEA5AEhogDg49NGV/ZNxuqCHNtzkPf7BzH9b9PpAhQYgoYGEBog9/wHFFiKcS3KTrQAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAIdElEQVR42u2dW2wUZRSAt1AFIm0BuQQsAcUHEIESLgkPRAsoxQJSaky80GAwSEARUSEBpS2oEbmDIGAaSYv6YgVEFKLIg/EBL+EiUowgRWoJICjUKCiwPv+nyX9yMjuzs/X73k5mZ/+Zn5OTr4ezM1nndk5OJgBaCK3YAiChAUhogPDJTiRRaKBCA5DQACQ0gMWhkzg0UKEBSGgAEhrA5ND0oYEKDUBCA5DQADaHTiZwaKBCA5DQACQ0gMWhUWigQgOQ0AAkNIDNoZmHBio0AAkNQEID2ByaeWigQgOQ0AAkNIDNoelDAxUagIQGIKEBbA5NHxqo0AAkNAAJDWB0aH5UCFRoABIagIQGMDk0sxxAhQYgoQFIaACbQzPLAVRoABIagIQGsDk0fWigQgOQ0AAkNIDNoRmHBio0AAkNQEID2Bw60/rQYxedD/X79yzu8r++/0zfHyo0oBwAJDRAFA4dt3noseW/eY+v2lJt+r5vDh4zOuprfoes7JzW+2+6etmJ8/N7OXFDw6mQHT6R1v2hQgPKAUBCA8SArF/eHZ1WiS4qv+DEj85Z4MTDCvoGcuLD3//gxAMH9Dcdl+s/N7XMiXdX3prS+8/r0jFSJ5YEdfKcNrkp3R8qNKAcACQ0QCwdeuuoSB26qOKiyZmramoj3RDp0JqTH9m7w3XGik6m+5d95ZZGM6dW9ocKDUBCAwkNkBEOXVMYqkMXVf7uxHIWQ3PkaVNKnVj2oaXTWp1YOnu/PvlOXHeiwbu+5L3V/lkQqzPLvrAkaJ866lmQZk5d3pEKDUBCAwkNkHEOfar63pQ69LjFfzix7DPPnXqf9/xLly55j1dt+9rr0NKZy0rHeJ1YMrKgZ6D7H1pQGMiZjx39LtD6fe8aEuj8qNeXTv3pog5UaAASGkhogLgTu98U5uXleY9LB1+5xT0u+8oS2UfWnD7VBHVU6/drTpvq69G+T3XsgPlIhQaUA4CEBojCocN+tp3mtJJ2t3Rw4m5d3dmK+pNHFKf+zOTg1vUPHfzKiUffM8mJZd85bGfONDTHH7fE/fwnL+VSoQHlACChAWLn0EG/4IFXXGeUsxuy76vNSkhnlchZD9m3lo6szYZY19f65ECFBiChAUhoaPkOneo+tLXvrDF02Eivw2pObf28tr7k24P73M+LeWgrvXr3c+JT9XWm88fcP9n0edkHtvbNg16vnIfetTDHia35SYUGlAOAhAaIwqGDzp/uWtDeiYvF85P3V7zgxNfrDztx60nFTixnNTTa/+Q+B+PCaZvDJUo+Mq1/ffuulP4DaA6qHQ/6G0KrUwe9XhXmoQFIaCChATLAocOeh24cNtyJc9vf7MTWyQjZR75mdeaASOdvRsVy7+EbO1wHP7nG/3nNQa2/IdTQ+tDa9cj7kffb6sFiRaFxaAASGkhogPg7dNC+3/jX/3LiTTVVXme+/Oc/rkMbJbrZ7IXoI+9fMcJ7ft8nd3ud3DrvfPrX8/71hNPu27vTibt379GyKqRw5DNnGp24UOyHnOWgDw1AQgMJDZABZP389giTtIxf+rcTy98Qau88WTL3MSfueVuXjN5AOf/8yBOPez+/eeMGr1NL4u7Y0pElhaMnOPH0GTO9n3//na1O/PH8dlRoQDkASGiAuJGdTPgVesLSK068+8svnLi69nPv+fKdJ9KZtT5u2I6t9aHl9ZUUP+zEzy980bRexeIlXseUTq05atiOra2vObO8327dunrPHzx4kPs322x3f3fOb0uFBpQDgIQGSLtDW//v3OrMGpoja44tkbMjEjlL0vy435nfWLvMdD1nz57zOqTm1BpaHzso1uuxOrO2P3K/J0innteGCg0oBwAJDRC5Q8vfcE1c5jrmqi3VTlxVU2ty6OazHbb3Alr70Pqz7oJtmHQ+iXRAzSElb23a5F2vYtHLgRw3KNKRGxvPpHS/rMj8pUIDygFAQgNEQNbxjcMdCZm43HVoOe8skc+Dlu9Ukce1d6wEdeSgyPlmOashnS/Vjqh9X7qRzixnL7S+cqr/Rpkn+tJUaEA5AEhogAhQn22nObKkrHSME9edaEjpBUf9nsCgfdK4O7GVHj26e+9P60tr+2v9G4UKDSgHAAkNkA6HTqT4+dDSmfv1yW/RGxh2n1lzSuu8cdj3L+MDBw45sexba9dr3V8qNKAcACQ0QBQOrfWhpQNrTiwdunNOVkZvUNSzCdbztT6w7BsH7fNaz5frU6EBSGggoQFagkMnlGfbWfvKA2/PjfQGwp6Pjts8s+bImrOme7ZE+5sk6OwMFRpQDgASGiAShxZ96O1z3L7xpKllTiyfD100cpQTy/cUDhkQzGn152zkxWpDV7zqPotNvnNFmyfWCLuvqzm6te+tzUfL/bI+O5AKDSgHAAkNkAayflxXYBqILlnjxtue9R9v7tR3xGoDNEeXz+nQkPf71JRpXqe2OrJ1liLs2Q7rbwjlewi1/NGQ51OhAeUAIKEBInHotYOSYS5QsjbL65hdO+V4z0/3u8C1d7ycu9jkdeZts5Pe/dCcWsPqxEGPW/vOzZx5dqjpRoUGlAOAhAaIxKGPrRmYjHLByetaBXLqdKM584fP3DDdf9PVyym9vukzZnodVyKdd/PGDSm9npw2uab9oUIDkNBAQgNkANmJZHovoPfxOYHOr79ztcnBpQNb1++tfSDN+ykdWDq19vnQCXl/qNCAcgCQ0AARkFW3ekCoVlP6Zmsn3lMebp95bGWT93jU69c+fd20P9a+tOzzppqg16PdPxUagIQGEhogIx161d2Rdk5L12d7j6+fcsV7fFZNW+/x2lnXYr1+0P1J9XqZdj1UaEA5AEhogDg49NGV/ZNxuqCHNtzkPf7BzH9b9PpAhQYgoYGEBog9/wHFFiKcS3KTrQAAAABJRU5ErkJggg==">
+<title>Bub &amp; Burt</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #dfe7ef;      /* frost, from Bub's head */
+  --panel: #f9fafc;     /* snow */
+  --ink: #26304a;       /* cap ink, from Burt's black cap */
+  --ink-soft: #56627b;
+  --line: #26304a;
+  --depth: #9fb0c6;
+  --felt: #e3a33d;      /* felt, from Bub's beak and feet */
+  --felt-ink: #3a2410;
+  --felt-depth: #b97f2c;
+  --btn: #f9fafc;
+  --btn-ink: #26304a;
+  --pen: #2c3f6b;
+  --crayon: #c9482f;
+  --tile: #eef2f7;
+  --backdrop: rgba(18, 24, 39, .45);
+  --px: 3px;
+  --pxborder: 0 calc(-1 * var(--px)) 0 0 var(--line), 0 var(--px) 0 0 var(--line), calc(-1 * var(--px)) 0 0 0 var(--line), var(--px) 0 0 0 var(--line);
+  --font: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN", "Nunito", "Quicksand", system-ui, -apple-system, sans-serif;
+  --pen-font: "Gaegu", "Chalkboard SE", "Chalkboard", "Comic Neue", "Comic Sans MS", cursive;
+  --crayon-font: "Gaegu", "Marker Felt", "Chalkboard SE", "Comic Sans MS", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #121827; --panel: #1d2538; --ink: #eef2f8; --ink-soft: #a7b2c6; --line: #070a12; --depth: #070a12;
+    --felt: #e9a940; --felt-ink: #2a1a08; --felt-depth: #9c6a1c; --btn: #28314a; --btn-ink: #eef2f8;
+    --pen: #b9cdf5; --crayon: #ff8f70; --tile: #161d2e; --backdrop: rgba(0, 0, 0, .55);
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--font); -webkit-text-size-adjust: 100%; }
+body { min-height: 100vh; min-height: 100dvh; }
+button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+button:focus-visible { outline: 3px solid var(--felt); outline-offset: 5px; }
+[hidden] { display: none !important; }
+
+.app {
+  width: 100%; max-width: 480px; margin: 0 auto;
+  padding: calc(env(safe-area-inset-top, 0px) + 10px) 14px calc(env(safe-area-inset-bottom, 0px) + 18px);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.title { display: block; height: 21px; width: auto; image-rendering: pixelated; }
+.clock {
+  appearance: none; background: none; border: 0; padding: 2px 0; cursor: pointer;
+  display: flex; flex-direction: column; align-items: flex-end; line-height: 1.25; text-align: right;
+}
+.clock .time { font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.clock .wx { font-size: 13px; color: var(--ink-soft); }
+
+.travel { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--ink-soft); }
+.travel span { flex: 1 1 auto; text-align: center; }
+.travel button { appearance: none; border: 0; background: var(--btn); color: var(--btn-ink); padding: 6px 10px; margin: var(--px); font-size: 13px; font-weight: 700; box-shadow: var(--pxborder); cursor: pointer; }
+
+.stage { position: relative; margin: 0 -14px; padding: var(--px) 0; display: flex; justify-content: center; }
+#room { display: block; background: #141a2a; box-shadow: var(--pxborder); touch-action: manipulation; cursor: pointer; }
+.toast {
+  position: absolute; left: 50%; bottom: 16px; width: max-content; max-width: calc(100% - 56px);
+  transform: translate(-50%, 6px); opacity: 0; pointer-events: none;
+  background: var(--panel); color: var(--ink); padding: 8px 12px; font-size: 14px; line-height: 1.35; font-weight: 600;
+  box-shadow: var(--pxborder); transition: opacity .18s ease, transform .18s ease;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+.dialog {
+  background: var(--panel); padding: 14px 14px 12px; margin: var(--px) var(--px) calc(var(--px) * 3);
+  box-shadow: var(--pxborder), 0 calc(var(--px) * 2) 0 0 var(--depth);
+}
+.line { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+.line + .line { margin-top: 12px; }
+.line img { width: 44px; height: auto; margin-top: 1px; image-rendering: pixelated; }
+.line img.both { width: 74px; }
+.line p { margin: 0; font-size: 16.5px; line-height: 1.45; font-weight: 500; text-wrap: pretty; }
+.next { margin: 12px 0 0; font-size: 13px; color: var(--ink-soft); }
+.letter {
+  display: block;
+  margin: 0 0 14px; padding: 10px 12px; background: var(--tile); box-shadow: 0 0 0 2px var(--felt);
+}
+.letter .hand { margin-top: 1px; }
+.letter button { display: block; margin: 4px 0 0 auto; appearance: none; border: 0; background: none; padding: 2px 0; font-size: 13px; font-weight: 700; color: var(--ink-soft); cursor: pointer; text-decoration: underline; }
+
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.btn {
+  appearance: none; border: 0; cursor: pointer; touch-action: manipulation;
+  background: var(--btn); color: var(--btn-ink); margin: var(--px) var(--px) calc(var(--px) * 3);
+  padding: 10px 2px 8px; display: flex; flex-direction: column; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 700; line-height: 1.1;
+  box-shadow: var(--pxborder), 0 calc(var(--px) * 2) 0 0 var(--depth);
+}
+.btn:active { transform: translateY(var(--px)); box-shadow: var(--pxborder), 0 var(--px) 0 0 var(--depth); }
+.btn.primary { background: var(--felt); color: var(--felt-ink); --depth: var(--felt-depth); }
+.btn .ico { display: block; height: 24px; }
+.btn .ico svg { display: block; height: 24px; width: auto; }
+
+.install { margin: 0; font-size: 13px; line-height: 1.4; color: var(--ink-soft); text-align: center; }
+.install button { appearance: none; border: 0; background: none; padding: 0 0 0 4px; font-weight: 700; color: var(--ink); text-decoration: underline; cursor: pointer; }
+
+.sheet-wrap { position: fixed; inset: 0; z-index: 10; background: var(--backdrop); display: flex; align-items: flex-end; justify-content: center; }
+.sheet {
+  width: min(480px, 100%); max-height: 84vh; max-height: 84dvh; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  background: var(--panel); margin: 0 var(--px) calc(env(safe-area-inset-bottom, 0px) + 12px); padding: 16px 16px 22px;
+  box-shadow: var(--pxborder); animation: rise .22s ease-out;
+}
+@keyframes rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.sheet h2 { margin: 0; font-size: 21px; line-height: 1.2; }
+.sheet .sub { margin: 6px 0 16px; font-size: 14px; line-height: 1.4; color: var(--ink-soft); }
+.close { appearance: none; border: 0; background: var(--btn); color: var(--btn-ink); padding: 6px 12px; margin: var(--px); font-size: 14px; font-weight: 700; box-shadow: var(--pxborder); cursor: pointer; }
+.entry + .entry { margin-top: 16px; }
+.when { margin: 0 0 3px; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+.hand { display: block; }
+.crayon-hand { margin-top: 2px; transform: rotate(-1.2deg); transform-origin: left center; }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.treasure { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px; background: var(--tile); }
+.treasure img { width: 40px; height: 40px; image-rendering: pixelated; margin-bottom: 2px; }
+.t-name { font-size: 15px; font-weight: 700; }
+.treasure .hand { margin: 0 0 2px; }
+.t-date { font-size: 12px; color: var(--ink-soft); }
+.locked { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.locked img { width: 34px; height: 34px; padding: 5px; background: var(--tile); opacity: .7; image-rendering: pixelated; }
+@media (prefers-reduced-motion: reduce) { .sheet { animation: none; } .toast { transition: none; } }
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <img id="title" class="title" alt="Bub and Burt">
+    <button id="clock" class="clock" type="button" aria-label="Time and weather">
+      <span id="clockTime" class="time"></span>
+      <span id="clockWx" class="wx"></span>
+    </button>
+  </header>
+  <div id="travel" class="travel" hidden>
+    <button type="button" data-step="-1">Earlier</button>
+    <span id="travelLabel"></span>
+    <button type="button" data-step="1">Later</button>
+    <button type="button" data-step="day">Next day</button>
+    <button type="button" data-step="0">Back to now</button>
+  </div>
+  <div class="stage" id="stage">
+    <canvas id="room" role="img" aria-label="Bub and Burt at home"></canvas>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+  <section class="dialog" aria-live="polite">
+    <div id="letter" class="letter" hidden><div id="letterText"></div><button type="button" id="letterClose">Close note</button></div>
+    <div id="lines"></div>
+    <p id="next" class="next"></p>
+  </section>
+  <nav class="actions" aria-label="Things to do">
+    <button type="button" id="btnFish" class="btn primary"><span class="ico" id="icoFish"></span><span>Give fish</span></button>
+    <button type="button" id="btnDiary" class="btn"><span class="ico" id="icoDiary"></span><span>Diary</span></button>
+    <button type="button" id="btnShelf" class="btn"><span class="ico" id="icoShelf"></span><span>Treasures</span></button>
+    <button type="button" id="btnSound" class="btn" aria-pressed="false"><span class="ico" id="icoSound"></span><span>Sound</span></button>
+  </nav>
+  <p id="install" class="install" hidden>To keep them on your home screen, tap Share, then Add to Home Screen.<button type="button" id="installClose">Got it</button></p>
+</main>
+<div class="sheet-wrap" id="diaryWrap" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="diaryTitle">
+    <header><h2 id="diaryTitle">Bub’s diary</h2><button type="button" class="close">Close</button></header>
+    <p class="sub">What you missed. Bub writes in pen. Burt found a crayon.</p>
+    <div id="diaryBody"></div>
+  </div>
+</div>
+<div class="sheet-wrap" id="shelfWrap" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="shelfTitle">
+    <header><h2 id="shelfTitle">Burt’s treasure shelf</h2><button type="button" class="close">Close</button></header>
+    <p class="sub" id="shelfCount"></p>
+    <ul class="grid" id="shelfGrid"></ul>
+    <div class="locked" id="shelfLocked" role="img"></div>
+  </div>
+</div>
+<script>
+(function () {
+'use strict';
+/* ==========================================================
+   BUB & BURT — a cozy check-in game
+   Everything is drawn into a tiny 144x160 pixel buffer.
+   ========================================================== */
+
+const CONFIG = {
+  HOURS_PER_UPDATE: 3,          // a new moment every 3 hours
+  START_DATE: '2026-11-25',     // the day Burt started his treasure shelf
+  BIRTHDAYS: { bub: null, burt: null } // e.g. '03-14' for March 14
+};
+
+const W = 144, H = 160, FLOOR_Y = 80;
+const TAU = Math.PI * 2, HALF_PI = Math.PI / 2;
+
+/* ---------- small math + random helpers ---------- */
+function hashStr(s) {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const rngFor = s => mulberry32(hashStr(s));
+function hash2(x, y) {
+  let h = (Math.imul(x | 0, 374761393) + Math.imul(y | 0, 668265263)) | 0;
+  h = Math.imul(h ^ (h >>> 13), 1274126177);
+  return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+}
+const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
+const lerp = (a, b, t) => a + (b - a) * t;
+const smooth = t => { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
+const easeOutBack = t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); };
+function easeOutBounce(x) {
+  const n1 = 7.5625, d1 = 2.75;
+  if (x < 1 / d1) return n1 * x * x;
+  if (x < 2 / d1) return n1 * (x -= 1.5 / d1) * x + 0.75;
+  if (x < 2.5 / d1) return n1 * (x -= 2.25 / d1) * x + 0.9375;
+  return n1 * (x -= 2.625 / d1) * x + 0.984375;
+}
+function weightedPick(rng, items, wf) {
+  let tot = 0;
+  for (const it of items) tot += wf(it);
+  let r = rng() * tot;
+  for (const it of items) { r -= wf(it); if (r <= 0) return it; }
+  return items[items.length - 1];
+}
+function vnoise(x, y) {
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi;
+  const a = hash2(xi, yi), b = hash2(xi + 1, yi), c = hash2(xi, yi + 1), d = hash2(xi + 1, yi + 1);
+  const u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+  return lerp(lerp(a, b, u), lerp(c, d, u), v);
+}
+const BAYER4 = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map(v => (v + 0.5) / 16);
+const bayer = (x, y) => BAYER4[((y & 3) << 2) | (x & 3)];
+
+/* ---------- colors (packed little-endian RGBA) ---------- */
+function hex(h) {
+  const n = parseInt(h.slice(1), 16);
+  return ((255 << 24) | ((n & 255) << 16) | (((n >> 8) & 255) << 8) | ((n >> 16) & 255)) >>> 0;
+}
+const rgbOf = c => [c & 255, (c >>> 8) & 255, (c >>> 16) & 255];
+function pack(r, g, b) {
+  r = r < 0 ? 0 : r > 255 ? 255 : r | 0;
+  g = g < 0 ? 0 : g > 255 ? 255 : g | 0;
+  b = b < 0 ? 0 : b > 255 ? 255 : b | 0;
+  return ((255 << 24) | (b << 16) | (g << 8) | r) >>> 0;
+}
+function mix(c1, c2, t) {
+  const a = rgbOf(c1), b = rgbOf(c2);
+  return pack(Math.round(lerp(a[0], b[0], t)), Math.round(lerp(a[1], b[1], t)), Math.round(lerp(a[2], b[2], t)));
+}
+function darken(c, f) { const a = rgbOf(c); return pack(a[0] * f, a[1] * f, a[2] * f); }
+const WHITE = 0xffffffff;
+
+const C = {};
+(function initPalette() {
+  const P = {
+    // room
+    wall: '#efe1c4', wallStripe: '#e7d5b3', wallShadow: '#dcc9a6',
+    trim: '#8a5a3c', trimLight: '#a7714d', trimDark: '#6a432c',
+    floor: '#b8723f', floorLight: '#c98952', floorDark: '#9f5c30', floorLine: '#83491f',
+    rug1: '#c45d45', rug2: '#ecd3a2', rug3: '#7c9c85', rugEdge: '#9a4433', rugDark: '#a84b38',
+    couch: '#50535b', couchLight: '#646870', couchDark: '#3d4046', couchDeep: '#2c2e33',
+    sherpa: '#f4efe4', sherpaShade: '#ddd4c3', sherpaDeep: '#c9bfac',
+    plaid: '#2f5b46', plaidLight: '#e9efe9', plaidDark: '#1f3f31', plaidMid: '#7fa08f',
+    curtain: '#d29a3a', curtainLight: '#e6b65a', curtainDark: '#b07a28', curtainDeep: '#8c5e1e',
+    frame: '#f6f1e7', frameShade: '#d9d0c0', sill: '#efe6d5',
+    door: '#f3efe7', doorShade: '#d9d2c5', doorDeep: '#c2baab', knob: '#d4a548', knobLight: '#f2d27e',
+    fridge: '#a6d5c3', fridgeLight: '#c5e8da', fridgeDark: '#82b6a3', fridgeDeep: '#5f9180', chrome: '#e3eaec',
+    lampShade: '#f4e1b5', lampShadeDark: '#dcc38e', lampGlow: '#fff4cf', brass: '#b8913f', brassDark: '#8a6a2a',
+    wood: '#8f5d3b', woodLight: '#ad7750', woodDark: '#5e3a25', woodBack: '#6b4329',
+    leaf: '#5f8f4e', leafLight: '#83b56c', leafDark: '#3f6b36', pot: '#bd6a45', potLight: '#d4825b', potDark: '#934c30',
+    wicker: '#c9a26a', wickerLight: '#ddbd87', wickerDark: '#9f7a47',
+    hoodie: '#2b3756', hoodieLight: '#3d4b72', tee: '#f1efe9',
+    mat: '#8b4a3a', matLight: '#a86050',
+    outline: '#2a2430',
+    // bub
+    bubWhite: '#f6f4ef', bubSpeck: '#e7e5e0', bubShade: '#d9d9da', bubShade2: '#c3c7cd',
+    frost1: '#56677f', frost2: '#8494aa', frost3: '#b9c4d2', frost4: '#e2e7ee',
+    beak: '#e3a33d', beakDark: '#bf8128', beakLight: '#f3c066', mouth: '#7a3426',
+    eye: '#16151b', glint: '#ffffff', lid: '#c3c7cd',
+    // burt
+    burtGray: '#9d9fa5', burtGrayLight: '#b4b6bb', burtGrayDark: '#83858c',
+    burtBlack: '#1d1d22', burtBlackLight: '#393941', burtWhite: '#f5f3ef', burtWhiteShade: '#dcdad5',
+    burtEye: '#141318', burtEyeRing: '#93402f', eyeShine: '#4a4a58',
+    blush: '#f3a4a4',
+    // fx + props
+    zzz: '#e9efff', heart: '#ff6b84', heartLight: '#ffb4c1', sparkle: '#fff3b0', sweat: '#8fd2ff',
+    bubble: '#ffffff', bubbleShade: '#dde2ea',
+    fish: '#7ab7dc', fishDark: '#4b8bb8', fishLight: '#bfe1f4',
+    mug: '#d77b57', mugDark: '#a95a3d', steam: '#f2f2f2',
+    chromeLight: '#ffffff', chromeMid: '#c9cfd6', chromeDark: '#6d737b',
+    book: '#5f86b3', bookDark: '#3f6390', page: '#f7f2e4', pageShade: '#ddd5c1',
+    paper: '#fbf8f1', pencil: '#f2c94c',
+    sockNavy: '#262b40', donutPink: '#f2a2b8', donutTan: '#d9a26b',
+    red: '#d6473f', green: '#3f8f4f', yellow: '#f5cf4a', blue: '#4f8fe0', pink: '#f29bb5',
+    gold: '#f2c94c', goldDark: '#c4952c', santa: '#c8463d', santaDark: '#97322c', ghost: '#f7f7f4'
+  };
+  for (const k in P) C[k] = hex(P[k]);
+})();
+
+/* ---------- drawing target + primitives ---------- */
+const T = { buf: null, w: W, h: H };
+function target(buf, w, h) { T.buf = buf; T.w = w; T.h = h; }
+function pset(x, y, c) {
+  x = Math.floor(x); y = Math.floor(y);
+  if (x < 0 || y < 0 || x >= T.w || y >= T.h) return;
+  T.buf[y * T.w + x] = c;
+}
+function pget(x, y) {
+  x = Math.floor(x); y = Math.floor(y);
+  if (x < 0 || y < 0 || x >= T.w || y >= T.h) return 0;
+  return T.buf[y * T.w + x];
+}
+function rect(x, y, w, h, c) {
+  x = Math.floor(x); y = Math.floor(y);
+  const x1 = Math.min(T.w, x + w), y1 = Math.min(T.h, y + h);
+  for (let j = Math.max(0, y); j < y1; j++) {
+    const row = j * T.w;
+    for (let i = Math.max(0, x); i < x1; i++) T.buf[row + i] = c;
+  }
+}
+const hline = (x, y, w, c) => rect(x, y, w, 1, c);
+const vline = (x, y, h, c) => rect(x, y, 1, h, c);
+function ellipse(cx, cy, rx, ry, c) {
+  for (let y = Math.floor(cy - ry); y <= Math.ceil(cy + ry); y++)
+    for (let x = Math.floor(cx - rx); x <= Math.ceil(cx + rx); x++) {
+      const dx = (x + 0.5 - cx) / rx, dy = (y + 0.5 - cy) / ry;
+      if (dx * dx + dy * dy <= 1) pset(x, y, c);
+    }
+}
+function shadePix(x, y, f) {
+  x = Math.floor(x); y = Math.floor(y);
+  if (x < 0 || y < 0 || x >= T.w || y >= T.h) return;
+  const i = y * T.w + x;
+  T.buf[i] = darken(T.buf[i], f);
+}
+function shadeEllipse(cx, cy, rx, ry, f) {
+  for (let y = Math.floor(cy - ry); y <= Math.ceil(cy + ry); y++)
+    for (let x = Math.floor(cx - rx); x <= Math.ceil(cx + rx); x++) {
+      const dx = (x + 0.5 - cx) / rx, dy = (y + 0.5 - cy) / ry;
+      if (dx * dx + dy * dy <= 1) shadePix(x, y, f);
+    }
+}
+function line(x0, y0, x1, y1, c) {
+  x0 = Math.round(x0); y0 = Math.round(y0); x1 = Math.round(x1); y1 = Math.round(y1);
+  const dx = Math.abs(x1 - x0), dy = -Math.abs(y1 - y0), sx = x0 < x1 ? 1 : -1, sy = y0 < y1 ? 1 : -1;
+  let err = dx + dy, n = 0;
+  for (;;) {
+    pset(x0, y0, typeof c === 'function' ? c(n++) : c);
+    if (x0 === x1 && y0 === y1) break;
+    const e2 = 2 * err;
+    if (e2 >= dy) { err += dy; x0 += sx; }
+    if (e2 <= dx) { err += dx; y0 += sy; }
+  }
+}
+// string-art sprites: rows of chars, '.' = transparent
+function sprite(rows, pal, x, y, flip) {
+  x = Math.round(x); y = Math.round(y);
+  for (let j = 0; j < rows.length; j++) {
+    const r = rows[j];
+    for (let i = 0; i < r.length; i++) {
+      const ch = r[i];
+      if (ch === '.') continue;
+      const c = pal[ch];
+      if (c) pset(x + (flip ? r.length - 1 - i : i), y + j, c);
+    }
+  }
+}
+function spriteOutlined(rows, pal, x, y, oc) {
+  x = Math.round(x); y = Math.round(y);
+  for (let j = -1; j <= rows.length; j++)
+    for (let i = -1; i <= rows[0].length; i++) {
+      const at = (a, b) => b >= 0 && b < rows.length && a >= 0 && a < rows[b].length && rows[b][a] !== '.';
+      if (at(i, j)) continue;
+      if (at(i - 1, j) || at(i + 1, j) || at(i, j - 1) || at(i, j + 1)) pset(x + i, y + j, oc);
+    }
+  sprite(rows, pal, x, y);
+}
+
+/* ---------- 3x5 pixel font ---------- */
+const FONT = {
+  A: '010101111101101', B: '110101110101110', C: '011100100100011', D: '110101101101110',
+  E: '111100110100111', F: '111100110100100', G: '011100101101011', H: '101101111101101',
+  I: '111010010010111', J: '001001001101010', K: '101101110101101', L: '100100100100111',
+  M: '101111111101101', N: '110101101101101', O: '010101101101010', P: '110101110100100',
+  Q: '010101101110011', R: '110101110101101', S: '011100010001110', T: '111010010010010',
+  U: '101101101101111', V: '101101101101010', W: '101101111111101', X: '101101010101101',
+  Y: '101101010010010', Z: '111001010100111',
+  '0': '111101101101111', '1': '010110010010111', '2': '110001010100111', '3': '110001010001110',
+  '4': '101101111001001', '5': '111100110001110', '6': '011100111101111', '7': '111001010010010',
+  '8': '111101111101111', '9': '111101111001110',
+  '?': '110001010000010', '!': '010010010000010', '.': '000000000000010', ',': '000000000010100',
+  '&': '010101010101011', "'": '010010000000000', '-': '000000111000000', ' ': '000000000000000'
+};
+function textWidth(s) { return s.length * 4 - 1; }
+function text(s, x, y, c, oc) {
+  s = String(s).toUpperCase();
+  x = Math.round(x); y = Math.round(y);
+  const draw = (ox, oy, col) => {
+    for (let k = 0; k < s.length; k++) {
+      const g = FONT[s[k]] || FONT[' '];
+      for (let j = 0; j < 5; j++) for (let i = 0; i < 3; i++)
+        if (g[j * 3 + i] === '1') pset(x + k * 4 + i + ox, y + j + oy, col);
+    }
+  };
+  if (oc) for (const [ox, oy] of [[-1, 0], [1, 0], [0, -1], [0, 1], [-1, -1], [1, -1], [-1, 1], [1, 1]]) draw(ox, oy, oc);
+  draw(0, 0, c);
+}
+
+/* ---------- tiny sprites ---------- */
+const SPR = {
+  heart: ['.h.h.', 'hHhhh', 'hhhhh', '.hhh.', '..h..'],
+  sparkle: ['..s..', '..s..', 'ssWss', '..s..', '..s..'],
+  sparkleSm: ['.s.', 'sWs', '.s.'],
+  note: ['.nnn', '.n.n', '.n.n', 'nn.n', 'nn..'],
+  fish: ['.bbb..b', 'bkbbbbb', 'bLLLLbb', '.bbb..b'],
+  drop: ['.d.', 'ddd', 'ddd', '.d.'],
+  z: ['zzz', '.z.', 'zzz'],
+  Z: ['zzzz', '..z.', '.z..', 'zzzz'],
+  star: ['..y..', '.yyy.', 'yyyyy', '.y.y.'],
+  dizzy: ['.y.', 'yyy', '.y.']
+};
+const SPAL = {
+  heart: { h: C.heart, H: C.heartLight },
+  sparkle: { s: C.sparkle, W: WHITE },
+  note: { n: WHITE },
+  fish: { b: C.fish, k: C.outline, L: C.fishLight },
+  drop: { d: C.sweat },
+  z: { z: C.zzz },
+  star: { y: C.sparkle }
+};
+
+/* ==========================================================
+   CONTENT — every moment Bub and Burt can be caught in.
+   hours use the middle of each 3-hour block (1.5, 4.5 ... 22.5)
+   ========================================================== */
+const ANY = [[0, 24]];
+const AWAKE = [[6, 23]];
+const MORNING = [[6, 11]];
+const AFTERNOON = [[14, 19]];
+const EVENING = [[18, 24]];
+const LATE = [[0, 6]];
+const NAPTIME = [[9, 18], [22, 24], [0, 7]];
+
+/* ---------- Bub: the dignified big brother ---------- */
+const BUB_ACTS = [
+  { id: 'b_rest', anim: 'sitSleep', spot: 'couchL', hours: ANY, w: 3, nap: true,
+    lines: [
+      'Bub is resting his eyes. He would like it on the record that he is not asleep.',
+      'Bub is just resting his eyes for a minute. It has been ninety minutes.',
+      'Bub is on nap number three of the day. Nap number four is already on the calendar.'
+    ],
+    diary: 'Rested my eyes. Was not asleep. Burt disputes this.' },
+  { id: 'b_fish', anim: 'think:fish', spot: 'couchL', hours: AWAKE, w: 2.5,
+    lines: [
+      'Bub has been thinking about fish for forty-five minutes and has no plans to stop.',
+      'Bub is staring into the distance, remembering a fish he had once. It was a good fish.',
+      'Bub is quietly planning his next snack. The plan involves fish. The plan always involves fish.'
+    ],
+    diary: 'Thought about fish. Very productive.' },
+  { id: 'b_mug', anim: 'mug', spot: 'couchL', hours: [[6, 11], [17, 24]], w: 2,
+    lines: [
+      'Bub made himself a warm drink. He isn’t going to drink it. He just likes holding it.',
+      'Bub is holding a warm mug and gazing at nothing in particular. This is peak Bub.'
+    ],
+    diary: 'Held a warm mug. Did not drink it. Perfect.' },
+  { id: 'b_sip', anim: 'sip', spot: 'couchL', hours: AWAKE, w: 1.6,
+    lines: [
+      'Bub is sipping from the fancy cup. He holds the straw like a true gentleman.',
+      'Bub is staying hydrated. He takes hydration very seriously. Look at him go.'
+    ],
+    diary: 'Hydrated from the good cup. Felt very distinguished.' },
+  { id: 'b_door', anim: 'doorWait', spot: 'door', hours: AFTERNOON, w: 3,
+    lines: [
+      'Bub is sitting by the door. He’s not waiting for anyone. He just likes this spot.',
+      'Bub is keeping an eye on the door. Purely for security reasons. Definitely not because he misses you.'
+    ],
+    diary: 'Sat by the door for a while. Unrelated to anything.' },
+  { id: 'b_read', anim: 'read', spot: 'couchL', hours: [[7, 23]], w: 2,
+    lines: [
+      'Bub is reading a very serious book. He’s been on the same page for an hour.',
+      'Bub is reading. Every few pages, he looks up to make sure Burt is still upright.'
+    ],
+    diary: 'Read page 12. Then read page 12 again. A very thoughtful book.' },
+  { id: 'b_sun', anim: 'sunbeam', spot: 'sunbeam', hours: [[9, 17]], w: 3.5, when: c => c.weather === 'clear',
+    lines: [
+      'Bub found the one sunbeam in the house and has no intention of sharing it.',
+      'Bub is lying belly-up in the sun. He is warm. He is round. He is at peace.'
+    ],
+    diary: 'Located the sunbeam. Occupied it. A full day’s work.' },
+  { id: 'b_burrito', anim: 'burrito', spot: 'couchL', hours: ANY, w: 2.2,
+    when: c => c.cold || c.weather === 'rain' || c.weather === 'snow',
+    lines: [
+      'Bub is wrapped in the fuzzy blanket. Only his face is showing. Do not disturb the burrito.',
+      'Bub has become one with the fuzzy blanket. He’ll be back in the spring.'
+    ],
+    diary: 'Became a blanket. Highly recommend.' },
+  { id: 'b_suck', anim: 'suckIn', spot: 'rugA', hours: AWAKE, w: 1.6,
+    lines: [
+      'Bub is sucking in his belly for a photo. He can hold it for about two seconds.',
+      'Bub is practicing good posture. The belly has other plans.'
+    ],
+    diary: 'Practiced posture. The belly won. As usual.' },
+  { id: 'b_window', anim: 'windowWatch', spot: 'couchBackL', hours: [[7, 19]], w: 1.6,
+    when: c => c.weather === 'clear' || c.weather === 'cloudy',
+    lines: [
+      'Bub is watching the world go by. He has opinions about all of it.',
+      'Bub is supervising the neighborhood from the window. Everything appears to be in order.'
+    ],
+    diary: 'Watched the street. Nothing happened. Very relaxing.' },
+  { id: 'b_rain', anim: 'windowWatch', spot: 'couchBackL', hours: AWAKE, w: 4, when: c => c.weather === 'rain',
+    lines: [
+      'Bub is listening to the rain and pretending he isn’t enjoying it.',
+      'It’s raining, so Bub has declared today an official blanket day.'
+    ],
+    diary: 'Rain all day. Excellent napping conditions.' },
+  { id: 'b_snow', anim: 'windowWatch', spot: 'couchBackL', hours: AWAKE, w: 3.5, when: c => c.weather === 'snow',
+    lines: [
+      'Bub is watching the snow fall. He’d never admit it, but this is his favorite weather.'
+    ],
+    diary: 'Snow. Burt is beside himself. I am also, quietly, beside myself.' },
+  { id: 'b_fridge', anim: 'fridge', spot: 'fridge', hours: AWAKE, w: 1,
+    lines: [
+      'Bub is reading the fridge magnets for the hundredth time. His favorite is the one shaped like a fish.'
+    ],
+    diary: 'Reviewed the fridge. Still no fish. Will check again later.' },
+  { id: 'b_dance', anim: 'dance', spot: 'rugA', hours: [[8, 23]], w: 0.35,
+    lines: [
+      'Bub is dancing. He thinks nobody is watching. Please don’t tell him.'
+    ],
+    diary: 'Nothing happened today. Nothing at all. Do not ask Burt.' },
+  { id: 'b_clock', anim: 'clockWatch', spot: 'couchL', hours: [[12, 18]], w: 2, when: c => c.weekday,
+    lines: [
+      'Bub is watching the clock. In his experience, good things walk through that door around five.'
+    ],
+    diary: 'Watched the clock. It moved very slowly. I suspect sabotage.' },
+  { id: 'b_yawn', anim: 'yawn', spot: 'couchL', hours: MORNING, w: 2,
+    lines: [
+      'Bub is easing into the day. Slowly. Very, very slowly.',
+      'Bub is not a morning penguin. He has been yawning since sunrise.'
+    ],
+    diary: 'Woke up. Regretted it briefly. Recovered.' },
+  { id: 'b_pat', anim: 'bellyPat', spot: 'couchL', hours: [[11, 16], [18, 22]], w: 1.5,
+    lines: [
+      'Bub is giving his belly a satisfied pat. He’s not sure what he did, but he’s proud of it.'
+    ],
+    diary: 'Patted belly. Belly approved.' },
+  { id: 'b_tidy', anim: 'carry', spot: 'rugA', hours: AWAKE, w: 1.5,
+    lines: [
+      'Bub is tidying up after Burt. It’s a full-time job and the pay is terrible.'
+    ],
+    diary: 'Tidied up after Burt. Found three socks and a mystery noodle.' }
+];
+
+/* ---------- Burt: the goofy little brother ---------- */
+const BURT_ACTS = [
+  { id: 'u_curtain', anim: 'hideCurtain', spot: 'curtain', hours: AWAKE, w: 2.5,
+    lines: [
+      'Burt is playing hide and seek. He’s behind the curtain. His feet are sticking out. He does not know this.',
+      'Burt has been hiding behind the curtain for an hour. Nobody is looking for him. He’s having the best day of his life.'
+    ],
+    crayon: 'I HID!! nobody found me. i am SO good at this' },
+  { id: 'u_basket', anim: 'basket', spot: 'basket', hours: AWAKE, w: 2,
+    lines: [
+      'Burt is “helping” with the laundry, which means he is in the laundry basket.',
+      'Burt has moved into the laundry basket. He says it’s his house now. It smells like socks. He loves it.'
+    ],
+    crayon: 'i live in the basket now. it smels like socks' },
+  { id: 'u_stretch', anim: 'stretchFall', spot: 'rugB', hours: [[6, 12]], w: 3,
+    lines: [
+      'Burt is doing his morning stretches, which is mostly falling over.',
+      'Burt is warming up for the day. So far he’s fallen over six times. A personal best.'
+    ],
+    crayon: 'did stretches!! fell over 6 times (on purpus)' },
+  { id: 'u_fallen', anim: 'fallen', spot: 'rugB', hours: AWAKE, w: 1.5,
+    lines: [
+      'Burt fell over. He’s decided he lives here now.',
+      'Burt tipped over about twenty minutes ago and has made peace with it.'
+    ],
+    crayon: 'fell over. the floor is nice tho' },
+  { id: 'u_balance', anim: 'balance', spot: 'rugB', hours: AWAKE, w: 1.6,
+    lines: [
+      'Burt is practicing his balance. He made it four whole seconds. A new record.',
+      'Burt is doing his physical therapy homework. The homework is “stand up.” It’s going okay.'
+    ],
+    crayon: '4 SECONDS!!! (then i fell)' },
+  { id: 'u_fridge', anim: 'fridge:hopeful', spot: 'fridge', hours: AWAKE, w: 2,
+    lines: [
+      'Burt is standing in front of the fridge, hoping it will open out of pity.',
+      'Burt is guarding the fridge. Nobody asked him to. Nobody is trying to get in. He’s taking it very seriously.'
+    ],
+    crayon: 'the fridge did not open. i will try agen tomorow' },
+  { id: 'u_sock', anim: 'sock', spot: 'rugB', hours: AWAKE, w: 1.6,
+    lines: [
+      'Burt found a sock with donuts on it and is trying very hard to eat the donuts.',
+      'Burt is wrestling the donut sock. The sock is winning.'
+    ],
+    crayon: 'the sock donuts are not reel. i am sad' },
+  { id: 'u_jiggle', anim: 'bellyJiggle', spot: 'rugB', hours: AWAKE, w: 1.6,
+    lines: [
+      'Burt poked his own belly and is now fascinated by the jiggle.',
+      'Burt has decided his baby fat is actually muscle. He is flexing it at no one.'
+    ],
+    crayon: 'my belly jiggles!!! (it is musle)' },
+  { id: 'u_car', anim: 'windowWatch:excited', spot: 'couchBackR', hours: AFTERNOON, w: 3, when: c => c.weekday,
+    lines: [
+      'Burt heard a car outside and ran to the window. It wasn’t you. He’s staying there just in case.'
+    ],
+    crayon: 'a car came. it wasnt them. i am still wating' },
+  { id: 'u_snow', anim: 'windowWatch:excited', spot: 'couchBackR', hours: AWAKE, w: 4.5, when: c => c.weather === 'snow',
+    lines: [
+      'Burt saw snow outside and is pretty sure it’s a family reunion.',
+      'It’s snowing! Burt has his face pressed against the window and hasn’t blinked in a while.'
+    ],
+    crayon: 'SNOW!!!! i think my cusins are coming' },
+  { id: 'u_rain', anim: 'windowWatch:excited', spot: 'couchBackR', hours: AWAKE, w: 3, when: c => c.weather === 'rain',
+    lines: [
+      'Burt is watching the rain and trying to pick a favorite raindrop. He’s changed his mind forty times.'
+    ],
+    crayon: 'i pickd a favrit raindrop. then it fell' },
+  { id: 'u_upside', anim: 'upsideSleep', spot: 'couchR', hours: NAPTIME, w: 2, nap: true,
+    lines: [
+      'Burt is asleep upside down again. Nobody knows how. Not even Burt.'
+    ],
+    crayon: 'took a nap. woke up upside down?? how' },
+  { id: 'u_run', anim: 'runSleep', spot: 'couchR', hours: NAPTIME, w: 2, nap: true,
+    lines: [
+      'Burt is napping, but aggressively. His feet are still running.',
+      'Burt is dreaming about fish. His flippers keep doing little swimming motions.'
+    ],
+    crayon: 'i had a dreem about a GIANT fish' },
+  { id: 'u_bounce', anim: 'bounce', spot: 'couchR', hours: AWAKE, w: 2,
+    lines: [
+      'Burt is bouncing on the couch. Bub said not to. Burt heard “keep going.”',
+      'Burt is testing the couch springs. For science. The results are in, and the results are “boing.”'
+    ],
+    crayon: 'the couch goes BOING' },
+  { id: 'u_door', anim: 'doorPace', spot: 'door', hours: AFTERNOON, w: 2.5,
+    lines: [
+      'Burt is waiting by the door with his whole body. He’ll be right here when you get home.',
+      'Burt is pacing by the door. Every few minutes he presses his ear to it, just in case.'
+    ],
+    crayon: 'WAITED BY THE DOOR. they are coming back rite' },
+  { id: 'u_think', anim: 'think:question', spot: 'couchR', hours: AWAKE, w: 1,
+    lines: [
+      'Burt is thinking very hard about something. Nobody knows what. Possibly nothing.',
+      'Burt is having a big think. His face is doing a lot.'
+    ],
+    crayon: 'i had a big think today. i forgot it' },
+  { id: 'u_zoom', anim: 'zoomies', spot: 'rug', hours: AWAKE, w: 2,
+    lines: [
+      'Burt has the zoomies. Three laps around the rug so far, plus one accidental somersault.',
+      'Burt is doing laps around the rug. Nobody knows what he’s training for. Neither does Burt.'
+    ],
+    crayon: 'ZOOMIES!!!!!!' },
+  { id: 'u_wave', anim: 'wave', spot: 'couchR', hours: AWAKE, w: 1.2,
+    lines: [
+      'Burt noticed you checking in and is waving with his whole body.'
+    ],
+    crayon: 'SOMEONE LOOKED AT US!!!' },
+  { id: 'u_pie', anim: 'think:pie', spot: 'couchR', hours: AWAKE, w: 8, when: c => c.tgWeek,
+    lines: [
+      'Burt heard someone say the word “pie” and hasn’t calmed down since.'
+    ],
+    crayon: 'PIE PIE PIE PIE' }
+];
+
+/* treasure finds replace Burt's moment for one block */
+const TREASURE_ACT = { id: 'u_treasure', anim: 'treasure', spot: 'rugB', hours: ANY, w: 1, lines: [''], crayon: '' };
+
+/* ---------- together ---------- */
+const BOTH_ACTS = [
+  { id: 'x_since', anim: 'pillow', hours: [[9, 18]], w: 5, nap: true, when: c => c.weekday,
+    lines: [
+      'Bub and Burt have been napping since you left. They will tell you they were very busy.',
+      'The brothers have been asleep since you left. If anyone asks, they’ve been extremely busy.'
+    ],
+    sleepy: { bub: true, burt: true },
+    diary: 'Very busy day. Mostly napping. Burt helped.',
+    crayon: 'we did NOT nap all day (we did)' },
+  { id: 'x_pillow', anim: 'pillow', hours: [[7, 23]], w: 3, nap: true,
+    lines: [
+      'Bub is using Burt as a pillow. Burt agreed to this. Bub did not ask.',
+      'Bub fell asleep on top of Burt. Burt is trying very hard not to move. It’s the hardest thing he’s ever done.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'Napped on Burt. Excellent support. Five stars.',
+    crayon: 'bub is heavy. i love him' },
+  { id: 'x_whisper', anim: 'whisper', hours: [[6, 24]], w: 3.5,
+    lines: [
+      'Bub is trying to nap. Burt is next to him, whispering “Bub. Bub. Are you awake. Bub.”'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'Attempted a nap. Was interrupted 41 times.',
+    crayon: 'bub was awake (he said he wasnt)' },
+  { id: 'x_nightq', anim: 'whisper', hours: LATE, w: 2,
+    lines: [
+      'It’s the middle of the night and Burt is wide awake. He has questions. Bub has no answers.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: '3 a.m. Burt asked if fish have friends. Went back to sleep.',
+    crayon: 'do fish have frends' },
+  { id: 'x_night', anim: 'nightSleep', hours: [[0, 6], [22, 24]], w: 6,
+    lines: [
+      'It’s late. Bub is asleep. Burt is also asleep, but upside down and halfway off the couch.',
+      'Bub insists on keeping the night-light on. He says it’s for Burt.',
+      'Shh. They’re both asleep. Bub is snoring very politely.'
+    ],
+    sleepy: { bub: true, burt: true },
+    diary: ['Slept. Burt kicked me twice. Only twice. A peaceful night.', 'Slept beautifully. Burt slept upside down. Again.', 'Night-light on. Burt asleep. All is well.'],
+    crayon: ['zzzzzzz (i was asleep when i wrote this)', 'i dreamd about fish', 'bub snores. very politely'] },
+  { id: 'x_rain', anim: 'negotiation', hours: AWAKE, w: 4.5, when: c => c.weather === 'rain',
+    lines: [
+      'It’s raining. Bub has declared a blanket day. Burt has declared a puddle day. Negotiations are ongoing.'
+    ],
+    diary: 'Rain. Declared a blanket day. Burt has filed an appeal.',
+    crayon: 'PUDDLE DAY!!! (bub said no)' },
+  { id: 'x_situps', anim: 'situps', hours: [[7, 22]], w: 3,
+    lines: [
+      'The brothers are doing sit-ups. Every time they sit up, their bellies say hello.',
+      'Bub has done one sit-up and is calling it a personal best. Burt is on forty and counting.',
+      'Burt is on sit-up number forty. He has been on sit-up number forty for a while now.',
+      { text: 'It’s Workout Wednesday. Bub did one sit-up and has been recovering ever since. Burt is still going.', when: c => c.wednesday }
+    ],
+    boost: c => (c.wednesday ? 2.5 : 1),
+    diary: 'Did a sit-up. One. It counts.',
+    crayon: 'i did 100 situps (i did 9)' },
+  { id: 'x_pt', anim: 'pt', hours: [[8, 21]], w: 3,
+    lines: [
+      'Burt has physical therapy today. His therapist, Bub, says they’re working on “standing.”',
+      'PT update: Burt stood up for four whole seconds before tipping over. Bub wrote it down.',
+      'Bub is coaching Burt through his balance exercises. So far, his only note is “less falling.”'
+    ],
+    diary: 'PT session. Patient fell over 12 times. Progress is progress.',
+    crayon: 'bub is the best docter. i fell over for him' },
+  { id: 'x_home', anim: 'comingHome', hours: AFTERNOON, w: 3.5, when: c => c.weekday,
+    lines: [
+      'Burt asked when you’re coming home. Bub said “soon.” Burt asked again four minutes later.',
+      'Both of them are sitting by the door. Bub says it’s a coincidence.'
+    ],
+    diary: 'Burt asked when you’d be home 37 times. Told him “soon” 37 times.',
+    crayon: 'is it SOON yet' },
+  { id: 'x_stars', anim: 'stars', hours: [[18, 24]], w: 3.5, when: c => c.weather === 'clear',
+    lines: [
+      'Bub is pointing out the constellations. Burt has renamed every single one of them “Fish.”',
+      'The brothers are stargazing. Bub is making a wish. Burt is making about thirty.'
+    ],
+    diary: 'Taught Burt the constellations. He renamed them all Fish.',
+    crayon: 'i saw a star that lookd like a fish (all of them)' },
+  { id: 'x_snow', anim: 'snowWatch', hours: AWAKE, w: 4, when: c => c.weather === 'snow',
+    lines: [
+      'The brothers are watching the snow fall. Burt has named every snowflake. Bub stopped him at four hundred.'
+    ],
+    diary: 'Snowed. Burt named 400 snowflakes. I stopped him there.',
+    crayon: 'snowflake 401 is named BUB' },
+  { id: 'x_hug', anim: 'hug', hours: AWAKE, w: 2,
+    lines: [
+      'Burt is leaning on Bub. Bub is pretending to be annoyed. He isn’t moving, though.',
+      'Bub and Burt are sitting together, doing absolutely nothing. It’s their favorite thing.'
+    ],
+    diary: 'Burt leaned on me for an hour. I allowed it.',
+    crayon: 'bub is warm' },
+  { id: 'x_morning', parts: { bub: ['yawn', 'couchL'], burt: ['bounce', 'couchR'] }, hours: MORNING, w: 3,
+    lines: [
+      'Bub is not a morning penguin. Burt is very much a morning penguin. It’s been a long morning for Bub.'
+    ],
+    diary: 'Burt woke up at 6 and has not stopped since.',
+    crayon: 'GOOD MORNING!!!!!!' },
+  { id: 'x_snack', parts: { bub: ['think:fish', 'couchL'], burt: ['think:fish', 'couchR'] }, hours: AWAKE, w: 2,
+    lines: [
+      'Bub and Burt are both thinking about the same snack. They don’t know it yet.'
+    ],
+    diary: 'Thought about fish. Burt claims he was thinking about fish first.',
+    crayon: 'FISH (i thot of it first)' },
+  { id: 'x_weekend', parts: { bub: ['sitSleep', 'couchL'], burt: ['zoomies', 'rug'] }, hours: [[9, 18]], w: 3,
+    when: c => c.weekend,
+    lines: [
+      'It’s the weekend! Burt has planned nine activities. Bub has planned one nap.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'The weekend. Executed my one plan flawlessly.',
+    crayon: 'we did 9 things!!! (bub did 1)' },
+  { id: 'x_lights', anim: 'lights', hours: [[8, 23]], w: 5, when: c => c.december,
+    lines: [
+      'Bub is untangling the holiday lights. Burt is the reason they’re tangled.',
+      'Burt helped with the holiday lights. Bub will be untangling him for the rest of the afternoon.'
+    ],
+    diary: 'Untangled the lights. Then untangled Burt.',
+    crayon: 'i am a tree now' },
+  { id: 'x_ginger', anim: 'ginger', hours: [[8, 23]], w: 12, when: c => c.m === 12 && c.d <= 13,
+    lines: [
+      'Bub and Burt are eyeing the gingerbread house. It’s for decoration. They’ve both been told. Twice.',
+      'Bub and Burt are eyeing the gingerbread house. Burt has asked whether the door is load-bearing.',
+      'Bub and Burt are staring at the gingerbread house. Bub says he’s just admiring the craftsmanship. He has been admiring it for an hour.'
+    ],
+    diary: 'Admired the gingerbread house. From a respectful distance. Mostly.',
+    crayon: 'the gingerbred house is SO pretty (and yummy probly)' },
+  { id: 'x_crumbs', anim: 'crumbs', hours: [[8, 23]], w: 12, when: c => c.m === 12 && c.d >= 14 && c.d <= 23,
+    lines: [
+      'Bub and Burt were found with crumbs on their beaks. The gingerbread house is missing part of its roof. Both deny everything.',
+      'There are crumbs on Bub’s beak and crumbs on Burt’s beak. The gingerbread house is missing a corner. The investigation is ongoing.',
+      'Bub and Burt have crumbs on their beaks, and there’s a gumdrop stuck to Burt’s cheek. They would like to know why you’re asking.'
+    ],
+    diary: 'The gingerbread house had some structural problems. Unrelated to us.',
+    crayon: 'we did NOT eat the roof (it was yummy)' },
+
+  /* ---------- holidays ---------- */
+  { id: 'h_turkey', special: true, parts: { bub: ['think:heart', 'couchL'], burt: ['showPaper:turkey', 'rugB'] },
+    hours: [[7, 24]], w: 10, when: c => c.thanksgiving,
+    lines: [
+      'Burt made a hand turkey. He doesn’t have hands, so it’s a flipper turkey. Bub is going to hang it on the fridge.'
+    ],
+    diary: 'Burt made a turkey. It is going on the fridge. It is staying on the fridge.',
+    crayon: 'my turkey is the best turkey' },
+  { id: 'h_thanks', special: true, anim: 'hug', hours: [[7, 24]], w: 10, when: c => c.thanksgiving,
+    lines: [
+      'Bub is thankful for naps, fish, and, after some careful consideration, Burt.'
+    ],
+    diary: 'Thankful for: naps, fish, Burt. In that order. Possibly a different order.',
+    crayon: 'i am thankful for EVRYTHING' },
+  { id: 'h_santa', special: true, parts: { bub: ['sitSleep', 'couchL'], burt: ['windowWatch:excited', 'couchBackR'] },
+    hours: [[16, 24]], w: 10, when: c => c.xmasEve,
+    lines: [
+      'Burt is staying up to catch Santa. Bub explained that Santa only comes once you’re asleep. Burt is not convinced.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'Christmas Eve. Burt is guarding the window. I am guarding the couch.',
+    crayon: 'i will see him THIS year' },
+  { id: 'h_socks', special: true, anim: 'giftSocks', hours: [[6, 24]], w: 10, when: c => c.xmas,
+    lines: [
+      'Bub got Burt a sock for Christmas. Burt got Bub a sock. They both love their socks very much.'
+    ],
+    diary: 'Christmas. Gave Burt a sock. Received a sock. A perfect exchange.',
+    crayon: 'I GOT A SOCK!!!!' },
+  { id: 'h_nye', special: true, parts: { bub: ['sitSleep', 'couchL'], burt: ['bounce', 'couchR'] },
+    hours: [[18, 24]], w: 10, when: c => c.nye,
+    lines: [
+      'Burt is staying up until midnight. Bub has already celebrated by falling asleep.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'New Year’s Eve. Celebrated early. By sleeping.',
+    crayon: 'i stayd up til midnite!!! (almost)' },
+  { id: 'h_newyear', special: true, parts: { bub: ['sitSleep', 'couchL'], burt: ['wave', 'couchR'] },
+    hours: [[6, 24]], w: 10, when: c => c.newYear,
+    lines: [
+      'Bub’s New Year’s resolution is more naps. He’s already ahead of schedule.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'Resolution: more naps. Progress: excellent.',
+    crayon: 'my resolushun is FISH' },
+  { id: 'h_ghost', special: true, parts: { bub: ['mug', 'couchL'], burt: ['bounce:ghost', 'couchR'] },
+    hours: [[7, 24]], w: 10, when: c => c.halloween,
+    lines: [
+      'Burt is going as a ghost this year. The ghost is a sock.',
+      'Bub is in charge of the candy. So far he’s eaten more than he’s handed out.'
+    ],
+    diary: 'Halloween. Burt is a ghost. The ghost keeps falling over.',
+    crayon: 'BOO (it is me burt)' },
+  { id: 'h_valentine', special: true, parts: { bub: ['think:heart', 'couchL'], burt: ['showPaper:valentine', 'rugB'] },
+    hours: [[7, 24]], w: 10, when: c => c.valentine,
+    lines: [
+      'Burt made Bub a valentine. It’s a drawing of a fish. Bub is going to keep it forever.'
+    ],
+    diary: 'Received a valentine. It is a fish. It is going in a frame.',
+    crayon: 'i drew bub a fish' },
+  { id: 'h_bubday', special: true, parts: { bub: ['sitSleep', 'couchL'], burt: ['bounce', 'couchR'] },
+    hours: [[7, 24]], w: 10, when: c => c.bubBday,
+    lines: [
+      'It’s Bub’s birthday! He has requested one quiet nap and absolutely no singing. Burt is singing.'
+    ],
+    sleepy: { bub: true, burt: false },
+    diary: 'My birthday. Requested quiet. Received singing. Secretly delighted.',
+    crayon: 'HAPPY BIRTHDAY BUB!!!!!!' },
+  { id: 'h_burtday', special: true, parts: { bub: ['mug', 'couchL'], burt: ['stretchFall', 'rugB'] },
+    hours: [[7, 24]], w: 10, when: c => c.burtBday,
+    lines: [
+      'It’s Burt’s birthday! He has already fallen over twice from excitement. Bub has been planning this for weeks.'
+    ],
+    diary: 'Burt’s birthday. He fell over from joy. I caught him the second time.',
+    crayon: 'its MY BIRTHDAY!!!!!' }
+];
+
+/* ---------- Burt's treasures (found on a schedule both phones share) ---------- */
+const TREASURES = [
+  { id: 'sock', name: 'Donut sock', find: 'Burt found a sock with donuts on it. He doesn’t know whose it is. It’s his now.', note: 'the donuts are fake. still mine',
+    icon: ['..BB..', '.BpBB.', '.BBBB.', '.BBpB.', '.BBBBB', '..BpBB'] },
+  { id: 'button', name: 'Shiny button', find: 'Burt found a button. He doesn’t know what it’s from. He loves it anyway.', note: 'SHINY!!!',
+    icon: ['.bbbb.', 'bcbbbb', 'bkbbkb', 'bbbbbb', 'bkbbkb', '.bbbb.'] },
+  { id: 'cap', name: 'Bottle cap', find: 'Burt found a bottle cap and is wearing it as a very small hat.', note: 'it is a tiny hat',
+    icon: ['......', 'r.r.r.', 'rrrrrr', 'rwwrrr', 'rrrrrr', '......'] },
+  { id: 'crayon', name: 'Half a crayon', find: 'Burt found half a crayon. He’s been using it to write in Bub’s diary.', note: 'i usd the other half',
+    icon: ['......', '.....o', '...ooo', '.oNNo.', 'ooNo..', '.o....'] },
+  { id: 'clip', name: 'Paperclip', find: 'Burt found a paperclip and bent it into a shape he says is a fish.', note: 'it is a fish (bendy)',
+    icon: ['.ssss.', 's....s', 's.ss.s', 's.s..s', 's.ssss', 's.....'] },
+  { id: 'earbud', name: 'Single earbud', find: 'Burt found a single earbud. It’s yours. He’s not giving it back.', note: 'its mine now (it is yours)',
+    icon: ['..ww..', '.wwww.', '.wwlw.', '..ww..', '..wl..', '..wl..'] },
+  { id: 'feather', name: 'Feather', find: 'Burt found a feather. He’s pretty sure it belonged to a cousin.', note: 'from my cusin probly',
+    icon: ['....ww', '...wlw', '..wlw.', '.wlw..', '.ww...', 'g.....'] },
+  { id: 'marble', name: 'Blue marble', find: 'Burt found a marble. It keeps rolling away, so he keeps chasing it. Everyone is happy.', note: 'it rolls away. i chase it',
+    icon: ['.bbbb.', 'bwcbbb', 'bccbbb', 'bbbcbb', 'bbbbcb', '.bbbb.'] },
+  { id: 'googly', name: 'Googly eye', find: 'Burt found a googly eye. He keeps holding it up to his face to see if Bub notices.', note: 'it looks at me',
+    icon: ['.llll.', 'lwwwwl', 'lwkkwl', 'lwkkwl', 'lwwwwl', '.llll.'] },
+  { id: 'pinecone', name: 'Pinecone', find: 'Burt found a pinecone. It’s spiky. He respects it.', note: 'spiky. respect',
+    icon: ['..nn..', '.nNnn.', '.nnNn.', '.nNnn.', '..nn..', '...N..'] },
+  { id: 'pick', name: 'Guitar pick', find: 'Burt found a guitar pick. He’s starting a band. He doesn’t have a guitar.', note: 'my band is called FISH',
+    icon: ['vvvvvv', 'vVvvvv', '.vvvv.', '.vvvv.', '..vv..', '......'] },
+  { id: 'duck', name: 'Rubber duck', find: 'Burt found a rubber duck. They’re best friends now. Bub says he’s fine with it.', note: 'NEW BEST FRIEND (sorry bub)',
+    icon: ['.yy...', 'ykyo..', '.yy...', 'yyyyyy', 'yyyyyy', '.yyyy.'] },
+  { id: 'ball', name: 'Bouncy ball', find: 'Burt found a bouncy ball. So far it has bounced off the fridge, the door, and Bub.', note: 'boing',
+    icon: ['.rrrr.', 'ryyyyr', 'rrrrrr', 'ryyyyr', 'rrrrrr', '.rrrr.'] },
+  { id: 'tie', name: 'Hair tie', find: 'Burt found a hair tie and is trying to use it as a lasso. He has lassoed nothing.', note: 'i am a cowboy',
+    icon: ['.pppp.', 'p....p', 'p....p', 'p....p', 'p....p', '.pppp.'] },
+  { id: 'coin', name: 'Shiny coin', find: 'Burt found a coin. He says he’s rich now and is planning to buy a fish.', note: 'I AM RICH',
+    icon: ['.YYYY.', 'YyyyyY', 'YywyyY', 'YyyyyY', 'YyyyyY', '.YYYY.'] },
+  { id: 'noodle', name: 'Dried noodle', find: 'Burt found a single dried noodle. He’s saving it for a special occasion.', note: 'for a speshul day',
+    icon: ['......', 'tt..tt', '.tttt.', '......', 'tt..tt', '.tttt.'] },
+  { id: 'fortune', name: 'Fortune', find: 'Burt found a fortune that says “Good things are coming.” He’s pretty sure it means fish.', note: 'it says FISH (it does not)',
+    icon: ['......', 'wwwwww', 'wrwrrw', 'wwwwww', '......', '......'] },
+  { id: 'shell', name: 'Seashell', find: 'Burt found a seashell. He held it up to his ear and says he can hear Bub snoring.', note: 'it sounds like bub',
+    icon: ['.tttt.', 'twtwtt', 'twtwtt', '.twtt.', '..tt..', '......'] },
+  { id: 'candle', name: 'Birthday candle', find: 'Burt found a birthday candle. He’s saving it for Bub’s birthday. It’s a secret. He has told Bub.', note: 'for bubs birthday (secret)',
+    icon: ['...o..', '...y..', '..pw..', '..wp..', '..pw..', '..wp..'] },
+  { id: 'mint', name: 'Wrapped mint', find: 'Burt found a wrapped mint. He’s keeping it for emergencies.', note: 'for emergensies only',
+    icon: ['......', 'r.ww.r', 'rwrwwr', 'r.ww.r', '......', '......'] },
+  { id: 'pebble', name: 'Shiny pebble', find: 'Burt found the shiniest pebble he has ever seen. He has seen two.', note: 'the shiniest rock',
+    icon: ['......', '.gggg.', 'gglggg', 'gggggG', '.gGGG.', '......'] },
+  { id: 'key', name: 'Mysterious key', find: 'Burt found a mysterious key. Nobody knows what it opens. He’s tried it on everything, including Bub.', note: 'it opens SOMETHING',
+    icon: ['.yy...', 'y.y...', '.yyyyy', '....y.', '....yy', '......'] },
+  { id: 'bell', name: 'Jingle bell', find: 'Burt found a jingle bell. Bub can now hear him coming from three rooms away.', note: 'jingle jingle',
+    icon: ['..YY..', '.yyyy.', '.ywyy.', 'yyyyyy', 'yYkkYy', '..yy..'] },
+  { id: 'star', name: 'Star sticker', find: 'Burt found a gold star sticker and has awarded it to himself.', note: 'i am a star now',
+    icon: ['..y...', '..yy..', 'yyyyy.', '.yyy..', '.y.y..', '......'] }
+];
+const ICON_PAL = {
+  k: C.outline, w: hex('#f7f4ee'), l: hex('#c9ced6'), g: hex('#9da3ab'), G: hex('#6b7178'),
+  y: hex('#f2c94c'), Y: hex('#c99a2e'), o: hex('#e98b3a'), r: hex('#d9534f'), p: hex('#f29bb5'),
+  b: hex('#5f9fd8'), c: hex('#a9dcef'), B: hex('#2b3756'), n: hex('#9b6a43'), N: hex('#6b4428'),
+  t: hex('#d9b27c'), s: hex('#c7ccd3'), v: hex('#9b7fd1'), V: hex('#c2adf0')
+};
+
+/* ---------- reactions ---------- */
+const POKE = {
+  bubAwake: [
+    'Bub acknowledges you with one slow, dignified blink.',
+    'Bub blinked at you. In Bub, that’s basically a hug.',
+    'Bub gave you a look that says “yes, hello, I’m very busy.”'
+  ],
+  bubAsleep: [
+    'Bub opened one eye, confirmed it was you, and went back to sleep.',
+    'Bub is pretending he didn’t feel that.'
+  ],
+  burtAwake: [
+    'Burt fell over. Physical therapy is going great.',
+    'Burt fell over, then got back up like nothing happened.',
+    'Burt fell over out of pure excitement.'
+  ],
+  burtAsleep: [
+    'Burt’s feet did a little run. He’s chasing something in his dream.',
+    'Burt mumbled “five more minutes” and went right back to sleep.'
+  ],
+  burtSpin: 'Burt did a spin! Then he fell over. Worth it.',
+  lampOff: 'Bub turned the lamp back on. He prefers it cozy.',
+  lampOn: 'Lamp on. Bub approves of the extra coziness.',
+  fridge: 'The fridge is closed. Burt has already checked. Twice.',
+  window: {
+    snow: 'It’s snowing. Burt would like you to know he’s aware.',
+    rain: 'Rain on the window. Bub calls this “napping weather.”',
+    clear: 'Bub says the view is fine. Burt says the view is the best view.',
+    cloudy: 'Cloudy out. Bub thinks it might be a blanket kind of day.'
+  }
+};
+const SNACK_LINES = [
+  'Burt ate his fish before it touched the ground. Bub is saving his for later.',
+  'Burt ate another fish in one bite. Bub tucked his away with the first one. He has a system.',
+  'Burt’s belly is officially full. Bub’s fish collection is growing.'
+];
+const SNACK_MORE = 'Bub has gently suggested that’s enough fish for now. Burt strongly disagrees.';
+const SNACK_ASLEEP = 'Burt woke up just long enough to eat his fish. Bub saved his without opening his eyes.';
+
+/* ==========================================================
+   WORLD — clock, calendar, weather, scenes, treasures, diary.
+   Everything is derived from the date, so every phone agrees.
+   ========================================================== */
+const HPU = CONFIG.HOURS_PER_UPDATE;
+const BLOCKS = Math.round(24 / HPU);
+const pad2 = n => (n < 10 ? '0' : '') + n;
+const keyOf = d => d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+function parseKey(k) { const p = k.split('-'); return { y: +p[0], m: +p[1], d: +p[2] }; }
+function keyAddDays(k, n) { const q = parseKey(k); return keyOf(new Date(q.y, q.m - 1, q.d + n, 12)); }
+function dayIndex(k) { const q = parseKey(k); return Math.round(Date.UTC(q.y, q.m - 1, q.d) / 86400000); }
+function blockOfDate(dt) { return Math.min(BLOCKS - 1, Math.floor((dt.getHours() + dt.getMinutes() / 60) / HPU)); }
+function blockStart(k, b) { const q = parseKey(k); return new Date(q.y, q.m - 1, q.d, b * HPU, 0, 0, 0); }
+function prevBlock(k, b) { return b > 0 ? [k, b - 1] : [keyAddDays(k, -1), BLOCKS - 1]; }
+function nextBlockStart(k, b) { return b < BLOCKS - 1 ? blockStart(k, b + 1) : blockStart(keyAddDays(k, 1), 0); }
+function thanksgivingDay(y) { const first = new Date(y, 10, 1).getDay(); return 1 + ((4 - first + 7) % 7) + 21; }
+
+/* chance of [snow, rain, cloudy] by month; the rest is clear */
+const WX_TABLE = {
+  1: [0.4, 0.06, 0.25], 2: [0.34, 0.08, 0.25], 3: [0.14, 0.2, 0.26], 4: [0, 0.3, 0.22], 5: [0, 0.28, 0.18],
+  6: [0, 0.18, 0.12], 7: [0, 0.16, 0.1], 8: [0, 0.18, 0.12], 9: [0, 0.2, 0.2], 10: [0, 0.22, 0.24],
+  11: [0.2, 0.15, 0.3], 12: [0.38, 0.07, 0.25]
+};
+function weatherFor(k, b, m) {
+  const x = rngFor('wx:' + k + ':' + Math.floor(b / 4))();
+  const t = WX_TABLE[m];
+  if (x < t[0]) return 'snow';
+  if (x < t[0] + t[1]) return 'rain';
+  if (x < t[0] + t[1] + t[2]) return 'cloudy';
+  return 'clear';
+}
+
+function blockCtx(k, b) {
+  const q = parseKey(k), dow = new Date(q.y, q.m - 1, q.d, 12).getDay(), tg = thanksgivingDay(q.y);
+  const mmdd = pad2(q.m) + '-' + pad2(q.d), hour = b * HPU + HPU / 2;
+  const c = {
+    key: k, block: b, y: q.y, m: q.m, d: q.d, dow, hour, mmdd,
+    weather: weatherFor(k, b, q.m),
+    weekend: dow === 0 || dow === 6, wednesday: dow === 3,
+    cold: q.m >= 10 || q.m <= 4,
+    thanksgiving: q.m === 11 && q.d === tg,
+    tgWeek: q.m === 11 && Math.abs(q.d - tg) <= 3 && q.d !== tg,
+    december: q.m === 12 && q.d <= 23,
+    xmasEve: q.m === 12 && q.d === 24, xmas: q.m === 12 && q.d === 25,
+    nye: q.m === 12 && q.d === 31, newYear: q.m === 1 && q.d === 1,
+    halloween: q.m === 10 && q.d === 31, valentine: q.m === 2 && q.d === 14,
+    bubBday: CONFIG.BIRTHDAYS.bub === mmdd, burtBday: CONFIG.BIRTHDAYS.burt === mmdd,
+    tgFridge: (q.m === 11 && q.d >= tg) || q.m === 12,
+    valFridge: q.m === 2 && q.d >= 14
+  };
+  c.weekday = !c.weekend;
+  c.workHours = c.weekday && hour > 8.5 && hour < 17.5;
+  return c;
+}
+
+function inHours(hrs, h) { for (const r of hrs) if (h >= r[0] && h < r[1]) return true; return false; }
+function eligible(a, c) { return inHours(a.hours || ANY, c.hour) && (!a.when || a.when(c)); }
+function weightOf(a, c) {
+  let w = a.w || 1;
+  if (a.nap && c.workHours) w *= 1.7;     // they absolutely nap all day while you're at work
+  if (a.boost) w *= a.boost(c);
+  return w;
+}
+function lineOptions(a, c) {
+  const out = [];
+  a.lines.forEach((l, idx) => {
+    if (typeof l === 'string') out.push({ text: l, idx });
+    else if (!l.when || l.when(c)) out.push({ text: l.text, idx });
+  });
+  return out;
+}
+const RUG_SPOTS = ['rug', 'rugA', 'rugB', 'sunbeam'];
+function conflicts(a, b) {
+  if (a.spot === b.spot) return true;
+  return (a.spot === 'rug' && RUG_SPOTS.includes(b.spot)) || (b.spot === 'rug' && RUG_SPOTS.includes(a.spot));
+}
+
+/* ---------- treasures: same schedule on every phone ---------- */
+const START_IDX = dayIndex(CONFIG.START_DATE);
+const TREASURE_ORDER = (function () {
+  const r = rngFor('treasure-order'), rest = [];
+  for (let i = 1; i < TREASURES.length; i++) rest.push(i);
+  for (let i = rest.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); const tmp = rest[i]; rest[i] = rest[j]; rest[j] = tmp; }
+  return [0].concat(rest);
+})();
+function findBlockFor(k) {
+  const di = dayIndex(k) - START_IDX;
+  if (di < 0) return -1;
+  if (di === 0) return 3;
+  const r = rngFor('find:' + k);
+  return r() < 0.42 ? 3 + Math.floor(r() * 4) : -1;
+}
+const foundCache = new Map();
+function foundList(k, b) {
+  const id = k + ':' + b;
+  if (foundCache.has(id)) return foundCache.get(id);
+  const di = dayIndex(k) - START_IDX, out = [];
+  let key = CONFIG.START_DATE;
+  for (let i = 0; i <= di && out.length < TREASURES.length; i++) {
+    const fb = findBlockFor(key);
+    if (fb >= 0 && (i < di || fb <= b)) out.push({ item: TREASURES[TREASURE_ORDER[out.length]], key, block: fb });
+    key = keyAddDays(key, 1);
+  }
+  foundCache.set(id, out);
+  return out;
+}
+function findAt(k, b) {
+  if (findBlockFor(k) !== b) return null;
+  const list = foundList(k, b), last = list[list.length - 1];
+  return last && last.key === k && last.block === b ? last : null;
+}
+
+/* ---------- scenes ---------- */
+function hatsFor(c) {
+  if (c.xmasEve || c.xmas) return { bub: 'santa', burt: 'santa' };
+  if ((c.nye && c.hour >= 18) || c.newYear) return { bub: 'party', burt: 'party' };
+  return { bub: c.bubBday ? 'party' : null, burt: c.burtBday ? 'party' : null };
+}
+function rawScene(k, b, salt) {
+  const c = blockCtx(k, b);
+  const r = rngFor('scene:' + k + ':' + b + ':' + salt);
+  const find = findAt(k, b);
+  const bothEl = BOTH_ACTS.filter(a => eligible(a, c));
+  const specials = bothEl.filter(a => a.special);
+  let pBoth = c.hour < 6 ? 0.9 : specials.length ? 0.85 : 0.45;
+  if (find) pBoth = 0;
+  const choose = a => { const o = lineOptions(a, c); return o[Math.floor(r() * o.length)] || { text: '', idx: 0 }; };
+  const sc = { c, key: k, block: b, hats: hatsFor(c), find };
+  if (bothEl.length && r() < pBoth) {
+    const pool = specials.length ? specials : bothEl;
+    const a = weightedPick(r, pool, x => weightOf(x, c));
+    const o = choose(a);
+    return Object.assign(sc, { kind: 'both', both: a, line: o.text, variant: o.idx });
+  }
+  const bubEl = BUB_ACTS.filter(a => eligible(a, c));
+  const bub = weightedPick(r, bubEl.length ? bubEl : [BUB_ACTS[0]], x => weightOf(x, c));
+  let burtEl = find ? [TREASURE_ACT] : BURT_ACTS.filter(a => eligible(a, c) && !conflicts(a, bub));
+  if (!burtEl.length) burtEl = [BURT_ACTS.find(a => a.id === 'u_run')];
+  const burt = weightedPick(r, burtEl, x => weightOf(x, c));
+  const ob = choose(bub), ou = find ? { text: find.item.find, idx: 0 } : choose(burt);
+  return Object.assign(sc, { kind: 'pair', bub, burt, bubLine: ob.text, burtLine: ou.text, vb: ob.idx, vu: ou.idx });
+}
+function sameScene(a, b) {
+  if (a.kind !== b.kind) return false;
+  if (a.kind === 'both') return a.both.id === b.both.id;
+  return a.bub.id === b.bub.id || a.burt.id === b.burt.id;
+}
+const sceneCache = new Map();
+function resolveScene(k, b, depth) {
+  let s = rawScene(k, b, 0);
+  if (depth <= 0 || s.find) return s;
+  const pb = prevBlock(k, b), prev = resolveScene(pb[0], pb[1], depth - 1);
+  for (let salt = 1; salt < 6 && sameScene(s, prev); salt++) s = rawScene(k, b, salt);
+  return s;
+}
+function sceneAt(k, b) {
+  const id = k + ':' + b;
+  if (!sceneCache.has(id)) sceneCache.set(id, resolveScene(k, b, 3));
+  return sceneCache.get(id);
+}
+function diaryEntries(k, b, n) {
+  const out = [];
+  let key = k, blk = b;
+  for (let i = 0; i < n; i++) {
+    const s = sceneAt(key, blk);
+    let pen, crayon;
+    const pickD = d => (Array.isArray(d) ? d[hashStr(key + ':' + blk) % d.length] : d);
+    if (s.kind === 'both') { pen = pickD(s.both.diary); crayon = pickD(s.both.crayon); }
+    else {
+      pen = pickD(s.bub.diary);
+      crayon = s.find ? 'found ' + s.find.item.name.toLowerCase() + '!! ' + s.find.item.note : pickD(s.burt.crayon);
+    }
+    out.push({ key, block: blk, pen, crayon });
+    const p = prevBlock(key, blk); key = p[0]; blk = p[1];
+  }
+  return out;
+}
+
+/* ---------- light + sky by time of day ---------- */
+const AMB_KEYS = [
+  [0, [0.30, 0.33, 0.52]], [5, [0.31, 0.33, 0.52]], [6.3, [0.62, 0.56, 0.62]], [7.5, [0.92, 0.86, 0.82]],
+  [9, [1, 0.97, 0.92]], [13, [1, 1, 0.97]], [16.5, [1, 0.94, 0.85]], [18.3, [0.93, 0.73, 0.63]],
+  [19.3, [0.58, 0.52, 0.66]], [20.5, [0.36, 0.37, 0.58]], [24, [0.30, 0.33, 0.52]]
+];
+const SKY_KEYS = [
+  [0, '#0d1330', '#1a2550'], [5, '#141a3c', '#2a2b55'], [6.2, '#3b4a85', '#e09a7a'], [7.2, '#6d9fdc', '#f3d3a8'],
+  [9, '#6eaee8', '#cbe7f7'], [13, '#5fa6e6', '#bfe2fa'], [16.5, '#6fa0d6', '#f0d6a6'], [18.2, '#5c5a9e', '#f2905c'],
+  [19.2, '#2d3266', '#a35f7c'], [20.5, '#131b3e', '#263160'], [24, '#0d1330', '#1a2550']
+].map(k => [k[0], hex(k[1]), hex(k[2])]);
+function keyAt(keys, h) {
+  for (let i = 0; i < keys.length - 1; i++)
+    if (h >= keys[i][0] && h <= keys[i + 1][0]) return [i, (h - keys[i][0]) / (keys[i + 1][0] - keys[i][0])];
+  return [keys.length - 2, 1];
+}
+function envFor(dt, weather, lampOverride) {
+  const h = dt.getHours() + dt.getMinutes() / 60 + dt.getSeconds() / 3600;
+  const [ai, at] = keyAt(AMB_KEYS, h), a0 = AMB_KEYS[ai][1], a1 = AMB_KEYS[ai + 1][1];
+  const wm = weather === 'cloudy' ? [0.9, 0.92, 0.97] : weather === 'rain' ? [0.78, 0.82, 0.92] : weather === 'snow' ? [0.94, 0.96, 1.02] : [1, 1, 1];
+  const amb = [lerp(a0[0], a1[0], at) * wm[0], lerp(a0[1], a1[1], at) * wm[1], lerp(a0[2], a1[2], at) * wm[2]];
+  const bright = (amb[0] + amb[1] + amb[2]) / 3;
+  const night = clamp((0.86 - bright) / 0.48, 0, 1);
+  const [si, stt] = keyAt(SKY_KEYS, h);
+  let top = mix(SKY_KEYS[si][1], SKY_KEYS[si + 1][1], stt), bot = mix(SKY_KEYS[si][2], SKY_KEYS[si + 1][2], stt);
+  if (weather !== 'clear') {
+    const g = weather === 'cloudy' ? ['#9aa6b6', '#2a3042', 0.45] : weather === 'rain' ? ['#7f8a9c', '#1f2433', 0.62] : ['#c3ccd8', '#39415a', 0.5];
+    const gc = mix(hex(g[0]), hex(g[1]), night);
+    top = mix(top, gc, g[2]); bot = mix(bot, gc, g[2] * 0.85);
+  }
+  let lamp = (bright < 0.8 || weather === 'rain' || weather === 'snow') ? 1 : 0;
+  if (h >= 0.5 && h < 6) lamp = 0.75;                 // Bub's night-light
+  if (lampOverride === true) lamp = 1; else if (lampOverride === false) lamp = 0;
+  const m = dt.getMonth() + 1;
+  return {
+    h, amb, night, skyTop: top, skyBot: bot, lamp, weather, month: m,
+    sunUp: h > 6.7 && h < 18.1, sunbeam: weather === 'clear' && h >= 8.5 && h <= 16.8,
+    snowy: weather === 'snow',
+    season: (m === 12 || m <= 2) ? 'winter' : m <= 5 ? 'spring' : m <= 8 ? 'summer' : 'fall'
+  };
+}
+function sunbeamGeom(h) {
+  const off = (12.5 - h) * 4, sl = (12.5 - h) * 2.6;
+  return { y0: 88, y1: 116, xa0: 50 + off, xb0: 90 + off, xa1: 50 + off + sl, xb1: 90 + off + sl };
+}
+
+/* ==========================================================
+   ART — penguins, room, window, light, props, effects
+   ========================================================== */
+const FRAME = new Uint32Array(W * H), BG = new Uint32Array(W * H), PREV = new Uint32Array(W * H);
+
+/* ---------- penguins (drawn from shapes so they can squish, tip, and roll) ---------- */
+const DEF = {
+  bub: { pivotV: -13.5, lieDrop: 2.9, headTop: -27, beakV: -16.6 },
+  burt: { pivotV: -12, lieDrop: 1.6, headTop: -26.2, beakV: -16.4 }
+};
+function newPose(who, x, y) {
+  const f = who === 'burt' ? 0.38 : 0.32;
+  return { who, x, y, gy: y, rot: 0, sx: 1, sy: 1, pu: 0, pv: null, eyes: 'open', eyesL: null, eyesR: null,
+    lx: 0, ly: 0, flL: f, flR: f, beak: 0, back: false, blush: false, hat: null, wrap: false,
+    feetL: 0, feetR: 0, belly: 1, crease: false, asleep: false, shadow: true, zb: 0, hidden: false, clipY: null, spot: null };
+}
+function pivotOf(P) { const pv = P.pv == null ? DEF[P.who].pivotV : P.pv; return [P.pu * P.sx, pv * P.sy]; }
+function toWorld(P, u, v) {
+  const pp = pivotOf(P), lx = u * P.sx - pp[0], ly = v * P.sy - pp[1];
+  const c = Math.cos(P.rot), s = Math.sin(P.rot);
+  return [P.x + pp[0] + lx * c - ly * s, P.y + pp[1] + lx * s + ly * c];
+}
+const eV = (u, v, cx, cy, rx, ry) => { const dx = (u - cx) / rx, dy = (v - cy) / ry; return dx * dx + dy * dy; };
+function flipperHit(u, v, sx, sy, ang, side, len, wid) {
+  const dx = u - sx, dy = v - sy, ax = Math.sin(ang) * side, ay = Math.cos(ang);
+  const along = dx * ax + dy * ay, perp = -dx * ay + dy * ax;
+  const a = (along - len * 0.5) / (len * 0.5), p = perp / wid;
+  return a * a + p * p <= 1 ? along / len : -1;
+}
+function frostCol(u, v, bias) {
+  const fu = Math.floor(u), fv = Math.floor(v);
+  const n = vnoise(fu * 0.55 + 3.1, fv * 0.55 + 7.7) * 0.65 + hash2(fu * 3 + 1, fv * 5 + 2) * 0.35 + (bias || 0);
+  return n < 0.4 ? C.frost1 : n < 0.57 ? C.frost2 : n < 0.74 ? C.frost3 : C.frost4;
+}
+const speck = (u, v, a, b, p) => (hash2(Math.floor(u) * 7 + 3, Math.floor(v) * 11 + 5) < p ? b : a);
+
+function eyeBub(u, v, ex, ey, st) {                                    // 2x3 bead eyes with a shine
+  const i = Math.floor(u - ex), j = Math.floor(v - ey);
+  if (i < -1 || i > 2 || j < -1 || j > 3) return 0;
+  switch (st) {
+    case 'open': if (i >= 0 && i < 2 && j >= 0 && j < 3) return (i === 0 && j === 0) ? C.glint : (i === 1 && j === 2) ? C.eyeShine : C.eye; break;
+    case 'wide': if (i >= 0 && i < 2 && j >= -1 && j < 3) return (i === 0 && j === -1) ? C.glint : (i === 1 && j === 2) ? C.eyeShine : C.eye; break;
+    case 'closed': if (i >= 0 && i < 2 && j === 2) return C.eye; break;
+    case 'half': if (i >= 0 && i < 2 && j >= 1 && j < 3) return (i === 0 && j === 1) ? C.glint : C.eye; if (i >= 0 && i < 2 && j === 0) return C.lid; break;
+    case 'happy': if (j === 1 && i >= 0 && i < 2) return C.eye; if (j === 2 && (i === -1 || i === 2)) return C.eye; break;
+    case 'x': if (((j === 0 || j === 2) && (i === -1 || i === 1)) || (i === 0 && j === 1)) return C.eye; break;
+  }
+  return 0;
+}
+function eyeBurt(u, v, ex, ey, st) {                                   // big round black eyes, innocent and earnest
+  const i = Math.floor(u - ex), j = Math.floor(v - ey);
+  if (i < 0 || i > 2 || j < -1 || j > 2) return 0;
+  switch (st) {
+    case 'open': if (j >= 0) return (i === 0 && j === 0) ? C.glint : (i === 2 && j === 2) ? C.eyeShine : C.burtEye; break;
+    case 'wide': return (i === 0 && j === -1) ? C.glint : (i === 2 && j === 2) ? C.eyeShine : C.burtEye;
+    case 'closed': if (j === 2) return C.burtEye; break;
+    case 'half': if (j >= 1) return (i === 0 && j === 1) ? C.glint : C.burtEye; if (j === 0) return C.burtWhiteShade; break;
+    case 'happy': if ((j === 1 && i === 1) || (j === 2 && i !== 1)) return C.burtEye; break;
+    case 'x': if (j >= 0 && ((i !== 1 && j !== 1) || (i === 1 && j === 1))) return C.burtEye; break;
+  }
+  return 0;
+}
+function hatPx(u, v, kind, ht) {
+  if (kind === 'santa') {
+    if (v >= ht - 1.5 && v < ht + 1.5 && Math.abs(u) < 5.8) return C.ghost;
+    const k = (ht - 1.5 - v) / 8;
+    if (k >= 0 && k <= 1) { const cx = k * k * 5, hw = lerp(5.4, 0.8, k); if (Math.abs(u - cx) < hw) return k > 0.8 ? C.santaDark : C.santa; }
+    if (eV(u, v, 5.4, ht - 9.6, 1.7, 1.7) <= 1) return C.ghost;
+  } else if (kind === 'party') {
+    const k = (ht + 0.5 - v) / 9;
+    if (k >= 0 && k <= 1) { const hw = lerp(4.2, 0.4, k); if (Math.abs(u - 1) < hw) return (Math.floor((ht + 0.5 - v) / 2) % 2) ? C.yellow : C.pink; }
+    if (eV(u, v, 1, ht - 9.4, 1.4, 1.4) <= 1) return C.blue;
+  } else if (kind === 'sock') {
+    if (eV(u, v, 0, ht + 1.6, 7.6, 3.3) <= 1 && v < ht + 2.6) return (Math.floor(v) % 3 === 0) ? C.bubShade : C.tee;
+    if (eV(u, v, 7.4, ht + 3.4, 2.1, 3) <= 1) return C.tee;
+  }
+  return 0;
+}
+function sampleBub(u, v, p) {                                        // rounder Bub: less tall, more egg
+  if (p.hat) { const hc = hatPx(u, v, p.hat, DEF.bub.headTop); if (hc) return hc; }
+  if (p.wrap) {
+    const face = eV(u, v, 0, -18, 5.8, 4.8) <= 1;
+    if (!face && (eV(u, v, 0, -19.3, 9.8, 9) <= 1 || eV(u, v, 0, -10.2, 11.8, 10.6) <= 1)) {
+      if (v > -0.6) return 0;
+      const n = vnoise(Math.floor(u) * 0.7 + 11, Math.floor(v) * 0.7 + 3);
+      return n < 0.3 ? C.sherpaShade : n > 0.82 ? C.sherpaDeep : C.sherpa;
+    }
+  }
+  const back = p.back, lx = p.lx, ly = p.ly;
+  if (!back) {
+    const el = eyeBub(u, v, -5 + lx, -21 + ly, p.eyesL || p.eyes); if (el) return el;
+    const er = eyeBub(u, v, 3 + lx, -21 + ly, p.eyesR || p.eyes); if (er) return er;
+    const bx = lx * 0.6, by = DEF.bub.beakV + ly * 0.5;
+    if (p.beak) {
+      if (eV(u, v, bx, by + 0.4, 2.4, 1.9) <= 1) { const fv = Math.floor(v - by); return fv <= -1 ? C.beak : fv === 0 ? C.mouth : C.beakDark; }
+    } else if (eV(u, v, bx, by, 2.3, 1.45) <= 1) {
+      return v > by + 0.5 ? C.beakDark : (u < bx - 1 && v < by - 0.3 ? C.beakLight : C.beak);
+    }
+    if (p.blush && v >= -18 + ly && v < -17 + ly && ((u >= -7.5 + lx && u < -5.5 + lx) || (u >= 5.5 + lx && u < 7.5 + lx))) return C.blush;
+  }
+  const fl = flipperHit(u, v, -7.8, -15.2, p.flL, -1, 10.4, 2.5), fr = flipperHit(u, v, 7.8, -15.2, p.flR, 1, 10.4, 2.5);
+  if (fl >= 0 || fr >= 0) return frostCol(u, v, Math.max(fl, fr) > 0.75 ? 0.2 : 0);
+  if (eV(u, v, -4 + p.feetL, -0.8, 2.8, 1.5) <= 1 || eV(u, v, 4 + p.feetR, -0.8, 2.8, 1.5) <= 1) return v > -0.4 ? C.beakDark : C.beak;
+  const he = eV(u, v, 0, -19.3, 8.6, 7.7);
+  if (he <= 1) {
+    if (back) return frostCol(u, v, 0);
+    const capLine = -22.6 + 2.3 * Math.exp(-(u * u) / 3.2);
+    if (v < capLine || (Math.abs(u) > 6.8 && v < -17)) return frostCol(u, v, 0);
+    if (he > 0.8 && v > -17.3) return C.bubShade;
+    return speck(u, v, C.bubWhite, C.bubSpeck, 0.12);
+  }
+  const be = eV(u, v, 0, -10.2, 10.6 * p.belly, 9.4);
+  if (be <= 1) {
+    if (back) return frostCol(u, v, 0.22);
+    if (p.crease && v >= -10 && v < -9 && Math.abs(u) < 6.5) return C.bubShade2;
+    if (be > 0.86) return C.bubShade2;
+    if (be > 0.66 && (u > 2.5 || v > -4.5)) return C.bubShade;
+    return speck(u, v, C.bubWhite, C.bubSpeck, 0.1);
+  }
+  return 0;
+}
+function sampleBurt(u, v, p) {
+  const lx = p.lx, ly = p.ly, back = p.back;
+  if (p.hat === 'ghost') {
+    if (eV(u, v, 0, -18.6, 10.6, 8.8) <= 1 || eV(u, v, 0, -9.4, 11.8, 10.2) <= 1) {
+      if (v > -1.2 + Math.sin(u * 1.3) * 0.9) return 0;
+      if (!back && (eyeBurt(u, v, -7 + lx, -19 + ly, 'open') || eyeBurt(u, v, 4 + lx, -19 + ly, 'open'))) return C.outline;
+      return (Math.floor(u * 0.5 + v * 0.3) % 4 === 0) ? C.frost4 : C.ghost;
+    }
+    if (eV(u, v, -4.4, -0.8, 3, 1.5) <= 1 || eV(u, v, 4.4, -0.8, 3, 1.5) <= 1) return C.burtBlack;
+    return 0;
+  }
+  if (p.hat) { const hc = hatPx(u, v, p.hat, DEF.burt.headTop); if (hc) return hc; }
+  if (!back) {
+    const el = eyeBurt(u, v, -7 + lx, -19 + ly, p.eyesL || p.eyes); if (el) return el;
+    const er = eyeBurt(u, v, 4 + lx, -19 + ly, p.eyesR || p.eyes); if (er) return er;
+    const sx = lx * 0.7, sy = DEF.burt.beakV + ly * 0.5;
+    if (eV(u, v, sx, sy, 2.7, 2.3) <= 1) {
+      if (p.beak && v > sy - 0.2 && v < sy + 1.2 && Math.abs(u - sx) < 1.8) return C.mouth;
+      return (u < sx - 0.8 && v < sy - 0.8) ? C.burtBlackLight : C.burtBlack;
+    }
+    if (p.blush && v >= -16 + ly && v < -15 + ly && ((u >= -8 + lx && u < -6 + lx) || (u >= 6 + lx && u < 8 + lx))) return C.blush;
+  }
+  const fl = flipperHit(u, v, -8.4, -13.2, p.flL, -1, 10, 2.6), fr = flipperHit(u, v, 8.4, -13.2, p.flR, 1, 10, 2.6);
+  if (fl >= 0 || fr >= 0) return speck(u, v, C.burtGrayLight, C.burtGray, 0.25);
+  if (eV(u, v, -4.4 + p.feetL, -0.8, 3, 1.5) <= 1 || eV(u, v, 4.4 + p.feetR, -0.8, 3, 1.5) <= 1) return C.burtBlack;
+  const he = eV(u, v, 0, -18.6, 9.6, 7.6);
+  if (he <= 1) {
+    if (back) return speck(u, v, C.burtBlack, C.burtBlackLight, 0.1);
+    const mask = (eV(u, v, -4.4, -17.3, 4.8, 4.6) <= 1 || eV(u, v, 4.4, -17.3, 4.8, 4.6) <= 1 || eV(u, v, 0, -13.6, 6.4, 2.6) <= 1)
+      && !(Math.abs(u) < 1.3 && v < -17.4);
+    if (mask) return (he > 0.75 && v > -15) ? C.burtWhiteShade : C.burtWhite;
+    return speck(u, v, C.burtBlack, C.burtBlackLight, 0.08);
+  }
+  const be = eV(u, v, 0, -9.4, 10.6 * p.belly, 9.4);
+  if (be <= 1) {
+    if (!back && eV(u, v, 0, -18.6, 9.8, 8.9) <= 1) return C.burtBlack;        // the little black collar
+    if (p.crease && v >= -9 && v < -8 && Math.abs(u) < 7) return C.burtGrayDark;
+    if (be > 0.82) return C.burtGrayDark;
+    const h = hash2(Math.floor(u) * 7 + 3, Math.floor(v) * 11 + 5);
+    if (be > 0.6 && (u > 3 || v > -4)) return h < 0.5 ? C.burtGrayDark : C.burtGray;
+    return h < 0.12 ? C.burtGrayDark : h > 0.88 ? C.burtGrayLight : C.burtGray;
+  }
+  return 0;
+}
+const SBUF = new Uint32Array(100 * 100);
+function drawPenguin(P) {
+  if (P.hidden) return;
+  const d = DEF[P.who], sample = P.who === 'bub' ? sampleBub : sampleBurt;
+  const pp = pivotOf(P), pwx = P.x + pp[0], pwy = P.y + pp[1];
+  const R = Math.min(49, 23 + Math.ceil(Math.hypot(P.pu, (P.pv == null ? d.pivotV : P.pv) - d.pivotV)) + (P.hat ? 9 : 0));
+  const size = R * 2, x0 = Math.floor(pwx) - R, y0 = Math.floor(pwy) - R;
+  const c = Math.cos(P.rot), s = Math.sin(P.rot), isx = 1 / P.sx, isy = 1 / P.sy;
+  for (let j = 0; j < size; j++) {
+    const dy = y0 + j + 0.5 - pwy;
+    for (let i = 0; i < size; i++) {
+      const dx = x0 + i + 0.5 - pwx;
+      SBUF[j * size + i] = sample((dx * c + dy * s + pp[0]) * isx, (-dx * s + dy * c + pp[1]) * isy, P) || 0;
+    }
+  }
+  const clipY = P.clipY == null ? 1e9 : P.clipY;
+  for (let j = 0; j < size; j++) {
+    const Y = y0 + j;
+    if (Y >= clipY) break;
+    for (let i = 0; i < size; i++) {
+      const k = j * size + i, col = SBUF[k];
+      if (col) pset(x0 + i, Y, col);
+      else if ((i > 0 && SBUF[k - 1]) || (i < size - 1 && SBUF[k + 1]) || (j > 0 && SBUF[k - size]) || (j < size - 1 && SBUF[k + size])) pset(x0 + i, Y, C.outline);
+    }
+  }
+}
+function drawShadow(P) {
+  if (!P.shadow || P.hidden) return;
+  const lying = Math.abs(Math.sin(P.rot)) > 0.6;
+  shadeEllipse(lying ? toWorld(P, 0, -13)[0] : P.x, P.gy + 0.3, lying ? 15 : 8.5 * P.sx, 1.8, 0.8);
+}
+
+/* ---------- the room ---------- */
+const GLASS = { x0: 48, y0: 12, x1: 96, y1: 46 };
+const SKYBUF = new Uint32Array(W * H), GLASSMASK = new Uint8Array(W * H);
+for (let y = GLASS.y0; y < GLASS.y1; y++) for (let x = GLASS.x0; x < GLASS.x1; x++) GLASSMASK[y * W + x] = 1;
+const SOCK = ['.NN...', '.NpN..', '.NNN..', '.NNtN.', '.NNNNN', '..NpNN'];
+const SOCKPAL = { N: C.sockNavy, p: C.donutPink, t: C.donutTan };
+const SHELF_SLOTS = [[2, 8], [9, 8], [16, 8], [2, 20], [9, 20], [16, 20]];
+
+function curtainCol(x, y, x0, y1) {
+  const f = (((x - x0) % 6) + 6) % 6;
+  if (y >= y1 - 1) return C.curtainDeep;
+  if (y <= 9 && x % 3 === 0) return C.curtainDeep;
+  return (f === 0 || f === 5) ? C.curtainDark : (f === 2 || f === 3) ? C.curtainLight : C.curtain;
+}
+function drawCurtainLeft(hide) {
+  const x0 = 26, x1 = 45, y1 = 85;
+  for (let y = 8; y <= y1; y++) for (let x = x0; x <= x1; x++) pset(x, y, curtainCol(x, y, x0, y1));
+  if (!hide) return;
+  const bx = hide.x + 0.5 + hide.wig * 0.6, by = 71;
+  for (let y = 54; y <= y1; y++) for (let x = x0 - 2; x <= x1 + 2; x++) {
+    if (eV(x + 0.5, y + 0.5, bx, by, 12.5, 16) > 1) continue;
+    const side = (x + 0.5 - bx) / 12.5;
+    let col = curtainCol(x + Math.round(side * 2), y, x0, y1);
+    if (side < -0.62) col = C.curtainLight; else if (side > 0.8) col = C.curtainDeep; else if (side > 0.5) col = C.curtainDark;
+    if (y >= y1 - 1) col = C.curtainDeep;
+    pset(x, y, col);
+  }
+}
+function drawRoomBG(o) {
+  rect(0, 0, W, FLOOR_Y, C.wall);
+  for (let x = 3; x < W; x += 8) vline(x, 2, 71, C.wallStripe);
+  hline(0, 0, W, C.wallShadow); hline(0, 1, W, C.wallShadow);
+  rect(0, 73, W, 7, C.trim); hline(0, 73, W, C.trimLight); hline(0, 79, W, C.trimDark);
+  for (let y = FLOOR_Y; y < H; y++) {
+    const row = Math.floor((y - FLOOR_Y) / 6), iy = (y - FLOOR_Y) % 6;
+    for (let x = 0; x < W; x++) {
+      let col = iy === 0 ? C.floorLine : iy === 1 ? C.floorLight : C.floor;
+      if (iy !== 0 && (x + Math.floor(hash2(row, 5) * 29)) % 29 === 0) col = C.floorLine;
+      else if (iy > 1 && hash2(x * 3, y * 7) < 0.06) col = C.floorDark;
+      T.buf[y * W + x] = col;
+    }
+  }
+  for (let x = 0; x < W; x++) shadePix(x, 80, 0.86);
+  // treasure cubby above the fridge
+  rect(0, 2, 24, 26, C.wood); hline(0, 2, 24, C.woodLight); hline(0, 27, 24, C.woodDark);
+  rect(2, 4, 20, 10, C.woodBack); rect(2, 16, 20, 10, C.woodBack);
+  hline(2, 4, 20, darken(C.woodBack, 0.8)); hline(2, 16, 20, darken(C.woodBack, 0.8)); hline(2, 14, 20, C.woodLight);
+  for (const x of [8, 15]) { vline(x, 4, 10, C.wood); vline(x, 16, 10, C.wood); }
+  const ids = o.shelf ? o.shelf.split(',') : [];
+  ids.forEach((id, i) => { const it = TREASURES.find(t => t.id === id); if (it && SHELF_SLOTS[i]) sprite(it.icon, ICON_PAL, SHELF_SLOTS[i][0], SHELF_SLOTS[i][1]); });
+  // fridge
+  rect(3, 30, 18, 1, C.fridge); rect(2, 31, 20, 55, C.fridge);
+  hline(3, 30, 18, C.fridgeLight); vline(2, 32, 53, C.fridgeLight); vline(21, 31, 55, C.fridgeDark);
+  hline(2, 47, 20, C.fridgeDeep); hline(2, 48, 20, C.fridgeLight); hline(2, 85, 20, C.fridgeDark);
+  rect(3, 86, 3, 1, C.couchDeep); rect(18, 86, 3, 1, C.couchDeep);
+  rect(17, 35, 2, 9, C.chrome); vline(18, 35, 9, C.chromeMid); rect(17, 51, 2, 14, C.chrome); vline(18, 51, 14, C.chromeMid);
+  sprite(SPR.fish, SPAL.fish, 5, 51);
+  rect(5, 58, 7, 8, C.paper); hline(6, 60, 5, C.pageShade); hline(6, 62, 4, C.pageShade); hline(6, 64, 5, C.pageShade); pset(8, 57, C.red);
+  sprite(SPR.heart, SPAL.heart, 14, 76);
+  if (o.tgFridge) drawPaper(5, 68, 'turkey'); else if (o.valFridge) drawPaper(5, 68, 'valentine');
+  for (let x = 2; x < 23; x++) { shadePix(x, 87, 0.8); shadePix(x, 88, 0.9); }
+  // window frame + sill
+  rect(46, 10, 52, 38, C.frame); vline(97, 10, 38, C.frameShade); hline(46, 47, 52, C.frameShade); hline(47, 11, 50, C.frameShade);
+  rect(43, 47, 58, 3, C.sill); hline(43, 47, 58, WHITE); hline(43, 50, 58, C.frameShade);
+  for (let x = 44; x < 100; x++) shadePix(x, 51, 0.9);
+  // rod + curtains
+  hline(25, 6, 82, C.knobLight); hline(25, 7, 82, C.brassDark); rect(23, 5, 3, 4, C.brass); rect(105, 5, 3, 4, C.brass);
+  for (let y = 8; y <= 80; y++) for (let x = 98; x <= 104; x++) pset(x, y, curtainCol(x, y, 98, 80));
+  if (!o.hide) drawCurtainLeft(null);
+  // clock above the door
+  ellipse(129.5, 12.5, 5.6, 5.6, C.wood); ellipse(129.5, 12.5, 4.5, 4.5, C.paper);
+  pset(129, 8, C.trimDark); pset(133, 12, C.trimDark); pset(129, 16, C.trimDark); pset(125, 12, C.trimDark);
+  // lamp
+  vline(108, 40, 45, C.brass); vline(109, 40, 45, C.brassDark);
+  ellipse(108.5, 85.5, 4.5, 1.6, C.brassDark); hline(105, 85, 7, C.brass);
+  for (let y = 29; y <= 39; y++) {
+    const k = (y - 29) / 10, hw = lerp(3.6, 5.8, k);
+    for (let x = Math.ceil(108.5 - hw); x < 108.5 + hw; x++) {
+      let col = C.lampShade;
+      if (y === 39) col = C.lampShadeDark; else if (x > 108.5 + hw - 2.2) col = C.lampShadeDark; else if (x < 108.5 - hw + 1.5) col = mix(C.lampShade, WHITE, 0.35);
+      pset(x, y, col);
+    }
+  }
+  shadeEllipse(108.5, 87, 6, 1.4, 0.82);
+  // door
+  rect(115, 20, 28, 61, C.doorShade); rect(117, 22, 24, 59, C.door); vline(140, 22, 59, C.doorShade);
+  const panel = (x, y, w, h) => { rect(x, y, w, h, C.doorShade); rect(x + 1, y + 1, w - 2, h - 2, C.door); hline(x + 1, y + 1, w - 2, C.doorDeep); vline(x + 1, y + 1, h - 2, C.doorDeep); };
+  panel(120, 26, 8, 20); panel(130, 26, 8, 20); panel(120, 50, 8, 26); panel(130, 50, 8, 26);
+  rect(118, 51, 2, 2, C.knob); pset(118, 51, C.knobLight);
+  rect(116, 82, 26, 5, C.mat); for (let x = 117; x < 141; x += 3) vline(x, 83, 3, C.matLight);
+  if (o.dec) {
+    for (let y = 29; y <= 43; y++) for (let x = 122; x <= 136; x++) {
+      const dd = Math.hypot(x + 0.5 - 129, y + 0.5 - 36);
+      if (dd <= 5.8 && dd >= 3.1) pset(x, y, hash2(x, y) < 0.15 ? C.red : hash2(x + 7, y) < 0.35 ? C.leafLight : C.leafDark);
+    }
+    rect(127, 40, 4, 2, C.red); pset(126, 42, C.red); pset(131, 42, C.red);
+  }
+  // rug
+  for (let y = 108; y <= 140; y++) for (let x = 25; x <= 119; x++) {
+    const dd = eV(x + 0.5, y + 0.5, 72, 124, 46, 15);
+    if (dd > 1) continue;
+    const r = Math.sqrt(dd);
+    let col = r < 0.26 ? C.rug2 : r < 0.48 ? C.rug1 : r < 0.66 ? C.rug3 : r < 0.84 ? C.rug2 : C.rug1;
+    if (r > 0.95) col = C.rugEdge; else if ((x + y * 2) % 4 === 0) col = mix(col, C.rugDark, 0.3);
+    pset(x, y, col);
+  }
+  // couch
+  for (let y = 84; y <= 87; y++) for (let x = 41; x <= 102; x++) shadePix(x, y, y < 86 ? 0.72 : 0.86);
+  rect(47, 52, 50, 1, C.couchLight); rect(46, 53, 52, 13, C.couch); hline(46, 53, 52, mix(C.couch, C.couchLight, 0.5));
+  vline(63, 55, 10, C.couchDark); vline(80, 55, 10, C.couchDark); hline(46, 65, 52, C.couchDark);
+  for (let y = 50; y <= 63; y++) for (let x = 79; x <= 96; x++) {           // the green plaid blanket
+    if (y === 50 && (x === 79 || x === 96)) continue;
+    const a = (x - 79) % 5, b = (y - 50) % 5, vs = a === 2, hs = b === 2;
+    let col = vs && hs ? C.plaidLight : (vs || hs) ? C.plaidMid : (a === 4 || b === 4) ? C.plaidDark : C.plaid;
+    if (y >= 62) col = darken(col, 0.82);
+    pset(x, y, col);
+  }
+  drawArm(41); drawArm(96);
+  rect(48, 66, 48, 6, C.couchLight); hline(48, 66, 48, mix(C.couchLight, WHITE, 0.12)); vline(71, 66, 6, C.couch);
+  rect(48, 72, 48, 12, C.couch); hline(48, 72, 48, C.couchDark); vline(71, 73, 10, C.couchDark); hline(48, 83, 48, C.couchDeep);
+  rect(43, 85, 2, 2, C.woodDark); rect(99, 85, 2, 2, C.woodDark);
+  if (!o.noSherpa) drawSherpa();
+  // laundry basket (clothes inside)
+  ellipse(125.5, 129, 7, 4.5, C.hoodie); ellipse(124, 127.5, 4, 2.4, C.hoodieLight);
+  ellipse(135.5, 128.5, 5.5, 3.5, C.tee); hline(132, 127, 6, C.bubShade);
+  sprite(SOCK, SOCKPAL, 128, 122);
+  rect(118, 129, 24, 3, C.wickerDark);
+  if (!o.basketIn) drawBasketFront();
+}
+function drawArm(x) { rect(x, 60, 7, 25, C.couch); rect(x + 1, 59, 5, 1, C.couchLight); hline(x, 60, 7, C.couchLight); vline(x + 6, 61, 23, C.couchDark); hline(x, 84, 7, C.couchDeep); }
+function drawSherpa() {                                                     // the fuzzy sherpa blanket
+  const inS = (x, y) => eV(x, y, 46, 59.5, 8.5, 3.6) <= 1 || eV(x, y, 41, 70, 4.2, 12) <= 1 || eV(x, y, 51.5, 66.5, 5, 4.5) <= 1;
+  for (let y = 54; y <= 83; y++) for (let x = 35; x <= 58; x++) {
+    if (!inS(x + 0.5, y + 0.5)) continue;
+    let col = vnoise(x * 0.8 + 3, y * 0.8 + 9) < 0.32 ? C.sherpaShade : C.sherpa;
+    if (!inS(x + 0.5, y + 1.5)) col = C.sherpaDeep; else if (!inS(x + 1.5, y + 0.5) && x > 44) col = C.sherpaShade;
+    pset(x, y, col);
+  }
+}
+function drawBasketFront() {
+  for (let y = 131; y <= 152; y++) {
+    const inset = Math.floor((y - 131) / 9);
+    for (let x = 117 + inset; x <= 142 - inset; x++) pset(x, y, ((Math.floor((y - 131) / 2) + Math.floor(x / 3)) % 2) ? C.wicker : C.wickerDark);
+  }
+  rect(116, 130, 28, 3, C.wickerLight); hline(116, 132, 28, C.wickerDark);
+  rect(120, 135, 4, 2, C.woodDark); rect(136, 135, 4, 2, C.woodDark);
+  for (let x = 118; x <= 141; x++) shadePix(x, 153, 0.78);
+}
+function drawPlant() {
+  const leaves = [[10, 127, 6.5, 3.6, -0.9], [4, 134, 5.5, 3.2, -0.2], [16, 132, 6, 3.4, 0.7], [9, 137, 5, 3, 0.15], [20, 124, 4.6, 2.8, 1.1]];
+  for (const L of leaves) line(10, 143, L[0], L[1], C.leafDark);
+  for (const [cx, cy, rx, ry, a] of leaves) {
+    const ca = Math.cos(a), sa = Math.sin(a);
+    for (let y = Math.floor(cy - rx - 1); y <= cy + rx + 1; y++) for (let x = Math.floor(cx - rx - 1); x <= cx + rx + 1; x++) {
+      const dx = x + 0.5 - cx, dy = y + 0.5 - cy, u = dx * ca + dy * sa, v = -dx * sa + dy * ca;
+      const e = (u * u) / (rx * rx) + (v * v) / (ry * ry);
+      if (e > 1) continue;
+      let col = v > 0.8 ? C.leafDark : v < -1 ? C.leafLight : C.leaf;
+      if (Math.abs(v) < 0.5 && Math.abs(u) < rx - 1) col = C.leafLight;
+      if (e > 0.82) col = C.leafDark;
+      pset(x, y, col);
+    }
+  }
+  for (let y = 143; y <= 158; y++) {
+    const hw = lerp(8, 6, (y - 143) / 15);
+    for (let x = Math.ceil(10.5 - hw); x < 10.5 + hw; x++) pset(x, y, x > 10.5 + hw - 2.5 ? C.potDark : y < 146 ? C.potLight : C.pot);
+  }
+  hline(3, 146, 15, C.potDark);
+}
+
+/* ---------- window: sky, neighbors, weather ---------- */
+const HOUSES = [[0, 9, 10], [9, 11, 13], [20, 8, 8], [28, 12, 11], [40, 8, 9]];
+const FAR = [[2, 10, 15], [12, 7, 18], [19, 12, 14], [31, 9, 17], [40, 8, 13]];
+function drawSky(env, t) {
+  target(SKYBUF, W, H);
+  const { x0, y0, x1, y1 } = GLASS, gw = x1 - x0, gh = y1 - y0;
+  const lv = [0, 1, 2, 3, 4].map(i => mix(env.skyTop, env.skyBot, i / 4));
+  for (let y = y0; y < y1; y++) {
+    const k = (y - y0) / (gh - 1);
+    for (let x = x0; x < x1; x++) SKYBUF[y * W + x] = lv[clamp(Math.floor(k * 4 + bayer(x, y)), 0, 4)];
+  }
+  const wet = env.weather === 'rain' || env.weather === 'snow';
+  if (env.night > 0.3 && !wet) {
+    const n = env.weather === 'cloudy' ? 6 : 16;
+    for (let i = 0; i < n; i++) {
+      const sx = x0 + Math.floor(hash2(i, 7) * gw), sy = y0 + Math.floor(hash2(i, 13) * (gh - 14));
+      if (hash2(i * 31, Math.floor(t * 1.3 + i * 0.7)) > 0.18) pset(sx, sy, mix(env.skyTop, WHITE, 0.35 + 0.6 * env.night));
+    }
+  }
+  if (env.sunUp && !wet) {
+    const k = (env.h - 6.7) / 11.4, low = 1 - Math.sin(Math.PI * k);
+    const sx = lerp(x1 - 7, x0 + 7, k), sy = y0 + 5 + low * 17;
+    ellipse(sx, sy, 3.6, 3.6, mix(hex('#fff1b8'), hex('#ffb36b'), low));
+    ellipse(sx, sy, 2.5, 2.5, mix(hex('#fffbe6'), hex('#ffd08a'), low));
+  } else if (env.night > 0.45 && !wet) {
+    const k = ((env.h + 24 - 18) % 24) / 12, mx = lerp(x0 + 9, x1 - 9, k), my = y0 + 6 + Math.abs(k - 0.5) * 8;
+    ellipse(mx, my, 3.4, 3.4, hex('#f4f1dc')); ellipse(mx + 1.7, my - 1.1, 3, 3, env.skyTop);
+  }
+  const nCl = env.weather === 'clear' ? 2 : env.weather === 'cloudy' ? 5 : 6;
+  const cCol = mix(env.weather === 'clear' ? WHITE : hex('#c3cad6'), env.skyTop, 0.2 + env.night * 0.6), cSh = mix(cCol, env.skyTop, 0.35);
+  for (let i = 0; i < nCl; i++) {
+    const span = gw + 24, sp = 0.35 + hash2(i, 3) * 0.5;
+    const cx = x0 - 12 + ((hash2(i, 1) * span + t * sp) % span), cy = y0 + 3 + hash2(i, 2) * (wet ? 8 : 14);
+    ellipse(cx, cy + 0.8, 5.5, 2.2, cSh); ellipse(cx, cy, 5, 2.2, cCol); ellipse(cx + 3, cy - 1.4, 3.4, 2.1, cCol); ellipse(cx - 3, cy + 0.2, 3, 1.8, cCol);
+  }
+  const farC = mix(env.skyBot, hex('#4d5873'), 0.42);
+  for (const [ox, w, h] of FAR) { rect(x0 + ox, y1 - h, w, h, farC); for (let k = 0; k < 3; k++) hline(x0 + ox + k + 1, y1 - h - 1 - k, w - 2 - 2 * k, farC); }
+  // the tree out front
+  const tx = x0 + 4, trunk = mix(hex('#5a4636'), hex('#1b1820'), env.night * 0.8);
+  rect(tx, y1 - 14, 2, 14, trunk);
+  if (env.season === 'winter') {
+    line(tx + 1, y1 - 12, tx - 3, y1 - 18, trunk); line(tx + 1, y1 - 10, tx + 5, y1 - 17, trunk); line(tx, y1 - 14, tx + 1, y1 - 21, trunk);
+    if (env.snowy) { pset(tx - 3, y1 - 19, WHITE); pset(tx + 5, y1 - 18, WHITE); pset(tx + 1, y1 - 22, WHITE); }
+  } else {
+    const s = env.season, c1 = s === 'summer' ? '#4f8a46' : s === 'spring' ? '#f2b8c8' : '#d9822b', c2 = s === 'summer' ? '#3b6e37' : s === 'spring' ? '#e79ab0' : '#b8562a';
+    ellipse(tx + 1, y1 - 18, 6, 5, mix(hex(c2), env.skyTop, env.night * 0.6)); ellipse(tx, y1 - 19, 5, 4.3, mix(hex(c1), env.skyTop, env.night * 0.6));
+  }
+  const nearC = mix(hex('#6a7690'), hex('#1a1f30'), env.night * 0.85), roofC = mix(hex('#8a5a4a'), hex('#24202c'), env.night * 0.85);
+  for (let i = 0; i < HOUSES.length; i++) {
+    const [ox, w, h] = HOUSES[i], hx = x0 + ox, hy = y1 - h;
+    rect(hx, hy, w, h, nearC);
+    for (let k = 0; k < 4; k++) hline(hx + k, hy - 1 - k, w - 2 * k, roofC);
+    if (env.snowy) for (let k = 0; k < 4; k++) { pset(hx + k, hy - 1 - k, hex('#f4f8ff')); pset(hx + w - 1 - k, hy - 1 - k, hex('#f4f8ff')); }
+    for (let wy = hy + 2; wy < y1 - 2; wy += 4) for (let wx = hx + 2; wx < hx + w - 2; wx += 4) {
+      const lit = env.night > 0.4 && hash2(i * 7 + wx, wy + Math.floor(env.h)) > 0.45;
+      rect(wx, wy, 2, 2, lit ? hex('#ffd98a') : mix(hex('#9fb4cf'), nearC, 0.55));
+    }
+  }
+  if (env.snowy) { hline(x0, y1 - 1, gw, hex('#f4f8ff')); for (let x = x0; x < x1; x += 3) pset(x, y1 - 2, hex('#f4f8ff')); }
+  const pc = env.night > 0.5 ? hex('#7d8fb3') : hex('#d2deef');
+  if (env.weather === 'rain') {
+    for (let i = 0; i < 44; i++) {
+      const sp = 52 + hash2(i, 5) * 26, x = x0 + ((((hash2(i, 1) * gw - t * 9) % gw) + gw) % gw), y = y0 + ((hash2(i, 2) * gh + t * sp) % gh);
+      pset(x, y, pc); pset(x + 1, y - 1, pc);
+    }
+    for (let i = 0; i < 6; i++) {
+      const x = x0 + 2 + Math.floor(hash2(i, 21) * (gw - 4)), y = Math.floor(y0 + ((hash2(i, 22) * gh + t * (1.5 + hash2(i, 23) * 2)) % gh)), k = y * W + x;
+      SKYBUF[k] = mix(SKYBUF[k], WHITE, 0.5);
+    }
+  }
+  if (env.weather === 'snow') for (let i = 0; i < 36; i++) {
+    const y = y0 + ((hash2(i, 2) * gh + t * (5 + hash2(i, 5) * 7)) % gh), x = x0 + ((((hash2(i, 1) * gw + Math.sin(t * 0.8 + i) * 2.2) % gw) + gw) % gw);
+    const sc = mix(WHITE, env.skyTop, env.night * 0.25);
+    pset(x, y, sc); if (i % 6 === 0) pset(x + 1, y, sc);
+  }
+  if ((env.season === 'fall' || env.season === 'spring') && !wet && env.night < 0.6) for (let i = 0; i < 5; i++) {
+    const y = y0 + ((hash2(i, 9) * gh + t * (4 + i)) % gh), x = x0 + ((((hash2(i, 8) * gw - t * 3 + Math.sin(t + i) * 3) % gw) + gw) % gw);
+    pset(x, y, env.season === 'spring' ? hex('#f7c6d4') : (i % 2 ? hex('#d9822b') : hex('#b8462a')));
+  }
+  for (const [gx, gy] of [[x0 + 3, y0 + 9], [x0 + 27, y0 + 9], [x0 + 3, y0 + 26], [x0 + 27, y0 + 26]])
+    for (let k = 0; k < 4; k++) { const i = (gy - k) * W + gx + k; SKYBUF[i] = mix(SKYBUF[i], WHITE, 0.22); }
+}
+function copySky() {
+  for (let y = GLASS.y0; y < GLASS.y1; y++) { const r = y * W; for (let x = GLASS.x0; x < GLASS.x1; x++) FRAME[r + x] = SKYBUF[r + x]; }
+}
+function drawMullions() { rect(71, 12, 2, 34, C.frame); vline(72, 12, 34, C.frameShade); rect(48, 28, 48, 2, C.frame); hline(48, 29, 48, C.frameShade); }
+function drawSillDecor(m) {
+  if (m === 12) {
+    rect(88, 44, 5, 3, C.pot);
+    for (let i = 0; i < 4; i++) { hline(90 - i, 35 + i * 2, 1 + i * 2, C.leafDark); hline(90 - i, 36 + i * 2, 1 + i * 2, C.leaf); }
+  } else if (m >= 9 && m <= 11) {
+    ellipse(55.5, 44.5, 3.6, 2.6, hex('#e8892f')); vline(54, 43, 3, hex('#c86d1f')); vline(57, 43, 3, hex('#c86d1f')); vline(55, 40, 2, C.leafDark);
+    if (m === 10) { pset(54, 44, hex('#5a2a10')); pset(57, 44, hex('#5a2a10')); hline(54, 46, 4, hex('#5a2a10')); }
+  } else if (m >= 3 && m <= 8) {
+    rect(54, 43, 5, 4, C.pot); vline(55, 39, 4, C.leafDark); vline(57, 40, 3, C.leafDark);
+    const fc = m <= 5 ? C.pink : C.yellow; pset(55, 38, fc); pset(54, 39, fc); pset(56, 39, fc); pset(57, 39, fc);
+  } else {
+    rect(54, 43, 5, 4, C.pot); ellipse(56.5, 41.5, 3, 2.2, C.leaf); pset(56, 40, C.leafLight);
+  }
+}
+function drawClockHands(dt) {
+  const cx = 129, cy = 12, m = dt.getMinutes(), h = (dt.getHours() % 12) + m / 60;
+  line(cx, cy, cx + Math.sin(m / 60 * TAU) * 3.6, cy - Math.cos(m / 60 * TAU) * 3.6, C.outline);
+  line(cx, cy, cx + Math.sin(h / 12 * TAU) * 2.4, cy - Math.cos(h / 12 * TAU) * 2.4, C.trimDark);
+  pset(cx, cy, C.red);
+}
+
+/* ---------- light ---------- */
+const LM = { key: '', mr: new Float32Array(W * H), mg: new Float32Array(W * H), mb: new Float32Array(W * H), ar: new Float32Array(W * H), ag: new Float32Array(W * H), ab: new Float32Array(W * H) };
+function buildLightMap(env) {
+  const key = Math.floor(env.h * 12) + '|' + env.weather + '|' + env.lamp;
+  if (LM.key === key) return;
+  LM.key = key;
+  const sb = env.sunbeam ? sunbeamGeom(env.h) : null;
+  const sunK = sb ? clamp(Math.min(env.h - 8.5, 16.8 - env.h) / 1.2, 0, 1) : 0;
+  const lampK = env.lamp * (0.35 + 0.65 * env.night);
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    const i = y * W + x;
+    let mr = env.amb[0], mg = env.amb[1], mb = env.amb[2], ar = 0, ag = 0, ab = 0;
+    if (lampK > 0) {
+      const dx = x + 0.5 - 108.5, dy = (y + 0.5 - 37) * 1.15;
+      let k = 1 - Math.sqrt(dx * dx + dy * dy) / 84;
+      if (k > 0) { k = Math.floor(k * k * 5 + bayer(x, y)) / 5; mr += 0.82 * k * lampK; mg += 0.62 * k * lampK; mb += 0.34 * k * lampK; }
+    }
+    if (sb && y >= sb.y0 && y <= sb.y1) {
+      const q = (y - sb.y0) / (sb.y1 - sb.y0), xa = lerp(sb.xa0, sb.xa1, q), xb = lerp(sb.xb0, sb.xb1, q);
+      if (x >= xa && x <= xb) {
+        const edge = Math.min(x - xa, xb - x, y - sb.y0, sb.y1 - y);
+        if (edge > 2.5 || bayer(x, y) < edge / 2.5) { ar += 30 * sunK; ag += 24 * sunK; ab += 10 * sunK; }
+      }
+    }
+    LM.mr[i] = mr; LM.mg[i] = mg; LM.mb[i] = mb; LM.ar[i] = ar; LM.ag[i] = ag; LM.ab[i] = ab;
+  }
+}
+function applyLighting() {
+  const F = FRAME, S = SKYBUF, M = GLASSMASK, mr = LM.mr, mg = LM.mg, mb = LM.mb, ar = LM.ar, ag = LM.ag, ab = LM.ab;
+  for (let i = 0; i < W * H; i++) {
+    const c = F[i];
+    if (M[i] && c === S[i]) continue;                // the sky glows on its own
+    let r = (c & 255) * mr[i] + ar[i], g = ((c >>> 8) & 255) * mg[i] + ag[i], b = ((c >>> 16) & 255) * mb[i] + ab[i];
+    r = r > 255 ? 255 : r | 0; g = g > 255 ? 255 : g | 0; b = b > 255 ? 255 : b | 0;
+    F[i] = ((255 << 24) | (b << 16) | (g << 8) | r) >>> 0;
+  }
+}
+function drawEmissive(env, t, o) {
+  if (env.lamp > 0) { const gc = mix(C.lampShadeDark, C.lampGlow, env.lamp); hline(104, 40, 9, gc); hline(106, 41, 5, mix(gc, WHITE, 0.3)); }
+  if (o.dec) {
+    const cols = [C.red, C.green, C.yellow, C.blue];
+    let i = 0;
+    const bulb = (x, y) => { const on = (Math.floor(t * 1.2) + i) % 3 !== 0; pset(x, y, on ? cols[i % 4] : darken(cols[i % 4], 0.5)); i++; };
+    for (let x = 48; x <= 96; x += 4) bulb(x, 10 + (i % 2));
+    for (let y = 14; y <= 44; y += 5) { bulb(46, y); bulb(97, y); }
+    if (Math.floor(t * 1.5) % 2) pset(90, 34, C.sparkle); else pset(90, 34, C.gold);
+  }
+  if (o.m === 10 && env.night > 0.3) { pset(54, 44, hex('#ffcf5a')); pset(57, 44, hex('#ffcf5a')); hline(54, 46, 4, hex('#ffb13d')); }
+}
+
+/* ---------- props ---------- */
+function drawMug(x, y) { x = Math.round(x); y = Math.round(y); rect(x, y, 4, 4, C.mug); hline(x, y, 4, hex('#6b3a24')); vline(x + 3, y + 1, 3, C.mugDark); pset(x + 4, y + 1, C.mugDark); pset(x + 4, y + 2, C.mugDark); }
+const SKULL = ['..kkk..', '.kkkkk.', 'dsWssss', 'skkskkd', 'skkskkd', 'dsssssd', '.sdsds.', '..ddd..'];
+function drawSkullCup(x, y) { sprite(SKULL, { k: C.outline, s: C.chromeMid, W: C.chromeLight, d: C.chromeDark }, x, y); }
+function drawStraw(x0, y0, x1, y1) { line(x0, y0, x1, y1, n => (n % 2 ? WHITE : C.outline)); }
+function drawBook(x, y) {
+  x = Math.round(x); y = Math.round(y);
+  rect(x - 1, y, 11, 6, C.book); rect(x, y, 9, 5, C.page); vline(x + 4, y, 5, C.pageShade);
+  hline(x + 1, y + 1, 3, C.pageShade); hline(x + 5, y + 1, 3, C.pageShade); hline(x + 1, y + 3, 2, C.pageShade); hline(x + 5, y + 3, 3, C.pageShade);
+  hline(x - 1, y + 5, 11, C.bookDark);
+}
+function drawClipboard(x, y, wt) {
+  x = Math.round(x); y = Math.round(y);
+  rect(x, y, 7, 9, C.wood); rect(x + 1, y + 1, 5, 7, C.paper); rect(x + 2, y - 1, 3, 2, C.chromeMid);
+  hline(x + 2, y + 3, 3, C.pageShade); hline(x + 2, y + 5, 3, C.pageShade);
+  if (wt) { const k = Math.floor(wt * 8) % 3; line(x + 3 + k, y + 7, x + 6 + k, y + 3, C.pencil); }
+}
+function drawSock(x, y, flip) { sprite(SOCK, SOCKPAL, x, y, flip); }
+function drawPaper(x, y, kind) {
+  x = Math.round(x); y = Math.round(y);
+  rect(x - 1, y - 1, 12, 11, C.outline); rect(x, y, 10, 9, kind === 'valentine' ? hex('#ffd6e0') : C.paper);
+  if (kind === 'turkey') {
+    const cols = [C.red, C.yellow, C.green, C.blue, hex('#e98b3a')];
+    for (let i = 0; i < 5; i++) line(x + 5, y + 6, x + 1 + i * 2, y + 1, cols[i]);
+    ellipse(x + 5.5, y + 6, 2.2, 2, hex('#8a5a3c')); pset(x + 4, y + 5, C.outline); pset(x + 3, y + 6, C.beak);
+  } else { sprite(SPR.fish, SPAL.fish, x + 2, y + 3); pset(x + 8, y + 1, C.heart); }
+}
+function lightsPts(U) { return [[-11, -22], [9, -18], [-10, -13], [10, -8], [-9, -4]].map(q => toWorld(U, q[0], q[1])); }
+function drawLightsWire(B, U) {
+  const a = toWorld(B, 11, -9), pts = lightsPts(U);
+  line(a[0], a[1], pts[0][0], pts[0][1], C.leafDark);
+  for (let i = 0; i < pts.length - 1; i++) line(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1], C.leafDark);
+}
+function drawLightsBulbs(U, t) {
+  const pts = lightsPts(U), cols = [C.red, C.yellow, C.green, C.blue];
+  for (let i = 0; i < pts.length - 1; i++) for (let k = 1; k < 4; k++) {
+    const q = k / 4, n = i * 3 + k, on = (Math.floor(t * 2) + n) % 3 !== 0;
+    pset(lerp(pts[i][0], pts[i + 1][0], q), lerp(pts[i][1], pts[i + 1][1], q), on ? cols[n % 4] : darken(cols[n % 4], 0.55));
+  }
+}
+
+const GINGER = [
+  '......kk......', '.....kwwk.....', '....kwbbwk....', '...kwbrbbwk...', '..kwbbbbgbwk..', '.kwwwwwwwwwwk.',
+  '..kbbbbbbbbk..', '..kbyybbBBbk..', '..kbyybbBBbk..', '..kbbbbbBBbk..', '.kwrwgwrwgwrk.', 'kppppppppppppk', '.kkkkkkkkkkkk.'
+];
+const GINGER_PAL = { k: C.outline, w: hex('#fbf7ef'), b: hex('#b8743f'), B: hex('#7f4a24'), r: C.red, g: C.green, y: C.yellow, p: hex('#dfe3ea') };
+const GINGER_BITTEN = (function () {                                         // a penguin-sized bite out of the roof, and a corner
+  const g = GINGER.map(r => r.split(''));
+  const gone = (x, y) => Math.hypot(x + 0.5 - 11, y + 0.5 - 3.2) < 3.1 || Math.hypot(x + 0.5 - 2.6, y + 0.5 - 8.2) < 1.9;
+  for (let y = 0; y < g.length; y++) for (let x = 0; x < g[y].length; x++) if (gone(x, y)) g[y][x] = '.';
+  for (let y = 0; y < g.length; y++) for (let x = 0; x < g[y].length; x++)
+    if (g[y][x] !== '.' && (gone(x - 1, y) || gone(x + 1, y) || gone(x, y - 1) || gone(x, y + 1))) g[y][x] = 'k';
+  return g.map(r => r.join(''));
+})();
+function drawGinger(x, y, bitten) { sprite(bitten ? GINGER_BITTEN : GINGER, GINGER_PAL, x, y); }
+const CRUMB_A = hex('#d9a26b'), CRUMB_B = hex('#a8743f');
+function drawCrumbs(cx, cy) { [[-10, 1], [-7, 2], [8, 2], [10, 0], [-3, 3], [5, 3], [12, 2], [-12, 2], [2, 4]].forEach((d, i) => pset(cx + d[0], cy + d[1], i % 2 ? CRUMB_B : CRUMB_A)); }
+function beakCrumbs(P) {
+  const bv = DEF[P.who].beakV;
+  [[-2.5, 1.8], [1.6, 2.4], [3.2, 0.6]].forEach((d, i) => { const p = toWorld(P, d[0] + P.lx * 0.6, bv + d[1] + P.ly * 0.5); pset(p[0], p[1], i % 2 ? CRUMB_B : CRUMB_A); });
+}
+function drawGumdrop(P) { const p = toWorld(P, 6.5 + P.lx, -15.8 + P.ly); rect(p[0], p[1], 2, 2, C.red); pset(p[0], p[1], hex('#ff8a80')); }
+
+/* ---------- effects (drawn after lighting so they stay bright) ---------- */
+function fxZzz(x, y, t, dir) {
+  dir = dir || 1;
+  for (let k = 0; k < 3; k++) {
+    const ph = (t * 0.42 + k / 3) % 1;
+    if (ph > 0.86) continue;
+    spriteOutlined(ph > 0.5 ? SPR.Z : SPR.z, SPAL.z, x + dir * (ph * 6 + Math.sin(ph * 7 + k)), y - ph * 13, C.outline);
+  }
+}
+function bubbleBox(x, y, w, h) {
+  x = Math.round(x); y = Math.round(y);
+  rect(x + 1, y, w - 2, h, C.bubble); rect(x, y + 1, w, h - 2, C.bubble);
+  hline(x + 1, y - 1, w - 2, C.outline); hline(x + 1, y + h, w - 2, C.outline); vline(x - 1, y + 1, h - 2, C.outline); vline(x + w, y + 1, h - 2, C.outline);
+  pset(x, y, C.outline); pset(x + w - 1, y, C.outline); pset(x, y + h - 1, C.outline); pset(x + w - 1, y + h - 1, C.outline);
+}
+const ICON_PIE = ['..ttt..', '.ttttt.', 'ooooooo', 'TTTTTTT'];
+const ICON_BLANKET = ['gwgwgwg', 'wwwwwww', 'gwgwgwg', 'wwwwwww', 'gwgwgwg'];
+function fxThought(x, y, icon, t, dir) {
+  dir = dir || 1; x = Math.round(x); y = Math.round(y);
+  ellipse(x + 0.5, y + 0.5, 1.8, 1.8, C.outline); ellipse(x + 0.5, y + 0.5, 0.9, 0.9, C.bubble);
+  ellipse(x + dir * 2.5 + 0.5, y - 2.5, 2.2, 2.2, C.outline); ellipse(x + dir * 2.5 + 0.5, y - 2.5, 1.3, 1.3, C.bubble);
+  const bw = 13, bh = 9, bx = dir > 0 ? x + 2 : x - bw - 1, by = y - 14;
+  bubbleBox(bx, by, bw, bh);
+  const wig = Math.floor(t * 3) % 2;
+  if (icon === 'fish') sprite(SPR.fish, SPAL.fish, bx + 3 + wig, by + 2);
+  else if (icon === 'question') text('?', bx + 5, by + 2, C.outline);
+  else if (icon === 'heart') sprite(SPR.heart, SPAL.heart, bx + 4, by + 2 - wig);
+  else if (icon === 'pie') sprite(ICON_PIE, { t: C.donutTan, o: hex('#e98b3a'), T: hex('#a8743f') }, bx + 3, by + 3);
+  else if (icon === 'blanket') sprite(ICON_BLANKET, { g: C.plaid, w: C.plaidLight }, bx + 3, by + 2);
+  else if (icon === 'drop') { sprite(SPR.drop, SPAL.drop, bx + 5, by + 1 + wig); hline(bx + 3, by + 7, 7, C.sweat); }
+}
+function fxSay(x, y, str, side) {
+  const w = textWidth(str) + 6, h = 9;
+  const bx = Math.round(side === 'left' ? x - w + 3 : x - 3), by = Math.round(y - h - 3);
+  bubbleBox(bx, by, w, h);
+  text(str, bx + 3, by + 2, C.outline);
+  const tx = side === 'left' ? bx + w - 4 : bx + 2;
+  pset(tx, by + h, C.bubble); pset(tx + 1, by + h, C.bubble); pset(tx, by + h + 1, C.bubble);
+  pset(tx - 1, by + h + 1, C.outline); pset(tx + 1, by + h + 1, C.outline); pset(tx, by + h + 2, C.outline);
+}
+function fxHeart(x, y, ph) { if (ph < 0 || ph > 0.92) return; spriteOutlined(SPR.heart, SPAL.heart, x - 2, y - ph * 9, C.outline); }
+function fxNotes(x, y, t) {
+  for (let k = 0; k < 2; k++) { const ph = (t * 0.5 + k * 0.5) % 1; if (ph > 0.85) continue; spriteOutlined(SPR.note, SPAL.note, x + (k ? 8 : -12) + Math.sin(ph * 6) * 1.5, y - ph * 10, C.outline); }
+}
+function fxSparkles(x, y, t) {
+  for (let k = 0; k < 3; k++) { if ((Math.floor(t * 4) + k) % 3 === 0) continue; const a = k * 2.1 + Math.floor(t * 2) * 0.7; sprite(SPR.sparkleSm, SPAL.sparkle, x + Math.cos(a) * 9 - 1, y + Math.sin(a) * 4 - 1); }
+}
+function fxDizzy(p, t) { for (let k = 0; k < 3; k++) { const a = t * 6 + k * 2.09; sprite(SPR.dizzy, { y: C.sparkle }, p[0] + Math.cos(a) * 6 - 1, p[1] + Math.sin(a) * 2 - 1); } }
+function fxPuff(x, y, q) { if (q > 0.9) return; const r = 6 + q * 8; for (let k = 0; k < 6; k++) { const a = k / 6 * TAU; rect(x + Math.cos(a) * r - 1, y + Math.sin(a) * r * 0.6 - 1, 2, 2, C.bubble); } }
+function fxMotes(g, t) {
+  for (let i = 0; i < 9; i++) {
+    const q = (hash2(i, 3) + t * 0.035 * (1 + hash2(i, 9))) % 1, y = g.y0 + 2 + q * (g.y1 - g.y0 - 4);
+    const xa = lerp(g.xa0, g.xa1, q), xb = lerp(g.xb0, g.xb1, q), x = lerp(xa + 2, xb - 2, hash2(i, 4)) + Math.sin(t * 0.6 + i) * 2;
+    if (Math.sin(t * 2 + i * 1.7) > -0.4) pset(x, y, mix(C.sparkle, WHITE, 0.5));
+  }
+}
+function fxSteam(x, y, t) { for (let k = 0; k < 3; k++) { const ph = (t * 0.55 + k / 3) % 1; if (ph < 0.8) pset(x + Math.sin(ph * 6 + k * 2) * 1.2, y - ph * 8, C.steam); } }
+function fxTwinkle(t) { const ph = t % 3; if (ph > 1) return; const n = Math.floor(t / 3); sprite(ph < 0.5 ? SPR.sparkleSm : SPR.sparkle, SPAL.sparkle, 56 + (n % 3) * 12, 15 + (n % 2) * 5); }
+
+/* ---------- handwriting: a kid's ball-and-stick print (x-height = 1, caps = 2) ---------- */
+const GLYPHS = (function () {
+  const L = (a, b, c, d) => ['P', a, b, c, d], P = (...p) => ['P'].concat(p), D = (x, y) => ['D', x, y];
+  const A = (cx, cy, rx, ry, a0, a1) => ['A', cx, cy, rx, ry, a0, a1], O = (cx, cy, rx, ry) => A(cx, cy, rx, ry, 0, 360);
+  const q2 = [.5, L(.12, -2, .06, -1.55), L(.38, -2, .32, -1.55)], q1 = [.25, L(.15, -2, .08, -1.55)];
+  return {
+    a: [1, O(.5, -.5, .5, .5), L(1, -1, 1, 0)], b: [1, L(0, -2, 0, 0), O(.5, -.5, .5, .5)], c: [.9, A(.5, -.5, .5, .5, 320, 40)],
+    d: [1, O(.5, -.5, .5, .5), L(1, -2, 1, 0)], e: [1, L(.02, -.5, 1, -.5), A(.5, -.5, .5, .5, 0, -320)],
+    f: [.7, A(.6, -1.6, .3, .35, 180, 340), L(.3, -1.6, .3, 0), L(0, -1, .65, -1)],
+    g: [1, O(.5, -.5, .5, .5), L(1, -1, 1, .45), A(.5, .45, .5, .4, 0, 160)],
+    h: [1, L(0, -2, 0, 0), A(.5, -.5, .5, .5, 180, 360), L(1, -.5, 1, 0)], i: [.3, L(.15, -1, .15, 0), D(.15, -1.45)],
+    j: [.6, L(.45, -1, .45, .4), A(.15, .4, .3, .35, 0, 160), D(.45, -1.45)], k: [.85, L(0, -2, 0, 0), L(.8, -1, .05, -.45), L(.3, -.62, .85, 0)],
+    l: [.3, L(.15, -2, .15, 0)],
+    m: [1.5, L(0, -1, 0, 0), A(.37, -.6, .37, .4, 180, 360), L(.74, -.6, .74, 0), A(1.11, -.6, .37, .4, 180, 360), L(1.48, -.6, 1.48, 0)],
+    n: [1, L(0, -1, 0, 0), A(.5, -.5, .5, .5, 180, 360), L(1, -.5, 1, 0)], o: [1, O(.5, -.5, .5, .5)],
+    p: [1, L(0, -1, 0, .8), O(.5, -.5, .5, .5)], q: [1, O(.5, -.5, .5, .5), L(1, -1, 1, .8)], r: [.75, L(0, -1, 0, 0), A(.5, -.45, .5, .5, 195, 300)],
+    s: [.8, A(.4, -.75, .36, .25, -25, -270), A(.4, -.25, .36, .25, -90, 155)],
+    t: [.7, L(.32, -1.7, .32, -.15), A(.57, -.15, .25, .15, 180, 90), L(0, -1, .68, -1)],
+    u: [1, L(0, -1, 0, -.5), A(.5, -.5, .5, .5, 180, 0), L(1, -1, 1, 0)], v: [1, P(0, -1, .5, 0, 1, -1)],
+    w: [1.4, P(0, -1, .35, 0, .7, -.75, 1.05, 0, 1.4, -1)], x: [.9, L(0, -1, .9, 0), L(.9, -1, 0, 0)],
+    y: [1, L(0, -1, .5, 0), L(1, -1, .25, .8)], z: [.9, P(0, -1, .9, -1, 0, 0, .9, 0)],
+    A: [1.3, P(0, 0, .65, -2, 1.3, 0), L(.25, -.75, 1.05, -.75)],
+    B: [1.1, L(0, -2, 0, 0), L(0, -2, .5, -2), A(.5, -1.5, .5, .5, -90, 90), L(.5, -1, 0, -1), L(0, -1, .55, -1), A(.55, -.5, .5, .5, -90, 90), L(.55, 0, 0, 0)],
+    C: [1.4, A(1, -1, .95, 1, 315, 45)], D: [1.3, L(0, -2, 0, 0), L(0, -2, .35, -2), A(.35, -1, .9, 1, -90, 90), L(.35, 0, 0, 0)],
+    E: [1, L(0, -2, 0, 0), L(0, -2, .95, -2), L(0, -1, .75, -1), L(0, 0, .95, 0)], F: [.95, L(0, -2, 0, 0), L(0, -2, .95, -2), L(0, -1, .75, -1)],
+    G: [1.5, A(1, -1, .95, 1, 315, 0), L(1.95, -1, 1.25, -1)], H: [1.2, L(0, -2, 0, 0), L(1.2, -2, 1.2, 0), L(0, -1, 1.2, -1)],
+    I: [.8, L(.4, -2, .4, 0), L(0, -2, .8, -2), L(0, 0, .8, 0)], J: [1, L(.9, -2, .9, -.45), A(.45, -.45, .45, .45, 0, 160)],
+    K: [1.1, L(0, -2, 0, 0), L(1.05, -2, .05, -.85), L(.4, -1.2, 1.1, 0)], L: [.9, L(0, -2, 0, 0), L(0, 0, .9, 0)],
+    M: [1.5, P(0, 0, 0, -2, .75, -.7, 1.5, -2, 1.5, 0)], N: [1.2, P(0, 0, 0, -2, 1.2, 0, 1.2, -2)], O: [1.8, O(.9, -1, .9, 1)],
+    P: [1.05, L(0, -2, 0, 0), L(0, -2, .5, -2), A(.5, -1.5, .5, .5, -90, 90), L(.5, -1, 0, -1)],
+    Q: [1.8, O(.9, -1, .9, 1), L(1.1, -.5, 1.8, .1)],
+    R: [1.1, L(0, -2, 0, 0), L(0, -2, .5, -2), A(.5, -1.5, .5, .5, -90, 90), L(.5, -1, 0, -1), L(.45, -1, 1.1, 0)],
+    S: [1.1, A(.55, -1.5, .5, .5, -25, -270), A(.55, -.5, .5, .5, -90, 155)], T: [1.2, L(0, -2, 1.2, -2), L(.6, -2, .6, 0)],
+    U: [1.2, L(0, -2, 0, -.6), A(.6, -.6, .6, .6, 180, 0), L(1.2, -2, 1.2, -.6)], V: [1.3, P(0, -2, .65, 0, 1.3, -2)],
+    W: [1.9, P(0, -2, .45, 0, .95, -1.4, 1.45, 0, 1.9, -2)], X: [1.2, L(0, -2, 1.2, 0), L(1.2, -2, 0, 0)],
+    Y: [1.2, L(0, -2, .6, -1), L(1.2, -2, .6, -1), L(.6, -1, .6, 0)], Z: [1.2, P(0, -2, 1.2, -2, 0, 0, 1.2, 0)],
+    '0': [1.1, O(.55, -1, .55, 1)], '1': [.6, L(.4, -2, .4, 0), L(.4, -2, .05, -1.65)],
+    '2': [1.1, A(.55, -1.45, .5, .55, 200, 380), L(1.02, -1.26, 0, 0), L(0, 0, 1.1, 0)],
+    '3': [1, A(.45, -1.5, .45, .5, 200, 450), A(.45, -.5, .5, .5, -90, 160)], '4': [1.1, P(.8, 0, .8, -2, 0, -.6, 1.1, -.6)],
+    '5': [1, P(.95, -2, .1, -2, .04, -1.1), A(.45, -.6, .5, .6, -150, 150)], '6': [1, O(.5, -.55, .48, .55), A(1, -.7, .95, 1.3, 180, 250)],
+    '7': [1, P(0, -2, 1, -2, .35, 0)], '8': [1, O(.5, -1.5, .4, .48), O(.5, -.5, .5, .52)], '9': [1, O(.5, -1.45, .48, .55), L(.98, -1.45, .9, 0)],
+    '.': [.3, D(.15, -.05)], ',': [.3, L(.2, -.08, .05, .3)], '!': [.3, L(.15, -2, .15, -.55), D(.15, -.05)],
+    '?': [.95, A(.45, -1.5, .45, .48, 200, 450), L(.45, -1.02, .45, -.55), D(.45, -.05)],
+    "'": q1, '’': q1, '‘': [.25, L(.1, -1.55, .17, -2)], '"': q2, '“': q2, '”': q2,
+    '(': [.45, A(.45, -.8, .4, 1.25, 125, 235)], ')': [.45, A(0, -.8, .4, 1.25, 55, -55)],
+    '-': [.6, L(.05, -.75, .55, -.75)], '—': [1, L(.05, -.75, .95, -.75)], '–': [.8, L(.05, -.75, .75, -.75)],
+    ':': [.3, D(.15, -.9), D(.15, -.05)], ';': [.3, D(.15, -.9), L(.2, -.08, .05, .3)]
+  };
+})();
+function strokePts(cmd, tf) {
+  if (cmd[0] === 'D') return { dot: tf(cmd[1], cmd[2]) };
+  const pts = [];
+  if (cmd[0] === 'P') for (let i = 1; i < cmd.length; i += 2) pts.push(tf(cmd[i], cmd[i + 1]));
+  else {
+    const cx = cmd[1], cy = cmd[2], rx = cmd[3], ry = cmd[4], a0 = cmd[5], a1 = cmd[6], n = Math.max(6, Math.ceil(Math.abs(a1 - a0) / 12));
+    for (let i = 0; i <= n; i++) { const a = (a0 + (a1 - a0) * i / n) * Math.PI / 180; pts.push(tf(cx + Math.cos(a) * rx, cy + Math.sin(a) * ry)); }
+  }
+  return pts;
+}
+function pnoise(x, y, px, py) {                                         // value noise that tiles seamlessly
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, u = xf * xf * (3 - 2 * xf), v = yf * yf * (3 - 2 * yf);
+  const g = (a, b) => hash2(((a % px) + px) % px, ((b % py) + py) % py);
+  return lerp(lerp(g(xi, yi), g(xi + 1, yi), u), lerp(g(xi, yi + 1), g(xi + 1, yi + 1), u), v);
+}
+
+/* ==========================================================
+   SCENE — where everyone stands and what they're up to
+   ========================================================== */
+const SPOTS = {
+  couchL: [60, 71], couchR: [83, 71], couchMid: [72, 71], couchBackL: [64, 53], couchBackR: [81, 53],
+  door: [128, 98], fridge: [12, 99], rugA: [56, 127], rugB: [89, 128], rug: [72, 124],
+  curtain: [35, 88], basket: [130, 147], sunbeam: [74, 108]
+};
+function place(P, spot) { const s = SPOTS[spot] || SPOTS.rugA; P.x = s[0]; P.y = s[1]; P.gy = s[1]; P.spot = spot; }
+const blinkAt = (t, seed, per) => ((t + seed * 1.7) % per) < 0.13;
+function idle(P, t, seed) { P.sy *= 1 + 0.02 * Math.sin(t * 2.2 + seed * 5); if (P.eyes === 'open' && blinkAt(t, seed, 3.6 + seed)) P.eyes = 'closed'; }
+function zzz(o, P, t, dir, du) { o.fx.push(() => { const p = toWorld(P, du == null ? 4 : du, DEF[P.who].headTop + 1); fxZzz(p[0] + (dir || 1) * 2, p[1], t, dir); }); }
+function mark(o, P, ch, du) { o.fx.push(() => { const p = toWorld(P, du == null ? 5 : du, DEF[P.who].headTop - 1); text(ch, p[0], p[1] - 6, WHITE, C.outline); }); }
+function say(o, P, str, side, du) { o.fx.push(() => { const p = toWorld(P, du || 0, DEF[P.who].headTop); fxSay(p[0], p[1], str, side); }); }
+function think(o, P, icon, t, dir) { o.fx.push(() => { const p = toWorld(P, (dir || 1) * 6, DEF[P.who].headTop + 1); fxThought(p[0], p[1], icon, t, dir); }); }
+function tipOver(P, dir, q) { P.pu = dir * 9.5; P.pv = -1; P.rot = dir * HALF_PI * q; }
+function situpPose(P, L, baseX) {
+  P.x = baseX + 14; P.pu = -9.5; P.pv = -1;
+  P.rot = -HALF_PI + L * (HALF_PI - 0.28);
+  P.sx = 1 + 0.26 * L; P.sy = 1 - 0.16 * L;          // bellies squish on the way up
+  P.crease = L > 0.6; P.flL = 0.9; P.flR = 0.9;
+}
+
+/* ---------- solo moments ---------- */
+const A = {
+  sitSleep(P, t, S, o) {
+    P.asleep = true; P.eyes = 'closed'; P.sy = 1 + 0.03 * Math.sin(t * 1.7); P.rot = 0.05 * Math.sin(t * 0.8);
+    zzz(o, P, t, P.who === 'bub' && P.x < 70 ? -1 : 1, P.who === 'bub' && P.x < 70 ? -4 : 4);
+  },
+  think(P, t, S, o, icon) {
+    const dir = P.spot === 'couchL' ? -1 : 1;
+    P.ly = -1; P.lx = dir; idle(P, t, 0.3);
+    think(o, P, icon || 'fish', t, dir);
+  },
+  mug(P, t, S, o) {
+    idle(P, t, 0.7); P.flR = -0.55;
+    const k = t % 7; if (k > 4.5 && k < 6.3) P.eyes = 'happy';
+    o.items.push({ z: P.gy + 0.6, draw: () => { const p = toWorld(P, 2.5, -12.5); drawMug(p[0], p[1]); } });
+    o.fx.push(() => { const p = toWorld(P, 3.5, -13.5); fxSteam(p[0], p[1], t); });
+  },
+  sip(P, t, S, o) {
+    P.flL = -0.5; P.flR = -0.5; P.eyes = (t % 6 < 4) ? 'happy' : 'open'; P.sy = 1 + 0.02 * Math.sin(t * 2);
+    o.items.push({ z: P.gy + 0.6, draw: () => { const c = toWorld(P, -3.5, -12), b = toWorld(P, -0.5, DEF.bub.beakV); drawStraw(c[0] + 3, c[1], b[0], b[1] + 1); drawSkullCup(c[0], c[1]); } });
+  },
+  read(P, t, S, o) {
+    P.flL = -0.6; P.flR = -0.6; P.ly = 1;
+    const k = t % 8;
+    if (k > 5 && k < 6.6) { P.eyes = 'closed'; P.rot = 0.06 * smooth((k - 5) / 0.6); P.asleep = true; }
+    else if (k >= 6.6 && k < 6.9) { P.eyes = 'wide'; P.ly = 0; }
+    else idle(P, t, 0.4);
+    o.items.push({ z: P.gy + 0.6, draw: () => { const p = toWorld(P, -4.5, -11); drawBook(p[0], p[1]); } });
+  },
+  doorWait(P, t, S, o) {
+    const k = t % 8.5;
+    if (k > 5.8 && k < 7.8) { P.lx = -1; idle(P, t, 0.2); }
+    else { P.back = true; P.sy = 1 + 0.015 * Math.sin(t * 1.8); }
+  },
+  windowWatch(P, t, S, o, mode) {
+    P.back = true; P.shadow = false;
+    if (mode === 'excited') {
+      const b = Math.abs(Math.sin(t * 6.5)), f = 0.5 + 0.8 * Math.abs(Math.sin(t * 13));
+      P.y = P.gy - Math.round(b * 2.5); P.flL = f; P.flR = f;
+      const k = t % 9;
+      if (k > 7 && k < 8.4) { P.back = false; P.eyes = 'wide'; P.blush = true; P.y = P.gy; P.flL = P.flR = 1.4; }
+    } else { P.rot = 0.03 * Math.sin(t * 0.7); P.sy = 1 + 0.015 * Math.sin(t * 1.5); }
+  },
+  fridge(P, t, S, o, mode) {
+    const hop = mode === 'hopeful', k = t % 7.5;
+    if (k > 5.2 && k < 7.1) { P.eyes = hop ? 'wide' : 'open'; if (hop) mark(o, P, '?'); else mark(o, P, '...', 2); }
+    else { P.back = true; P.rot = -0.04; if (hop && Math.sin(t * 5) > 0.75) P.y = P.gy - 1; }
+  },
+  sunbeam(P, t, S, o) {
+    const g = sunbeamGeom(S.envH || 12), cx = (g.xa0 + g.xb0 + g.xa1 + g.xb1) / 4;
+    P.x = clamp(cx, 36, 96) + 22.5; P.y = P.gy = 107;
+    P.pu = -9.5; P.pv = -1; P.rot = -HALF_PI; P.eyes = 'happy'; P.asleep = true;
+    P.sx = 1 + 0.03 * Math.sin(t * 1.4); P.flL = 0.9; P.flR = 0.9;
+    o.fx.push(() => fxMotes(g, t));
+    if (t % 5 < 0.8) o.fx.push(() => { const p = toWorld(P, 0, -8); sprite(SPR.sparkleSm, SPAL.sparkle, p[0], p[1] - 14); });
+  },
+  burrito(P, t, S, o) {
+    P.wrap = true; o.flags.noSherpa = true;
+    const k = t % 9; P.eyes = k < 6.5 ? 'closed' : 'open'; P.asleep = k < 6.5;
+    P.sy = 1 + 0.02 * Math.sin(t * 1.6);
+    if (k < 6.5) zzz(o, P, t, -1, -4);
+  },
+  suckIn(P, t, S, o) {
+    const k = t % 5.2;
+    if (k < 1) idle(P, t, 0.5);
+    else if (k < 1.35) { const q = smooth((k - 1) / 0.35); P.sx = 1 - 0.18 * q; P.sy = 1 + 0.04 * q; P.eyes = 'wide'; }
+    else if (k < 3.3) {
+      P.sx = 0.82; P.sy = 1.04; P.eyes = 'wide'; P.blush = true; P.x += (Math.floor(t * 12) % 2) ? 0.6 : -0.6;
+      if (k > 2.6) o.fx.push(() => { const p = toWorld(P, 7, -25); sprite(SPR.drop, SPAL.drop, p[0], p[1]); });
+    } else if (k < 3.75) {
+      const q = (k - 3.3) / 0.45; P.sx = lerp(0.82, 1, easeOutBack(q)) + 0.14 * Math.sin(q * Math.PI); P.sy = lerp(1.04, 1, q); P.eyes = 'closed';
+      o.fx.push(() => fxPuff(P.x, P.gy - 11, q));
+    } else { P.eyes = 'open'; P.blush = k < 4.6; }
+  },
+  dance(P, t, S, o) {
+    const a = Math.sin(t * 4.2);
+    P.rot = 0.14 * a; P.y = P.gy - Math.round(Math.abs(a) * 2); P.flL = 1.6 + 0.8 * a; P.flR = 1.6 - 0.8 * a;
+    P.eyes = 'happy'; P.blush = true;
+    o.fx.push(() => fxNotes(P.x, P.gy - 32, t));
+  },
+  clockWatch(P, t, S, o) {
+    P.lx = 1; P.ly = -1; const k = t % 6;
+    if (k > 4 && k < 4.9) { P.eyes = 'closed'; P.sy = 0.96; P.ly = 0; } else idle(P, t, 0.9);
+  },
+  yawn(P, t, S, o) {
+    P.eyes = 'half'; const k = t % 5;
+    if (k > 3 && k < 4.3) { const q = Math.sin(Math.PI * (k - 3) / 1.3); P.beak = q > 0.35 ? 1 : 0; P.sy = 1 + 0.06 * q; P.eyes = 'closed'; P.flL = P.flR = 0.32 + 0.9 * q; }
+    else P.sy = 1 + 0.02 * Math.sin(t * 1.5);
+  },
+  bellyPat(P, t, S, o) {
+    P.eyes = 'happy'; const k = t % 3.2;
+    P.flR = k < 1.2 ? -0.75 + 0.3 * Math.abs(Math.sin(k * 8)) : -0.2;
+    P.sy = 1 + 0.02 * Math.sin(t * 2);
+    if (k < 1.2 && Math.sin(k * 8) > 0.9) o.fx.push(() => { const p = toWorld(P, 3, -8); sprite(SPR.sparkleSm, SPAL.sparkle, p[0] + 4, p[1] - 3); });
+  },
+  carry(P, t, S, o) {
+    P.x += 13 * Math.sin(t * 0.8); P.lx = Math.cos(t * 0.8) >= 0 ? 1 : -1;
+    P.rot = 0.09 * Math.sin(t * 8); P.y = P.gy - (Math.sin(t * 16) > 0 ? 1 : 0); P.eyes = blinkAt(t, 0.6, 3) ? 'closed' : 'open'; P.flR = -0.5;
+    o.items.push({ z: P.gy + 0.6, draw: () => { const p = toWorld(P, 2, -10); drawSock(p[0], p[1]); } });
+  },
+  hideCurtain(P, t, S, o) {
+    const k = t % 7.5, peek = k > 5 && k < 6.8; P.shadow = false;
+    if (peek) { const q = Math.min(1, Math.sin(Math.PI * (k - 5) / 1.8) * 2); P.x -= 9 * q; P.rot = -0.24 * q; P.eyes = 'wide'; P.lx = -1; }
+    else P.feetL = (Math.floor(t * 2) % 5 === 0) ? 1 : 0;
+    const hide = { x: SPOTS.curtain[0], wig: Math.sin(t * 3) > 0.92 ? 1 : 0 };
+    o.flags.curtainHide = hide;
+    o.items.push({ z: P.gy + 0.5, draw: () => { drawCurtainLeft(hide); drawArm(41); if (!o.flags.noSherpa) drawSherpa(); } });
+  },
+  basket(P, t, S, o, v) {
+    const k = t % 6, up = k > 2.4 && k < 5.4; P.shadow = false; o.flags.basketIn = true;
+    P.y = P.gy + (up ? 0 : 9);
+    P.lx = up ? (k < 3.6 ? -1 : k < 4.6 ? 1 : 0) : 0; P.eyes = up ? 'open' : 'happy';
+    if (Math.floor(t / 6) % 3 === 2) P.hat = P.hat || 'sock';
+    o.items.push({ z: P.gy + 0.5, draw: drawBasketFront });
+  },
+  stretchFall(P, t, S, o) {
+    const per = 6.6, k = t % per, dir = (Math.floor(t / per) % 2) ? 1 : -1;
+    P.x -= 6;
+    if (k < 1.4) { const q = smooth(k / 1.4); P.flL = P.flR = lerp(0.38, 2.7, q); P.sy = 1 + 0.08 * q; P.sx = 1 - 0.04 * q; P.eyes = 'happy'; }
+    else if (k < 2.4) { const q = k - 1.4; tipOver(P, dir, 0); P.rot = Math.sin(q * 11) * 0.1 * (0.4 + q) + dir * 0.06 * q; P.flL = P.flR = 2.7; P.sy = 1.08; P.sx = 0.96; P.eyes = 'wide'; }
+    else if (k < 2.95) { tipOver(P, dir, easeOutBounce((k - 2.4) / 0.55)); P.flL = P.flR = 1.3; P.eyes = 'wide'; }
+    else if (k < 4.9) {
+      tipOver(P, dir, 1); P.eyes = k < 3.8 ? 'x' : 'happy'; P.flL = P.flR = 0.9;
+      if (k < 3.8) o.fx.push(() => fxDizzy(toWorld(P, 0, DEF.burt.headTop + 1), t));
+    } else if (k < 5.6) { const q = smooth((k - 4.9) / 0.7); tipOver(P, dir, 1 - q); P.y = P.gy - Math.sin(q * Math.PI) * 2; }
+    else idle(P, t, 0.2);
+  },
+  fallen(P, t, S, o) {
+    P.x -= 22; tipOver(P, 1, 1); P.eyes = (t % 5 < 4.2) ? 'happy' : 'open'; P.flL = 0.9; P.flR = 0.9 + 0.3 * Math.sin(t * 2);
+    P.feetL = Math.sin(t * 3) > 0.8 ? 1 : 0;
+    if (t % 6 < 1.2) o.fx.push(() => { const p = toWorld(P, 0, -30); fxHeart(p[0], p[1] - 4, (t % 6) / 1.2); });
+  },
+  balance(P, t, S, o) {
+    const per = 8, k = t % per, dir = (Math.floor(t / per) % 2) ? 1 : -1;
+    if (k < 4.4) {
+      tipOver(P, dir, 0); P.rot = (0.04 + k * 0.025) * Math.sin(k * 5.5); P.flL = P.flR = 1.3 + 0.4 * Math.sin(k * 7); P.eyes = 'wide';
+      const n = Math.min(4, Math.floor(k) + 1);
+      o.fx.push(() => text(String(n), P.x - 1, P.gy - 37, WHITE, C.outline));
+    } else if (k < 4.9) { tipOver(P, dir, easeOutBounce((k - 4.4) / 0.5)); P.eyes = 'wide'; }
+    else if (k < 6.8) { tipOver(P, dir, 1); P.eyes = k < 5.8 ? 'x' : 'happy'; if (k < 5.8) o.fx.push(() => fxDizzy(toWorld(P, 0, -24), t)); }
+    else { const q = smooth((k - 6.8) / 0.8); tipOver(P, dir, 1 - q); P.y = P.gy - Math.sin(q * Math.PI) * 2; }
+  },
+  sock(P, t, S, o) {
+    P.ly = 1; P.flL = P.flR = -0.45;
+    if (t % 1 < 0.25) { P.sy = 0.95; P.beak = 1; }
+    const kk = t % 6.5;
+    if (kk > 5 && kk < 6.3) { P.eyes = 'wide'; P.ly = 0; P.beak = 0; mark(o, P, '?'); }
+    o.items.push({ z: P.gy + 0.6, draw: () => { const p = toWorld(P, -3, -7); drawSock(p[0], p[1]); } });
+  },
+  bellyJiggle(P, t, S, o) {
+    const k = t % 3.4;
+    if (k < 0.5) { P.flR = lerp(0.38, -0.75, smooth(k / 0.5)); P.ly = 1; }
+    else {
+      const q = k - 0.5, j = Math.sin(q * 19) * Math.exp(-q * 2.6);
+      P.sx = 1 + 0.11 * j; P.sy = 1 - 0.06 * j; P.flR = -0.75 + 0.3 * smooth(q * 2);
+      P.eyes = q < 0.9 ? 'wide' : 'happy'; P.ly = q < 0.9 ? 1 : 0; if (q > 0.9 && q < 2.2) P.blush = true;
+    }
+  },
+  upsideSleep(P, t, S, o) {
+    P.rot = Math.PI + 0.05 * Math.sin(t * 0.9); P.y = P.gy - 2; P.eyes = 'closed'; P.asleep = true; P.shadow = false;
+    P.feetL = Math.sin(t * 7) > 0.7 ? 1 : 0; P.feetR = Math.sin(t * 7 + 2) > 0.7 ? -1 : 0;
+    o.fx.push(() => { const p = toWorld(P, -7, -20); fxZzz(p[0] + 8, p[1] - 6, t); });
+  },
+  runSleep(P, t, S, o) {
+    P.rot = -HALF_PI; P.y = P.gy + DEF.burt.lieDrop; P.eyes = 'closed'; P.asleep = true;
+    const f = Math.sin(t * 15); P.feetL = 1.3 * f; P.feetR = -1.3 * f;
+    P.flL = 0.3 + 0.25 * Math.sin(t * 11); P.flR = 0.3 + 0.25 * Math.sin(t * 11 + 1);
+    o.fx.push(() => { const p = toWorld(P, 3, -22); fxZzz(p[0], p[1] - 8, t); });
+  },
+  bounce(P, t, S, o, mode) {
+    if (mode === 'ghost') P.hat = 'ghost';
+    const k = (t % 0.62) / 0.62, h = Math.sin(k * Math.PI);
+    P.y = P.gy - Math.round(h * 7);
+    if (h < 0.18) { P.sy = 0.88; P.sx = 1.1; } else { P.sy = 1.04; P.sx = 0.97; }
+    P.flL = P.flR = 0.4 + h * 1.2; P.eyes = h > 0.4 ? 'happy' : 'open';
+  },
+  doorPace(P, t, S, o) {
+    const k = t % 7;
+    if (k < 5) { P.x += 7 * Math.sin(k * 1.2566); P.lx = Math.cos(k * 1.2566) > 0 ? 1 : -1; P.rot = 0.1 * Math.sin(t * 9); P.y = P.gy - (Math.sin(t * 18) > 0 ? 1 : 0); idle(P, t, 0.6); }
+    else { P.back = true; P.rot = -0.08; mark(o, P, '?', 6); }
+  },
+  wave(P, t, S, o) {
+    P.flR = 2.3 + 0.45 * Math.sin(t * 10); P.eyes = 'happy'; P.blush = true; P.y = P.gy - (Math.sin(t * 5) > 0.6 ? 1 : 0);
+    if (t % 2.4 < 1.2) o.fx.push(() => fxHeart(P.x + 10, P.gy - 30, (t % 2.4) / 1.2));
+  },
+  zoomies(P, t, S, o) {
+    const th = t * 2.1;
+    P.x = 72 + 32 * Math.cos(th); P.gy = 124 + 7 * Math.sin(th);
+    P.y = P.gy - Math.abs(Math.sin(t * 14)) * 1.5; P.rot = 0.12 * Math.sin(t * 14);
+    P.flL = P.flR = 1.1 + 0.3 * Math.sin(t * 14); P.lx = -Math.sin(th) > 0 ? 1 : -1; P.eyes = 'happy';
+    const ph = (th / TAU) % 3;
+    if (ph > 2.55 && ph < 2.8) { P.rot = TAU * (ph - 2.55) / 0.25; P.eyes = 'x'; }
+  },
+  treasure(P, t, S, o) {
+    P.flL = P.flR = 2.6; P.eyes = 'happy'; P.blush = true; P.y = P.gy - (t % 1 < 0.25 ? 2 : 0);
+    const item = S.find && S.find.item;
+    o.items.push({ z: P.gy + 0.6, draw: () => { if (!item) return; const p = toWorld(P, 0, -31); spriteOutlined(item.icon, ICON_PAL, p[0] - 3, p[1] - 5, C.outline); } });
+    o.fx.push(() => fxSparkles(P.x, P.y - 36, t));
+  },
+  showPaper(P, t, S, o, kind) {
+    P.flL = P.flR = -0.5; P.eyes = 'happy'; P.blush = true; P.y = P.gy - (t % 1.4 < 0.2 ? 1 : 0);
+    o.items.push({ z: P.gy + 0.6, draw: () => { const p = toWorld(P, -5, -12); drawPaper(p[0], p[1], kind); } });
+  }
+};
+
+/* ---------- together ---------- */
+const AB = {
+  pillow(B, U, t, S, o) {
+    place(U, 'couchMid'); place(B, 'couchMid');
+    const burtAwake = !(S.both.sleepy && S.both.sleepy.burt);
+    U.rot = HALF_PI; U.x = 76; U.y = U.gy + DEF.burt.lieDrop;
+    B.rot = HALF_PI - 0.2; B.x = 70; B.y = 60; B.zb = 1;
+    B.eyes = 'closed'; B.asleep = true; B.sx = 1 + 0.025 * Math.sin(t * 1.5); B.flL = B.flR = 0.2;
+    zzz(o, B, t, -1, 0);
+    if (burtAwake) {
+      U.eyes = S.variant === 1 ? 'wide' : (blinkAt(t, 0.4, 3.2) ? 'closed' : 'open');
+      U.flR = 0.38 + (Math.sin(t * 9) > 0.85 ? 0.3 : 0);
+      if (S.variant === 1 && t % 3 < 1.5) o.fx.push(() => { const p = toWorld(U, 6, -24); sprite(SPR.drop, SPAL.drop, p[0], p[1]); });
+    } else { U.eyes = 'closed'; U.asleep = true; o.fx.push(() => { const p = toWorld(U, 2, -24); fxZzz(p[0] + 4, p[1] - 4, t + 1.3); }); }
+  },
+  whisper(B, U, t, S, o) {
+    place(B, 'couchL'); place(U, 'couchR');
+    B.eyes = 'closed'; B.asleep = true; B.sy = 1 + 0.03 * Math.sin(t * 1.7);
+    const k = t % 9;
+    if (k > 6.6 && k < 8.2) { B.eyesR = 'open'; B.lx = 1; } else zzz(o, B, t, -1, -4);
+    U.x -= 3; U.rot = -0.16; U.lx = -1; idle(U, t, 0.4);
+    if (t % 2.6 < 1.5) { U.flL = 1.1; say(o, U, 'BUB?', 'left', -5); }
+    U.y = U.gy - (Math.sin(t * 4) > 0.8 ? 1 : 0);
+  },
+  negotiation(B, U, t, S, o) {
+    place(B, 'couchL'); place(U, 'couchR');
+    B.wrap = true; o.flags.noSherpa = true; B.eyes = 'open'; B.sy = 1 + 0.02 * Math.sin(t * 1.6);
+    A.bounce(U, t, S, o);
+    if (Math.floor(t / 2.2) % 2 === 0) think(o, B, 'blanket', t, -1); else think(o, U, 'drop', t, 1);
+  },
+  situps(B, U, t, S, o) {
+    place(B, 'rugA'); place(U, 'rugB');
+    const Lu = Math.sin(((t % 1.3) / 1.3) * Math.PI);
+    situpPose(U, Lu, 92); U.eyes = Lu > 0.6 ? 'closed' : 'wide';
+    const nU = Math.min(40, 31 + Math.floor(t / 1.3));
+    let Lb = 0;
+    if (t < 26) { if (t > 1.2 && t < 4.2) Lb = Math.sin(Math.PI * (t - 1.2) / 3); }
+    else { const kb = t % 26; if (kb > 8 && kb < 9.6) Lb = 0.3 * Math.sin(Math.PI * (kb - 8) / 1.6); }
+    situpPose(B, Lb, 50); B.eyes = Lb > 0.05 ? 'closed' : (Math.floor(t / 3) % 3 === 0 ? 'open' : 'closed');
+    if (Lb > 0.2) B.x += (Math.floor(t * 14) % 2) ? 0.5 : -0.5;
+    const nB = t > 2.7 ? 1 : 0;
+    o.fx.push(() => { text(String(nB), 49, B.gy - 34, WHITE, C.outline); text(String(nU), 95, U.gy - 35, WHITE, C.outline); });
+    if (t > 4.2 && t % 2 < 1) o.fx.push(() => { const p = toWorld(B, 3, -28); sprite(SPR.drop, SPAL.drop, p[0], p[1] - 3); });
+    if (Lu > 0.8) o.fx.push(() => { const p = toWorld(U, 6, -26); sprite(SPR.drop, SPAL.drop, p[0], p[1] - 2); });
+  },
+  pt(B, U, t, S, o) {
+    place(B, 'rugA'); place(U, 'rugB'); B.x -= 8;
+    B.lx = 1; B.flR = -0.45; idle(B, t, 0.5);
+    A.balance(U, t, S, o);
+    const k = t % 8, down = k > 4.6 && k < 7.2;
+    if (down) { B.eyes = 'open'; B.ly = 1; mark(o, B, '...', 2); }
+    o.items.push({ z: B.gy + 0.6, draw: () => { const p = toWorld(B, 1, -13); drawClipboard(p[0], p[1], down ? t : 0); } });
+  },
+  comingHome(B, U, t, S, o) {
+    place(B, 'door'); place(U, 'door'); B.x = 118; U.x = 133; B.back = true; U.back = true;
+    const k = t % 5;
+    if (k > 2.6 && k < 3.8) { U.back = false; U.lx = -1; U.eyes = 'wide'; say(o, U, '?', 'right', 2); }
+    if (k > 3.4 && k < 4.6) { B.back = false; B.lx = 1; B.eyes = 'open'; say(o, B, 'SOON', 'left', -3); }
+    if (U.back && Math.sin(t * 5) > 0.8) U.y = U.gy - 1;
+  },
+  stars(B, U, t, S, o) {
+    place(B, 'couchBackL'); place(U, 'couchBackR');
+    B.back = U.back = true; B.shadow = U.shadow = false;
+    const k = t % 6;
+    B.flL = k < 3.2 ? 2.4 : 0.32;
+    U.flR = (k > 0.6 && k < 3.8) ? 2.4 : 0.38;
+    if (k > 4.2 && k < 5.6) { U.back = false; U.eyes = 'happy'; U.blush = true; U.lx = -1; }
+    o.fx.push(() => fxTwinkle(t));
+  },
+  snowWatch(B, U, t, S, o) { place(B, 'couchBackL'); place(U, 'couchBackR'); A.windowWatch(B, t, S, o); A.windowWatch(U, t, S, o, 'excited'); },
+  hug(B, U, t, S, o) {
+    place(B, 'couchL'); place(U, 'couchR');
+    U.x -= 5; U.rot = -0.3; U.eyes = 'happy'; U.blush = true; U.sy = 1 + 0.02 * Math.sin(t * 2);
+    const k = t % 7, soft = k > 4.5 && k < 6.2;
+    B.eyes = soft ? 'happy' : (blinkAt(t, 0.5, 3.4) ? 'closed' : 'open'); B.blush = soft; B.sy = 1 + 0.02 * Math.sin(t * 1.7);
+    if (t % 3 < 1.4) o.fx.push(() => fxHeart(72, 38, (t % 3) / 1.4));
+  },
+  nightSleep(B, U, t, S, o) {
+    place(B, 'couchL'); place(U, 'couchR');
+    A.sitSleep(B, t, S, o); B.rot = -0.16 + 0.03 * Math.sin(t * 0.8);
+    A.upsideSleep(U, t, S, o); U.rot = Math.PI + 0.42; U.x += 6; U.y = U.gy - 4;
+  },
+  lights(B, U, t, S, o) {
+    place(B, 'rugA'); place(U, 'rugB'); B.x -= 4;
+    B.eyes = 'open'; B.lx = 1; B.ly = 1; B.flR = 1.2;
+    U.eyes = 'happy'; U.blush = true; U.flL = U.flR = 1.0; U.y = U.gy - (t % 1.6 < 0.2 ? 1 : 0);
+    o.items.push({ z: U.gy + 0.6, draw: () => drawLightsWire(B, U) });
+    o.post.push(() => drawLightsBulbs(U, t));
+  },
+  ginger(B, U, t, S, o) {
+    place(B, 'rugA'); place(U, 'rugB'); B.x = 50; U.x = 95;
+    const q = t % 7;
+    if (q < 4.6) {                                  // Burt inches closer while Bub pretends not to look
+      const lean = smooth(q / 4.6);
+      B.lx = -1; B.ly = -1; B.eyes = 'open';
+      U.lx = -1; U.ly = 1; U.rot = -0.24 * lean; U.x -= 3 * lean; U.beak = q > 2.5 ? 1 : 0; idle(U, t, 0.4);
+      if (q > 3.4) o.fx.push(() => { const p = toWorld(U, -1.5, -13.5); sprite(SPR.drop, SPAL.drop, p[0] - 1, p[1] + Math.floor((q - 3.4) * 5)); });
+    } else if (q < 5.6) {                           // Bub glances over. Burt snaps upright.
+      B.lx = 1; B.ly = 0; B.eyes = 'open';
+      U.eyes = 'wide'; U.lx = 1; U.ly = -1; mark(o, U, '!');
+    } else {                                        // both just admiring the craftsmanship
+      B.lx = 1; B.ly = 1; B.eyes = blinkAt(t, 0.2, 2.5) ? 'closed' : 'open';
+      U.lx = -1; U.ly = 1; idle(U, t, 0.8);
+    }
+    o.items.push({ z: 126.5, draw: () => drawGinger(65, 113, false) });
+    if (Math.floor(t * 2) % 5 === 0) o.fx.push(() => sprite(SPR.sparkleSm, SPAL.sparkle, 76, 111));
+  },
+  crumbs(B, U, t, S, o) {
+    place(B, 'rugA'); place(U, 'rugB'); B.x = 50; U.x = 95;
+    const q = t % 5, side = q > 3.2 && q < 4.2;      // innocent looks, plus one quick side-eye at each other
+    B.lx = side ? 1 : -1; B.ly = side ? 0 : -1; U.lx = side ? -1 : 1; U.ly = side ? 0 : -1;
+    B.eyes = blinkAt(t, 0.3, 3.1) ? 'closed' : 'open'; U.eyes = blinkAt(t, 0.9, 2.7) ? 'closed' : 'open';
+    B.blush = U.blush = true;
+    o.items.push({ z: 126.5, draw: () => { drawGinger(65, 113, true); drawCrumbs(72, 124); } });
+    o.items.push({ z: B.gy + 0.6, draw: () => beakCrumbs(B) });
+    o.items.push({ z: U.gy + 0.6, draw: () => { beakCrumbs(U); drawGumdrop(U); } });
+    if (q < 2.4) o.fx.push(() => fxNotes(U.x + 2, U.gy - 30, t));   // Burt whistling, very casually
+  },
+  giftSocks(B, U, t, S, o) {
+    place(B, 'couchL'); place(U, 'couchR');
+    B.flR = -0.5; U.flL = -0.5; B.eyes = 'happy'; U.eyes = 'happy'; U.blush = true; B.blush = true;
+    U.y = U.gy - (t % 1.2 < 0.2 ? 1 : 0);
+    o.items.push({ z: B.gy + 0.6, draw: () => { const p = toWorld(B, 2, -11), q = toWorld(U, -7, -9); drawSock(p[0], p[1]); drawSock(q[0], q[1], true); } });
+    if (t % 3 < 1.4) o.fx.push(() => fxHeart(72, 36, (t % 3) / 1.4));
+  }
+};
+
+function runSolo(P, spec, t, S, o, v) {
+  const parts = spec.split(':'), f = A[parts[0]];
+  if (f) f(P, t, Object.assign({}, S, { variant: v }), o, parts[1]);
+}
+function buildPoses(S, t, o, st) {
+  const B = newPose('bub', 0, 0), U = newPose('burt', 0, 0);
+  const S2 = Object.assign({}, S, { envH: st.env ? st.env.h : 12 });
+  if (S.kind === 'both' && S.both.anim) AB[S.both.anim](B, U, t, S2, o);
+  else {
+    const bp = S.kind === 'both' ? S.both.parts.bub : [S.bub.anim, S.bub.spot];
+    const up = S.kind === 'both' ? S.both.parts.burt : [S.burt.anim, S.burt.spot];
+    place(B, bp[1]); place(U, up[1]);
+    runSolo(B, bp[0], t, S2, o, S.kind === 'pair' ? S.vb : S.variant);
+    runSolo(U, up[0], t + 1.7, S2, o, S.kind === 'pair' ? S.vu : S.variant);
+  }
+  if (S.hats) { if (S.hats.bub && !B.hat) B.hat = S.hats.bub; if (S.hats.burt && !U.hat) U.hat = S.hats.burt; }
+  applyInteractions(B, U, st, o);
+  return [B, U];
+}
+
+/* ---------- pokes + snacks ---------- */
+function applyInteractions(B, U, st, o) {
+  const now = st.tAbs, ib = st.inter.bub, iu = st.inter.burt;
+  if (ib) {
+    const d = now - ib.t0;
+    if (ib.kind === 'blink') { if (d < 0.75) { B.eyes = 'closed'; B.eyesL = B.eyesR = null; } else if (d > 1.4) st.inter.bub = null; }
+    else if (ib.kind === 'peek') { if (d < 1.5) { B.eyesL = 'closed'; B.eyesR = 'open'; } else st.inter.bub = null; }
+  }
+  if (iu) {
+    const d = now - iu.t0;
+    if (iu.kind === 'fall' || iu.kind === 'spin') {
+      const spin = iu.kind === 'spin' ? 0.6 : 0;
+      if (d < spin) U.rot += TAU * (d / spin);
+      else {
+        const e = d - spin, upright = Math.abs(U.rot) < 0.5 && U.pv == null && U.spot !== 'basket' && U.spot !== 'curtain';
+        if (upright) {
+          if (e < 0.45) tipOver(U, iu.dir, easeOutBounce(e / 0.45));
+          else if (e < 1.5) { tipOver(U, iu.dir, 1); U.eyes = 'x'; o.fx.push(() => fxDizzy(toWorld(U, 0, -24), now)); }
+          else if (e < 2.1) { const q = smooth((e - 1.5) / 0.6); tipOver(U, iu.dir, 1 - q); U.y -= Math.sin(q * Math.PI) * 2; }
+          else st.inter.burt = null;
+        } else if (e < 0.5) { U.y -= Math.sin((e / 0.5) * Math.PI) * 3; U.eyes = 'wide'; }
+        else st.inter.burt = null;
+      }
+    } else if (iu.kind === 'wiggle') { if (d < 1.2) { U.feetL = Math.sin(d * 30) * 1.5; U.feetR = -U.feetL; } else st.inter.burt = null; }
+  }
+  const sn = st.snack;
+  if (sn) {
+    const d = now - sn.t0;
+    if (d > 0.55 && d < 0.8) { U.beak = 1; U.eyes = 'wide'; }
+    else if (d >= 0.8 && d < 1.8) { U.eyes = 'happy'; U.belly = 1 + 0.14 * (1 - (d - 0.8)); U.blush = true; }
+    if (d > 0.55 && d < 1.7 && !B.back) { if (!B.asleep) B.eyes = 'open'; B.ly = 1; }
+    else if (d >= 1.7 && d < 2.6 && !B.asleep) B.eyes = 'happy';
+    if (d > 3) st.snack = null;
+  }
+}
+function drawInteractionFX(st, poses) {
+  const now = st.tAbs, B = poses[0], U = poses[1];
+  st.hearts = st.hearts.filter(h => now - h.t0 < 1.1);
+  for (const h of st.hearts) fxHeart(h.x, h.y, (now - h.t0) / 1.1);
+  const sn = st.snack;
+  if (!sn) return;
+  const d = now - sn.t0, ub = toWorld(U, 0, DEF.burt.beakV), bc = toWorld(B, 0, -9);
+  if (d < 0.55) {
+    const q = d / 0.55;
+    spriteOutlined(SPR.fish, SPAL.fish, ub[0] - 3, lerp(-6, ub[1] - 2, q * q), C.outline);
+    spriteOutlined(SPR.fish, SPAL.fish, bc[0] - 3, lerp(-10, bc[1] - 2, q * q), C.outline);
+    return;
+  }
+  if (d < 0.7) spriteOutlined(SPR.fish, SPAL.fish, ub[0] - 3, ub[1] - 2, C.outline);
+  if (d > 0.8 && d < 1.8) fxHeart(ub[0] + 6, ub[1] - 8, (d - 0.8) / 1);
+  if (d < 1.7) spriteOutlined(SPR.fish, SPAL.fish, bc[0] - 3, bc[1] - 2, C.outline);
+  else if (d < 2.4) {
+    const q = (d - 1.7) / 0.7, side = toWorld(B, -13, -9);
+    if (q < 0.7) spriteOutlined(SPR.fish, SPAL.fish, lerp(bc[0], side[0], q / 0.7) - 3, lerp(bc[1], side[1], q / 0.7) - 2, C.outline);
+    text('LATER', bc[0] - 9, bc[1] - 30 - q * 4, WHITE, C.outline);
+  }
+}
+
+/* ---------- one frame ---------- */
+let bgKey = '';
+function ensureBG(opts) {
+  const key = JSON.stringify(opts);
+  if (key === bgKey) return;
+  bgKey = key; target(BG, W, H); drawRoomBG(opts);
+}
+function renderScene(st) {
+  const S = st.scene, o = { items: [], fx: [], post: [], flags: {} };
+  const poses = buildPoses(S, st.t, o, st);
+  const found = foundList(S.key, S.block), shelf = [];
+  for (let i = found.length - 1; i >= 0 && shelf.length < 6; i--) shelf.push(found[i].item.id);
+  const c = S.c;
+  const opts = { m: c.m, dec: c.m === 12, tgFridge: c.tgFridge, valFridge: c.valFridge, noSherpa: !!o.flags.noSherpa,
+    hide: !!o.flags.curtainHide, basketIn: !!o.flags.basketIn, shelf: shelf.join(',') };
+  ensureBG(opts);
+  FRAME.set(BG); target(FRAME, W, H);
+  drawSky(st.env, st.tAbs); target(FRAME, W, H); copySky();
+  drawMullions(); drawSillDecor(c.m); drawClockHands(st.now);
+  for (const P of poses) o.items.push({ z: P.gy + P.zb, draw: () => { drawShadow(P); drawPenguin(P); } });
+  o.items.sort((a, b) => a.z - b.z);
+  for (const it of o.items) it.draw();
+  drawPlant();
+  buildLightMap(st.env); applyLighting();
+  drawEmissive(st.env, st.tAbs, opts);
+  for (const f of o.post) f();
+  for (const f of o.fx) f();
+  drawInteractionFX(st, poses);
+  return poses;
+}
+function dissolve(p) {
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    if (bayer(x, y) * 0.999 >= p) { const i = y * W + x; FRAME[i] = PREV[i]; }
+  }
+}
+
+/* ==========================================================
+   APP — screen, buttons, sheets, saving, sound, main loop
+   ========================================================== */
+const $ = id => document.getElementById(id);
+const QS = new URLSearchParams(location.search);
+const FORCE = { t: QS.get('t'), scene: QS.get('scene'), w: QS.get('w'), st: parseFloat(QS.get('st') || '0') || 0 };
+const reducedMotion = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+const pickR = arr => arr[Math.floor(Math.random() * arr.length)];
+
+const st = {
+  offsetMs: 0, scene: null, sceneId: '', sceneStart: 0, tAbs: 0, t: 0, now: new Date(),
+  inter: { bub: null, burt: null }, snack: null, hearts: [], lamp: null, trans: null, env: null, poses: null, burtTaps: []
+};
+if (FORCE.t) { const ft = new Date(FORCE.t).getTime(); if (!isNaN(ft)) st.offsetMs = ft - Date.now(); }
+const curNow = () => new Date(Date.now() + st.offsetMs);
+
+/* ---------- saving: Claude's storage when available, otherwise this phone ---------- */
+const Store = {
+  mem: {},
+  async get(k) {
+    if (k in this.mem) return this.mem[k];
+    let v = null;
+    if (window.storage && typeof window.storage.get === 'function') {
+      try { const r = await window.storage.get(k); if (r && r.value != null) v = JSON.parse(r.value); } catch (e) { /* not saved yet */ }
+    } else {
+      try { const s = window.localStorage.getItem(k); if (s != null) v = JSON.parse(s); } catch (e) { /* storage unavailable */ }
+    }
+    this.mem[k] = v;
+    return v;
+  },
+  async set(k, v) {
+    this.mem[k] = v;
+    if (window.storage && typeof window.storage.set === 'function') { try { await window.storage.set(k, JSON.stringify(v)); } catch (e) { /* keep in memory */ } return; }
+    try { window.localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* keep in memory */ }
+  }
+};
+
+/* ---------- pixels to images ---------- */
+function bufToURL(buf, w, h, scale) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const cx = c.getContext('2d'), id = cx.createImageData(w, h);
+  new Uint32Array(id.data.buffer).set(buf); cx.putImageData(id, 0, 0);
+  const o = document.createElement('canvas'); o.width = w * scale; o.height = h * scale;
+  const ox = o.getContext('2d'); ox.imageSmoothingEnabled = false; ox.drawImage(c, 0, 0, w * scale, h * scale);
+  return o.toDataURL('image/png');
+}
+function portraitBuf(list, w, h) {
+  const buf = new Uint32Array(w * h); target(buf, w, h);
+  for (const [who, x, y] of list) { const P = newPose(who, x, y); P.shadow = false; drawPenguin(P); }
+  target(FRAME, W, H);
+  return buf;
+}
+const PORTRAIT = {
+  bub: bufToURL(portraitBuf([['bub', 11, 29]], 22, 20), 22, 20, 6),
+  burt: bufToURL(portraitBuf([['burt', 11, 28]], 22, 20), 22, 20, 6),
+  both: bufToURL(portraitBuf([['bub', 11, 29], ['burt', 26, 29]], 37, 20), 37, 20, 6)
+};
+/* ---------- drawing the handwriting ---------- */
+const GRAIN = {};
+function grainFor(s) {                                                  // waxy crayon grain: little gaps where the paper shows through
+  if (GRAIN[s]) return GRAIN[s];
+  const w = 64 * s, h = 32 * s, c = document.createElement('canvas'); c.width = w; c.height = h;
+  const cx = c.getContext('2d'), id = cx.createImageData(w, h), d = id.data;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const gx = Math.floor(x / s), gy = Math.floor(y / s);
+    const n = pnoise(gx * 0.25, gy, 16, 32) * 0.55 + pnoise(gx * 0.5, gy * 0.5, 32, 16) * 0.2 + hash2(gx, gy + 99) * 0.25;
+    d[(y * w + x) * 4 + 3] = n < 0.34 ? 235 : n < 0.42 ? 160 : n < 0.5 ? 70 : 0;
+  }
+  cx.putImageData(id, 0, 0);
+  return (GRAIN[s] = c);
+}
+function handwrite(cv, str, style) {
+  const crayon = style === 'crayon', dpr = Math.min(3, window.devicePixelRatio || 1);
+  const size = +cv.dataset.size || (crayon ? 9.8 : 7.4), track = crayon ? 0.3 : 0.34, space = 0.62;
+  const par = cv.parentNode, cs = getComputedStyle(par);
+  const maxW = Math.max(100, par.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - (crayon ? 8 : 2));
+  const r = rngFor(style + '|' + str), gw = ch => (GLYPHS[ch] || [0.5])[0];
+  const lines = []; let cur = [], lw = 0;
+  for (const w of str.split(' ')) {
+    let ww = 0; for (const ch of w) ww += (gw(ch) + track) * size;
+    if (cur.length && lw + space * size + ww > maxW) { lines.push(cur); cur = []; lw = 0; }
+    if (cur.length) lw += space * size;
+    cur.push(w); lw += ww;
+  }
+  if (cur.length) lines.push(cur);
+  const lh = size * (crayon ? 3.45 : 3.25), top = size * 2.3, hCss = lines.length * lh + size * 0.5;
+  cv.width = Math.ceil(maxW * dpr); cv.height = Math.ceil(hCss * dpr);
+  cv.style.width = maxW + 'px'; cv.style.height = hCss + 'px';
+  const ctx = cv.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, maxW, hCss);
+  const col = getComputedStyle(document.documentElement).getPropertyValue(crayon ? '--crayon' : '--pen').trim() || (crayon ? '#c9482f' : '#2c3f6b');
+  const strokes = [], J = size * (crayon ? 0.09 : 0.025);
+  lines.forEach((ln, li) => {
+    let x = crayon ? 4 : 1;
+    const base = top + li * lh;
+    ln.forEach((w, wi) => {
+      if (wi) x += space * size * (0.85 + r() * 0.3);
+      for (const ch of w) {
+        const G = GLYPHS[ch] || [0.5], g0 = G[0];
+        const rot = (r() - 0.5) * (crayon ? 0.2 : 0.06), sc = crayon ? 0.9 + r() * 0.24 : 0.96 + r() * 0.08, dy = (r() - 0.5) * (crayon ? 0.32 : 0.08) * size;
+        const c = Math.cos(rot), s = Math.sin(rot), ox = x + g0 * size * sc / 2, oy = base + dy;
+        const tf = (gx, gy) => { const ux = (gx - g0 / 2) * sc * size, uy = gy * sc * size; return [ox + ux * c - uy * s, oy + ux * s + uy * c]; };
+        for (let k = 1; k < G.length; k++) {
+          const pts = strokePts(G[k], tf), seed = r() * 100;
+          if (!pts.dot) pts.forEach((p, i) => { p[0] += (vnoise(seed + i * 0.4, 1) - 0.5) * J * 2; p[1] += (vnoise(seed + i * 0.4, 9) - 0.5) * J * 2; });
+          strokes.push(pts);
+        }
+        x += (g0 * sc + track) * size;
+      }
+    });
+  });
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = col; ctx.fillStyle = col;
+  const pass = (lwid, alpha, dx, dy) => {
+    ctx.globalAlpha = alpha; ctx.lineWidth = lwid;
+    for (const p of strokes) {
+      ctx.beginPath();
+      if (p.dot) { ctx.arc(p.dot[0] + dx, p.dot[1] + dy, lwid * (crayon ? 0.6 : 0.95), 0, TAU); ctx.fill(); continue; }
+      ctx.moveTo(p[0][0] + dx, p[0][1] + dy);
+      for (let i = 1; i < p.length; i++) ctx.lineTo(p[i][0] + dx, p[i][1] + dy);
+      ctx.stroke();
+    }
+  };
+  if (crayon) {
+    pass(size * 0.28, 0.95, 0, 0);
+    pass(size * 0.14, 0.6, size * 0.07, size * 0.06);
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = ctx.createPattern(grainFor(Math.max(1, Math.round(dpr))), 'repeat'); ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.globalCompositeOperation = 'source-over';
+  } else pass(size * 0.13, 1, 0, 0);
+}
+function handEl(str, style, size) {
+  const c = el('canvas', 'hand ' + style + '-hand'); if (size) c.dataset.size = size;
+  c.setAttribute('role', 'img'); c.setAttribute('aria-label', str); c.dataset.text = str; c.dataset.style = style;
+  return c;
+}
+function renderHands(root) { root.querySelectorAll('canvas.hand').forEach(c => handwrite(c, c.dataset.text, c.dataset.style)); }
+const ICON_CACHE = {};
+function treasureURL(item) {
+  if (ICON_CACHE[item.id]) return ICON_CACHE[item.id];
+  const buf = new Uint32Array(64); target(buf, 8, 8); spriteOutlined(item.icon, ICON_PAL, 1, 1, C.outline); target(FRAME, W, H);
+  return (ICON_CACHE[item.id] = bufToURL(buf, 8, 8, 6));
+}
+const LOCKED_URL = (function () { const buf = new Uint32Array(64); target(buf, 8, 8); text('?', 2, 1, hex('#9aa6b8'), C.outline); target(FRAME, W, H); return bufToURL(buf, 8, 8, 6); })();
+function pxSVG(rows, pal) {
+  const h = rows.length, w = rows[0].length;
+  let s = '<svg viewBox="0 0 ' + w + ' ' + h + '" shape-rendering="crispEdges" aria-hidden="true" focusable="false">';
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+    const ch = rows[j][i];
+    if (ch !== '.' && pal[ch]) s += '<rect x="' + i + '" y="' + j + '" width="1.05" height="1.05" fill="' + pal[ch] + '"/>';
+  }
+  return s + '</svg>';
+}
+const INK = 'currentColor';
+const SVG = {
+  fish: pxSVG(['...kkkk...k', '.kkbbbbk.kk', 'kbwkbbbbkbk', 'kbbbbbbbbbk', 'kLLLLLLLkbk', '.kkLLLLk.kk', '...kkkk...k'], { k: INK, b: '#7ab7dc', w: '#ffffff', L: '#bfe1f4' }),
+  diary: pxSVG(['.kkkkkkkk.', 'kbbbbbbbpk', 'kbbhbhbbpk', 'kbhhhhhbpk', 'kbbhhhbbpk', 'kbbbhbbbpk', 'kbbbbbbbpk', '.kkkkkkkk.'], { k: INK, b: '#5f86b3', p: '#f7f2e4', h: '#ff6b84' }),
+  shelf: pxSVG(['.kkkkkkkk.', 'knnnnnnnnk', 'knnnnnnnnk', 'kyyyyyyyyk', 'knnnyynnnk', 'knnnkknnnk', 'knnnnnnnnk', '.kkkkkkkk.'], { k: INK, n: '#9b6a43', y: '#f2c94c' }),
+  soundOn: pxSVG(['....kk.....', '....kwk..k.', '....k.wk..k', '....k...k.k', '....k...k.k', '.kkkk.....k', 'kwwwk....k.', 'kwwwk......', '.kkk.......'], { k: INK, w: '#e3a33d' }),
+  soundOff: pxSVG(['....kk.....', '....kwk....', '....k.wk...', '....k...k.k', '....k....k.', '.kkkk...k.k', 'kwwwk......', 'kwwwk......', '.kkk.......'], { k: INK, w: '#9aa6b8' })
+};
+
+/* ---------- canvas ---------- */
+const cv = $('room'), cctx = cv.getContext('2d');
+const low = document.createElement('canvas'); low.width = W; low.height = H;
+const lctx = low.getContext('2d'), img = lctx.createImageData(W, H), view = new Uint32Array(img.data.buffer);
+const FILL_DARK = new Uint32Array(W * H).fill(hex('#141a2a'));
+function resize() {
+  const dpr = window.devicePixelRatio || 1, stage = $('stage');
+  const availW = stage.clientWidth - 6, availH = Math.max(260, window.innerHeight * 0.56);
+  const s = Math.max(1, Math.min(10, Math.floor(Math.min(availW * dpr / W, availH * dpr / H))));
+  cv.width = W * s; cv.height = H * s;
+  cv.style.width = (W * s / dpr) + 'px'; cv.style.height = (H * s / dpr) + 'px';
+}
+function present() { view.set(FRAME); lctx.putImageData(img, 0, 0); cctx.imageSmoothingEnabled = false; cctx.drawImage(low, 0, 0, cv.width, cv.height); }
+
+/* ---------- words on screen ---------- */
+function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+function portraitImg(who) { const i = el('img', who === 'both' ? 'both' : ''); i.src = PORTRAIT[who]; i.alt = ''; return i; }
+function renderStory() {
+  const S = st.scene, box = $('lines');
+  box.textContent = '';
+  const rows = S.kind === 'both' ? [['both', S.line]] : [['bub', S.bubLine], ['burt', S.burtLine]];
+  for (const r of rows) { const row = el('div', 'line'); row.append(portraitImg(r[0]), el('p', '', r[1])); box.append(row); }
+  cv.setAttribute('aria-label', rows.map(r => r[1]).join(' '));
+}
+function partOfDay(h) { return h < 5 ? 'night' : h < 12 ? 'morning' : h < 17 ? 'afternoon' : h < 21 ? 'evening' : 'night'; }
+function updateClock(now) {
+  $('clockTime').textContent = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  const w = st.scene ? st.scene.c.weather : 'clear', h = now.getHours();
+  const word = w === 'clear' ? (h >= 7 && h < 19 ? 'Sunny' : 'Clear') : w === 'cloudy' ? 'Cloudy' : w === 'rain' ? 'Rainy' : 'Snowy';
+  $('clockWx').textContent = word + ' ' + now.toLocaleDateString([], { weekday: 'long' }) + ' ' + partOfDay(h);
+  if (!$('travel').hidden) $('travelLabel').textContent = st.offsetMs ? 'Peeking at ' + now.toLocaleString([], { weekday: 'short', hour: 'numeric' }) : 'Right now';
+}
+function updateNext(now) {
+  const ms = Math.max(0, nextBlockStart(keyOf(now), blockOfDate(now)) - now);
+  const mins = Math.ceil(ms / 60000), hh = Math.floor(mins / 60), mm = mins % 60;
+  $('next').textContent = 'They’ll get up to something new in ' + (hh ? hh + 'h ' + mm + 'm' : mm + 'm') + '.';
+}
+let toastTimer = 0;
+function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 3600); }
+
+/* ---------- scenes ---------- */
+function forcedScene(spec, k, b) {
+  const c = Object.assign({}, blockCtx(k, b)); if (FORCE.w) c.weather = FORCE.w;
+  const base = { c, key: k, block: b, hats: hatsFor(c), find: null }, ids = spec.split(',');
+  const both = BOTH_ACTS.find(a => a.id === ids[0]);
+  if (both) { const o = lineOptions(both, c)[0]; return Object.assign(base, { kind: 'both', both, line: o.text, variant: o.idx }); }
+  const bub = BUB_ACTS.find(a => ids.includes(a.id)) || BUB_ACTS[0];
+  let burt = BURT_ACTS.find(a => ids.includes(a.id)) || BURT_ACTS.find(a => a.id === 'u_bounce'), find = null;
+  if (ids.includes('u_treasure')) { burt = TREASURE_ACT; find = { item: TREASURES[1], key: k, block: b }; }
+  return Object.assign(base, { kind: 'pair', bub, burt, find, bubLine: bub.lines[0], burtLine: find ? find.item.find : burt.lines[0], vb: 0, vu: 0 });
+}
+function setScene(k, b, now) {
+  PREV.set(st.sceneId ? FRAME : FILL_DARK);
+  st.sceneId = k + ':' + b;
+  let s = FORCE.scene ? forcedScene(FORCE.scene, k, b) : sceneAt(k, b);
+  if (FORCE.w && !FORCE.scene) s = Object.assign({}, s, { c: Object.assign({}, s.c, { weather: FORCE.w }) });
+  st.scene = s; st.sceneStart = st.tAbs - FORCE.st;
+  st.inter = { bub: null, burt: null }; st.snack = null; st.lamp = null;
+  st.trans = reducedMotion ? null : st.tAbs;
+  renderStory(); updateClock(now); updateNext(now);
+  Sound.setWeather(s.c.weather);
+}
+
+/* ---------- the loop ---------- */
+let lastFrame = 0, lastUI = 0;
+function tick(ts) {
+  requestAnimationFrame(tick);
+  if (ts - lastFrame < 48) return;
+  lastFrame = ts; st.tAbs = ts / 1000;
+  const now = curNow(), k = keyOf(now), b = blockOfDate(now);
+  if (k + ':' + b !== st.sceneId) setScene(k, b, now);
+  st.now = now; st.t = st.tAbs - st.sceneStart;
+  st.env = envFor(now, st.scene.c.weather, st.lamp);
+  st.poses = renderScene(st);
+  if (st.trans) { const p = (st.tAbs - st.trans) / 0.9; if (p >= 1) st.trans = null; else dissolve(p); }
+  present();
+  if (ts - lastUI > 1000) { lastUI = ts; updateClock(now); updateNext(now); }
+}
+
+/* ---------- tapping the room ---------- */
+function hitTest(ax, ay) {
+  if (st.poses) {
+    let best = null, bd = 15;
+    for (const P of st.poses) { const c = toWorld(P, 0, -13), d = Math.hypot(ax - c[0], ay - c[1]); if (d < bd) { bd = d; best = P.who; } }
+    if (best) return best;
+  }
+  if (ax >= 101 && ax <= 116 && ay >= 27 && ay <= 42) return 'lamp';
+  if (ax >= 0 && ax <= 24 && ay >= 2 && ay <= 28) return 'shelf';
+  if (ax >= 2 && ax <= 22 && ay >= 30 && ay <= 87) return 'fridge';
+  if (ax >= 48 && ax < 96 && ay >= 12 && ay < 46) return 'window';
+  return null;
+}
+cv.addEventListener('pointerdown', e => {
+  const r = cv.getBoundingClientRect(), ax = (e.clientX - r.left) / r.width * W, ay = (e.clientY - r.top) / r.height * H;
+  const hit = hitTest(ax, ay), now = st.tAbs;
+  if (hit === 'bub' || hit === 'burt') {
+    st.hearts.push({ x: ax, y: ay - 3, t0: now });
+    const P = hit === 'bub' ? st.poses[0] : st.poses[1];
+    if (hit === 'bub') {
+      st.inter.bub = { kind: P.asleep ? 'peek' : 'blink', t0: now };
+      toast(pickR(P.asleep ? POKE.bubAsleep : POKE.bubAwake)); Sound.sfx('boop');
+    } else {
+      st.burtTaps = st.burtTaps.filter(x => now - x < 2.2); st.burtTaps.push(now);
+      const dir = Math.random() < 0.5 ? -1 : 1;
+      if (P.asleep) { st.inter.burt = { kind: 'wiggle', t0: now }; toast(pickR(POKE.burtAsleep)); Sound.sfx('boop'); }
+      else if (st.burtTaps.length >= 5) { st.burtTaps = []; st.inter.burt = { kind: 'spin', t0: now, dir }; toast(POKE.burtSpin); Sound.sfx('spin'); }
+      else if (!st.inter.burt) { st.inter.burt = { kind: 'fall', t0: now, dir }; toast(pickR(POKE.burtAwake)); Sound.sfx('bonk'); }
+    }
+  } else if (hit === 'lamp') {
+    const wasOn = st.env && st.env.lamp > 0;
+    Sound.sfx('click');
+    if (wasOn) {
+      st.lamp = false;
+      if (st.env.night > 0.4) { toast('Lamp off. It’s very dark in here.'); setTimeout(() => { st.lamp = null; toast(POKE.lampOff); }, 2600); }
+      else toast('Lamp off.');
+    } else { st.lamp = true; toast(POKE.lampOn); }
+  } else if (hit === 'fridge') toast(POKE.fridge);
+  else if (hit === 'shelf') openShelf();
+  else if (hit === 'window') toast(POKE.window[st.scene.c.weather] || POKE.window.clear);
+});
+
+/* ---------- fish ---------- */
+async function giveFish() {
+  if (st.snack) return;
+  let rec = (await Store.get('bb:snacks')) || {};
+  if (rec.id !== st.sceneId) rec = { id: st.sceneId, n: 0 };
+  if (rec.n >= 3) { toast(SNACK_MORE); return; }
+  rec.n++; await Store.set('bb:snacks', rec);
+  const asleep = st.poses && st.poses[0].asleep && st.poses[1].asleep;
+  st.snack = { t0: st.tAbs };
+  toast(asleep ? SNACK_ASLEEP : SNACK_LINES[rec.n - 1]);
+  Sound.sfx('plop');
+  const saved = (await Store.get('bb:saved')) || { n: 0, at: 0 };
+  saved.n++; saved.at = Date.now() + st.offsetMs;
+  await Store.set('bb:saved', saved);
+}
+async function checkLetter() {
+  const saved = await Store.get('bb:saved');
+  if (!saved || !saved.n || Date.now() + st.offsetMs - saved.at < 2 * 3600 * 1000) return;
+  const msg = saved.n === 1
+    ? 'While you were away, Bub finally ate the fish you gave him. He waited exactly the right amount of time.'
+    : 'While you were away, Bub finally ate the ' + saved.n + ' fish you gave him. One at a time, with long, thoughtful pauses.';
+  const box = $('letterText'); box.textContent = ''; box.append(handEl(msg, 'pen'));
+  $('letter').hidden = false; renderHands(box);
+  await Store.set('bb:saved', { n: 0, at: 0 });
+}
+
+/* ---------- sheets ---------- */
+let lastFocus = null;
+function showSheet(id) { lastFocus = document.activeElement; $(id).hidden = false; $(id).querySelector('.close').focus(); }
+function hideSheet(id) { $(id).hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+function hourLabel(b) { const h = b * HPU; return h === 0 ? 'Midnight' : h === 12 ? 'Noon' : (h % 12) + (h < 12 ? ' AM' : ' PM'); }
+function openDiary() {
+  const now = curNow(), k = keyOf(now), list = diaryEntries(k, blockOfDate(now), 6), body = $('diaryBody');
+  body.textContent = '';
+  list.forEach((e, i) => {
+    const art = el('article', 'entry');
+    art.append(el('h3', 'when', i === 0 ? 'Now' : (e.key === k ? '' : 'Yesterday, ') + hourLabel(e.block)), handEl(e.pen, 'pen'));
+    if (e.crayon) art.append(handEl(e.crayon, 'crayon'));
+    body.append(art);
+  });
+  showSheet('diaryWrap'); renderHands(body);
+}
+function openShelf() {
+  const now = curNow(), list = foundList(keyOf(now), blockOfDate(now)), grid = $('shelfGrid');
+  $('shelfCount').textContent = list.length + ' of ' + TREASURES.length + ' found. Burt finds something new every few days.';
+  grid.textContent = '';
+  for (let i = list.length - 1; i >= 0; i--) {
+    const f = list[i], li = el('li', 'treasure'), im = el('img'), q = parseKey(f.key);
+    im.src = treasureURL(f.item); im.alt = '';
+    li.append(im, el('span', 't-name', f.item.name), handEl(f.item.note, 'crayon', 8.6),
+      el('span', 't-date', 'Found ' + new Date(q.y, q.m - 1, q.d).toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })));
+    grid.append(li);
+  }
+  const rest = TREASURES.length - list.length, lockRow = $('shelfLocked');
+  lockRow.textContent = ''; lockRow.setAttribute('aria-label', rest + ' treasures still out there');
+  for (let i = 0; i < rest; i++) { const im = el('img'); im.src = LOCKED_URL; im.alt = ''; lockRow.append(im); }
+  showSheet('shelfWrap'); renderHands(grid);
+}
+
+/* ---------- sound (made on the fly, nothing to download) ---------- */
+const Sound = {
+  ctx: null, on: false, out: null, timer: 0, next: 0, step: 0, noise: null, rain: null, wind: null, crackle: null, weather: 'clear',
+  ensure() {
+    if (!this.ctx) {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return false;
+      this.ctx = new AC(); this.out = this.ctx.createGain(); this.out.gain.value = 0.55; this.out.connect(this.ctx.destination);
+      const len = this.ctx.sampleRate * 2, b = this.ctx.createBuffer(1, len, this.ctx.sampleRate), d = b.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+      this.noise = b;
+    }
+    if (this.ctx.state === 'suspended') this.ctx.resume();
+    return true;
+  },
+  toggle() { if (!this.ensure()) return false; this.on = !this.on; if (this.on) this.start(); else this.stop(); return this.on; },
+  start() { this.next = this.ctx.currentTime + 0.1; this.step = 0; clearInterval(this.timer); this.timer = setInterval(() => this.pump(), 120); this.setWeather(this.weather); this.startCrackle(); },
+  stop() { clearInterval(this.timer); this.timer = 0; this.stopLoop('rain'); this.stopLoop('wind'); this.stopLoop('crackle'); },
+  pump() { const half = 60 / 66 / 2; while (this.next < this.ctx.currentTime + 0.5) { this.playStep(this.step, this.next); this.next += half; this.step++; } },
+  freq(n) { return 440 * Math.pow(2, (n - 69) / 12); },
+  playStep(s, t) {
+    const CH = [[53, 57, 60, 64], [52, 55, 59, 62], [50, 53, 57, 60], [48, 52, 55, 59]], bar = Math.floor(s / 8) % 4;
+    if (s % 8 === 0) { for (const n of CH[bar]) this.pad(n, t, 3.6); this.pluck(CH[bar][0] - 12, t, 0.06); }
+    const PENT = [72, 74, 76, 79, 81, 84];
+    if (hash2(s, 77) < 0.4) this.pluck(PENT[Math.floor(hash2(s, 78) * PENT.length)], t, 0.05);
+  },
+  pad(n, t, dur) {
+    const c = this.ctx, o = c.createOscillator(), g = c.createGain(), f = c.createBiquadFilter();
+    o.type = 'triangle'; o.frequency.value = this.freq(n); f.type = 'lowpass'; f.frequency.value = 900;
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.026, t + 0.6); g.gain.setValueAtTime(0.026, t + dur - 0.9); g.gain.linearRampToValueAtTime(0, t + dur + 0.6);
+    o.connect(f); f.connect(g); g.connect(this.out); o.start(t); o.stop(t + dur + 0.7);
+  },
+  pluck(n, t, vol) {
+    const c = this.ctx, o = c.createOscillator(), g = c.createGain();
+    o.type = 'sine'; o.frequency.value = this.freq(n);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0008, t + 1.4);
+    o.connect(g); g.connect(this.out); o.start(t); o.stop(t + 1.5);
+  },
+  loop(type, freq, q, vol) {
+    const c = this.ctx, s = c.createBufferSource(), f = c.createBiquadFilter(), g = c.createGain();
+    s.buffer = this.noise; s.loop = true; f.type = type; f.frequency.value = freq; f.Q.value = q; g.gain.value = vol;
+    s.connect(f); f.connect(g); g.connect(this.out); s.start();
+    return s;
+  },
+  stopLoop(k) { if (this[k]) { try { this[k].stop(); } catch (e) { /* already stopped */ } this[k] = null; } },
+  setWeather(w) {
+    this.weather = w;
+    if (!this.on || !this.ctx) return;
+    this.stopLoop('rain'); this.stopLoop('wind');
+    if (w === 'rain') this.rain = this.loop('bandpass', 1400, 0.5, 0.07);
+    if (w === 'snow') this.wind = this.loop('lowpass', 380, 0.7, 0.05);
+  },
+  startCrackle() {
+    this.stopLoop('crackle');
+    const c = this.ctx, len = c.sampleRate * 3, b = c.createBuffer(1, len, c.sampleRate), d = b.getChannelData(0);
+    for (let i = 0; i < len; i++) d[i] = Math.random() < 0.0006 ? (Math.random() * 2 - 1) * 0.8 : 0;
+    const s = c.createBufferSource(), g = c.createGain(), f = c.createBiquadFilter();
+    s.buffer = b; s.loop = true; f.type = 'highpass'; f.frequency.value = 1500; g.gain.value = 0.12;
+    s.connect(f); f.connect(g); g.connect(this.out); s.start();
+    this.crackle = s;
+  },
+  sfx(kind) {
+    if (!this.on || !this.ctx) return;
+    const c = this.ctx, t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+    const P = { boop: ['sine', 660, 990, 0.09, 0.18], bonk: ['triangle', 260, 110, 0.12, 0.25], plop: ['sine', 700, 300, 0.1, 0.2],
+      spin: ['triangle', 300, 1200, 0.08, 0.5], click: ['square', 1200, 900, 0.03, 0.05] }[kind] || ['sine', 600, 600, 0.05, 0.1];
+    o.type = P[0]; o.frequency.setValueAtTime(P[1], t); o.frequency.exponentialRampToValueAtTime(P[2], t + P[4]);
+    g.gain.setValueAtTime(P[3], t); g.gain.exponentialRampToValueAtTime(0.0005, t + P[4] + 0.05);
+    o.connect(g); g.connect(this.out); o.start(t); o.stop(t + P[4] + 0.1);
+  }
+};
+
+/* ---------- wiring ---------- */
+$('title').src = (function () {
+  const ink = hex('#26304a'), a = 'BUB', b = 'BURT', w = textWidth(a) + textWidth(b) + 12, buf = new Uint32Array(w * 7);
+  target(buf, w, 7); text(a, 1, 1, C.beak, ink); spriteOutlined(SPR.heart, SPAL.heart, textWidth(a) + 3, 1, ink); text(b, textWidth(a) + 10, 1, C.beak, ink);
+  target(FRAME, W, H); return bufToURL(buf, w, 7, 3);
+})();
+$('icoFish').innerHTML = SVG.fish; $('icoDiary').innerHTML = SVG.diary; $('icoShelf').innerHTML = SVG.shelf; $('icoSound').innerHTML = SVG.soundOff;
+$('btnFish').addEventListener('click', giveFish);
+$('btnDiary').addEventListener('click', openDiary);
+$('btnShelf').addEventListener('click', openShelf);
+$('btnSound').addEventListener('click', () => {
+  const on = Sound.toggle();
+  $('btnSound').setAttribute('aria-pressed', on ? 'true' : 'false');
+  $('icoSound').innerHTML = on ? SVG.soundOn : SVG.soundOff;
+  toast(on ? 'Sound on. If you can’t hear it, check that your phone isn’t on silent.' : 'Sound off.');
+});
+$('letterClose').addEventListener('click', () => { $('letter').hidden = true; });
+document.querySelectorAll('.sheet-wrap').forEach(w => {
+  w.addEventListener('click', e => { if (e.target === w) hideSheet(w.id); });
+  w.querySelector('.close').addEventListener('click', () => hideSheet(w.id));
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.sheet-wrap:not([hidden])').forEach(w => hideSheet(w.id)); });
+let clockTaps = [];
+$('clock').addEventListener('click', () => {
+  const n = performance.now(); clockTaps = clockTaps.filter(x => n - x < 900); clockTaps.push(n);
+  if (clockTaps.length >= 3) { clockTaps = []; $('travel').hidden = !$('travel').hidden; updateClock(curNow()); }
+});
+$('travel').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const step = b.dataset.step;
+  st.offsetMs = step === '0' ? 0 : st.offsetMs + (step === 'day' ? 86400000 : +step * HPU * 3600000);
+  updateClock(curNow()); checkLetter();
+});
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { if (Sound.ctx) Sound.ctx.suspend(); }
+  else { if (Sound.ctx && Sound.on) Sound.ctx.resume(); checkLetter(); }
+});
+(function installHint() {
+  const ios = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const standalone = window.navigator.standalone === true || (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
+  let framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  if (!ios || standalone || framed) return;
+  Store.get('bb:hint').then(v => { if (!v) $('install').hidden = false; });
+  $('installClose').addEventListener('click', () => { $('install').hidden = true; Store.set('bb:hint', 1); });
+})();
+resize();
+window.addEventListener('resize', resize);
+checkLetter();
+requestAnimationFrame(tick);
+
+})();
+</script>
+</body>
+</html>
